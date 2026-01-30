@@ -1,0 +1,7 @@
+﻿mifss:
+  cloud:
+    provider: generic
+    env: test
+    storage: minio
+    database: mysql
+    message-queue: rabbitmq

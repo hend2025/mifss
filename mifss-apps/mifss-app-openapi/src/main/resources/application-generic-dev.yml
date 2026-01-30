@@ -1,0 +1,15 @@
+﻿mifss:
+  cloud:
+    provider: generic
+    env: dev
+    storage: minio
+    database: mysql
+    message-queue: rabbitmq
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.16.34:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+

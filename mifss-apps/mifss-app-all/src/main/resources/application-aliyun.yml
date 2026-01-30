@@ -1,0 +1,6 @@
+mifss:
+  cloud:
+    provider: aliyun
+    storage: oss
+    database: rds
+    message-queue: rocketmq

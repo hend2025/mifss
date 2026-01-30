@@ -1,0 +1,8 @@
+﻿spring:
+  application:
+    name: mifss-app-fraud
+  profiles:
+    active: @cloud.provider@
+
+server:
+  port: 8080
