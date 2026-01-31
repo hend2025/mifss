@@ -17,9 +17,10 @@ mifss:
     storage: minio
     database: mysql
     message-queue: rabbitmq
+
   # RPC 类型选择: feign | dubbo
   rpc:
-    type: dubbo
+    type: feign
   # RPC feign 调用地址
   bio:
     service:

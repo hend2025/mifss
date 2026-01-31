@@ -6,7 +6,6 @@ import java.util.List;
 
 /**
  * 人脸特征 Dubbo3 服务接口
- * 提供与 FaceFturFeignClient 相同的功能
  */
 public interface FaceFturDubboService {
 
@@ -25,4 +24,5 @@ public interface FaceFturDubboService {
      * @return 人脸特征列表
      */
     List<FaceFturDTO> queryList(FaceFturDTO dto);
+
 }

@@ -16,7 +16,6 @@ import java.util.List;
 /**
  * 人脸特征服务实现
  * 同时作为本地 Spring 服务和 Dubbo RPC 服务
- * 当 mifss.rpc.type=dubbo 时，@DubboService 生效，对外暴露 Dubbo 服务
  */
 @Service
 @DubboService(interfaceClass = FaceFturDubboService.class)
