@@ -22,7 +22,6 @@ public class TestController {
     @ApiOperation("RPC调用-根据ID查询人脸特征")
     @GetMapping("/{id}")
     public FaceFturDTO getById(@ApiParam("人脸特征ID") @PathVariable("id") String id) {
-        System.out.println("getById");
         FaceFturDTO bean = rpcFaceFturService.getOneRpc(new RpcQueryWrapper<FaceFturDTO>().eq(FaceFturDTO::getFaceBosgId,id));
         return bean;
     }
@@ -30,7 +29,6 @@ public class TestController {
     @ApiOperation("RPC调用-查询人脸特征列表")
     @PostMapping("/queryList")
     public List<FaceFturDTO> queryList(@RequestBody FaceFturDTO dto) {
-        System.out.println();
         List<FaceFturDTO> list = rpcFaceFturService.listRpc(new RpcQueryWrapper<FaceFturDTO>()
                 .select(FaceFturDTO::getFaceBosgId,FaceFturDTO::getFaceImgUrl,FaceFturDTO::getCrteTime)
                 .orderByDesc(FaceFturDTO::getFaceBosgId)

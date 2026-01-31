@@ -25,8 +25,6 @@ public class FaceFturController {
     @GetMapping("/{id}")
     public FaceFturDTO getById(@ApiParam("人脸特征ID") @PathVariable("id") String id) {
 
-        System.out.println("11111111111");
-
         FaceFturDO bean = new FaceFturDO();
 
         bean = faceFturService.getById(id);

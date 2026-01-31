@@ -1,6 +1,8 @@
 package com.aeye.mifss.bas.controller;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.aeye.mifss.bas.dto.PsnInfoDTO;
+import com.aeye.mifss.bas.entity.PsnInfoDO;
 import com.aeye.mifss.bas.service.PsnInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -13,14 +15,17 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/bas/psnInfo")
 public class PsnInfoController {
 
-//    @Autowired
-//    private PsnInfoService psnInfoService;
-//
-//    @ApiOperation("根据ID查询人员")
-//    @GetMapping("/{id}")
-//    public PsnInfoDTO getById(@ApiParam("人员模板号") @PathVariable("id") String id) {
-//        PsnInfoDTO bean = psnInfoService.getById(id);
-//        return bean;
-//    }
+    @Autowired
+    private PsnInfoService psnInfoService;
+
+    @ApiOperation("根据ID查询人员")
+    @GetMapping("/{id}")
+    public PsnInfoDTO getById(@ApiParam("人员模板号") @PathVariable("id") String id) {
+        PsnInfoDO bean = psnInfoService.getById(id);
+        if(bean == null){
+            return null;
+        }
+        return BeanUtil.toBean(bean, PsnInfoDTO.class);
+    }
 
 }

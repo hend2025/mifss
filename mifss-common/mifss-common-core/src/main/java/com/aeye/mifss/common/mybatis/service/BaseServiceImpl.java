@@ -6,16 +6,17 @@ import com.aeye.mifss.common.mybatis.wrapper.RpcWrapperConverter;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>> implements LocalService<Entity>, RpcService<DTO> {
+public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
+        implements LocalService<Entity>, RpcService<DTO> {
 
-    @Resource
+    @Autowired
     protected BO bo;
 
     /**
