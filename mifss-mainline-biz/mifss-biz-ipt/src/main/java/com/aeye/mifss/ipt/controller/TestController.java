@@ -1,7 +1,7 @@
 package com.aeye.mifss.ipt.controller;
 
 import com.aeye.mifss.bio.dto.FaceFturDTO;
-import com.aeye.mifss.bio.service.FaceFturFeignClient;
+import com.aeye.mifss.ipt.rpc.FaceFturRpcClient;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -16,7 +16,7 @@ import java.util.List;
 public class TestController {
 
     @Autowired
-    private FaceFturFeignClient faceFturFeignClient;
+    private FaceFturRpcClient faceFturFeignClient;
 
     @ApiOperation("RPC调用-根据ID查询人脸特征")
     @GetMapping("/{id}")

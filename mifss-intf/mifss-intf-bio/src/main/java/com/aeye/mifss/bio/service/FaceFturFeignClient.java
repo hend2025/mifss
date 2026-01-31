@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(name = "bio-service", url = "${mifss.bio.service.url:http://127.0.0.1:8802/mifss/bio}")
+@FeignClient(name = "bio-service", url = "${mifss.bio.service.url:http://127.0.0.1:8801/mifss/bio}")
 public interface FaceFturFeignClient {
 
     @GetMapping("/faceFtur/{id}")

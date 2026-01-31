@@ -18,4 +18,12 @@
         <module>mifss-intf-mcp</module>
         <module>mifss-intf-openapi</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>

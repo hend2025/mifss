@@ -1,7 +1,14 @@
 ﻿server:
-  port: 8802
+  port: 8801
   servlet:
     context-path: /mifss/bio
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
 
 mifss:
   cloud:
@@ -10,12 +17,20 @@ mifss:
     storage: minio
     database: mysql
     message-queue: rabbitmq
+  # RPC 类型选择: feign | dubbo
+  rpc:
+    type: dubbo  # 默认使用 feign，设置为 dubbo 启用 Dubbo3
 
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.16.34:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
-    username: root
-    password: 123456
+# Dubbo3 配置 (当 mifss.rpc.type=dubbo 时生效)
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.aeye.mifss
 
 

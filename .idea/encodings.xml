@@ -46,6 +46,7 @@
     <file url="file://$PROJECT_DIR$/mifss-apps/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-dubbo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-extension/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-extension/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-infra/src/main/java" charset="UTF-8" />

@@ -82,6 +82,7 @@
       <module name="mifss-chrdise-huawei" target="1.8" />
       <module name="mifss-chrdise-tencent" target="1.8" />
       <module name="mifss-common-datascope" target="1.8" />
+      <module name="mifss-common-dubbo" target="1.8" />
       <module name="mifss-common-file" target="1.8" />
       <module name="mifss-common-log" target="1.8" />
       <module name="mifss-common-mq" target="1.8" />
@@ -155,6 +156,7 @@
       <module name="mifss-biz-trt" options="-parameters" />
       <module name="mifss-biz-video" options="-parameters" />
       <module name="mifss-common-core" options="-parameters" />
+      <module name="mifss-common-dubbo" options="-parameters" />
       <module name="mifss-common-extension" options="-parameters" />
       <module name="mifss-common-infra" options="-parameters" />
       <module name="mifss-common-security" options="-parameters" />
