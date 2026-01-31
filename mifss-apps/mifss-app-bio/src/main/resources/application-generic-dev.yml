@@ -25,6 +25,8 @@ mifss:
 dubbo:
   application:
     name: ${spring.application.name}
+    qos-port: 22222  # 使用不同的 QoS 端口，避免与其他服务冲突
+    qos-enable: true
   registry:
     address: zookeeper://127.0.0.1:2181
   protocol:

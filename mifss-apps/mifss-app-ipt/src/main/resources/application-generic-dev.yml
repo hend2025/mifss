@@ -19,7 +19,7 @@ mifss:
     message-queue: rabbitmq
   # RPC 类型选择: feign | dubbo
   rpc:
-    type: feign  # 使用 Dubbo3
+    type: dubbo
   # RPC feign 调用地址
   bio:
     service:
@@ -29,6 +29,11 @@ mifss:
 dubbo:
   application:
     name: ${spring.application.name}
+    qos-port: 22223  # ipt 服务使用 22223
+    qos-enable: true
+  protocol:
+    name: dubbo
+    port: 20881  # ipt 服务使用 20881，避免与 bio 的 20880 冲突
   registry:
     address: zookeeper://127.0.0.1:2181
   consumer:
