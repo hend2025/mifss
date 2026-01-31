@@ -1,6 +1,32 @@
-﻿mifss:
+﻿server:
+  port: 8801
+  servlet:
+    context-path: /mifss/bio
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+mifss:
   cloud:
     provider: huawei
     storage: obs
     database: gaussdb
     message-queue: dms
+
+# Dubbo3 配置 (服务提供方)
+dubbo:
+  application:
+    name: ${spring.application.name}
+    qos-port: 22222
+    qos-enable: true
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: nacos://${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
+  scan:
+    base-packages: com.aeye.mifss

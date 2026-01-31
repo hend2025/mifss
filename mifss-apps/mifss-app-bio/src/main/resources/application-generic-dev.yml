@@ -13,26 +13,20 @@ spring:
 mifss:
   cloud:
     provider: generic
-    env: dev
     storage: minio
     database: mysql
     message-queue: rabbitmq
-  # RPC 类型选择: feign | dubbo
-  rpc:
-    type: dubbo  # 默认使用 feign，设置为 dubbo 启用 Dubbo3
 
-# Dubbo3 配置 (当 mifss.rpc.type=dubbo 时生效)
+# Dubbo3 配置 (服务提供方)
 dubbo:
   application:
     name: ${spring.application.name}
-    qos-port: 22222  # 使用不同的 QoS 端口，避免与其他服务冲突
+    qos-port: 22222
     qos-enable: true
-  registry:
-    address: zookeeper://127.0.0.1:2181
   protocol:
     name: dubbo
     port: 20880
+  registry:
+    address: nacos://${NACOS_HOST:127.0.0.1}:${NACOS_PORT:8848}
   scan:
     base-packages: com.aeye.mifss
-
-
