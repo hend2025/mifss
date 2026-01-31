@@ -1,7 +1,8 @@
 package com.aeye.mifss.ipt.controller;
 
 import com.aeye.mifss.bio.dto.FaceFturDTO;
-import com.aeye.mifss.bio.service.FaceFturDubboService;
+import com.aeye.mifss.bio.service.RpcFaceFturService;
+import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -16,19 +17,24 @@ import java.util.List;
 public class TestController {
 
     @DubboReference
-    private FaceFturDubboService faceFturDubboService;
+    private RpcFaceFturService rpcFaceFturService;
 
     @ApiOperation("RPC调用-根据ID查询人脸特征")
     @GetMapping("/{id}")
     public FaceFturDTO getById(@ApiParam("人脸特征ID") @PathVariable("id") String id) {
-        FaceFturDTO bean = faceFturDubboService.getById(id);
+        System.out.println("getById");
+        FaceFturDTO bean = rpcFaceFturService.getOneRpc(new RpcQueryWrapper<FaceFturDTO>().eq(FaceFturDTO::getFaceBosgId,id));
         return bean;
     }
 
     @ApiOperation("RPC调用-查询人脸特征列表")
     @PostMapping("/queryList")
     public List<FaceFturDTO> queryList(@RequestBody FaceFturDTO dto) {
-        List<FaceFturDTO> list = faceFturDubboService.queryList(dto);
+        System.out.println();
+        List<FaceFturDTO> list = rpcFaceFturService.listRpc(new RpcQueryWrapper<FaceFturDTO>()
+                .select(FaceFturDTO::getFaceBosgId,FaceFturDTO::getFaceImgUrl,FaceFturDTO::getCrteTime)
+                .orderByDesc(FaceFturDTO::getFaceBosgId)
+                .last("limit 10"));
         return list;
     }
 

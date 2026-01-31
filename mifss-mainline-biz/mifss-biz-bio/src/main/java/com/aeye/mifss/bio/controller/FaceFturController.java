@@ -4,6 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import com.aeye.mifss.bio.dto.FaceFturDTO;
 import com.aeye.mifss.bio.entity.FaceFturDO;
 import com.aeye.mifss.bio.service.FaceFturService;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -24,18 +25,24 @@ public class FaceFturController {
     @GetMapping("/{id}")
     public FaceFturDTO getById(@ApiParam("人脸特征ID") @PathVariable("id") String id) {
 
-        FaceFturDO bean = faceFturService.getById(id);
+        System.out.println("11111111111");
 
-        FaceFturDTO dto = BeanUtil.copyProperties(bean, FaceFturDTO.class);
+        FaceFturDO bean = new FaceFturDO();
+
+        bean = faceFturService.getById(id);
+
+        bean = faceFturService.getOne(new LambdaQueryWrapper<FaceFturDO>().last("limit 1"));
+
+        FaceFturDTO  dto = BeanUtil.copyProperties(bean, FaceFturDTO.class);
 
         return dto;
     }
 
     @ApiOperation("查询人脸特征列表")
     @PostMapping("/queryList")
-    public List<FaceFturDTO> queryList(@RequestBody FaceFturDTO dto) {
-
-        return null;
+    public List<FaceFturDO> queryList(@RequestBody FaceFturDTO dto) {
+        List<FaceFturDO> list = faceFturService.list(new LambdaQueryWrapper<FaceFturDO>().last("limit 10"));
+        return list;
     }
 
 }

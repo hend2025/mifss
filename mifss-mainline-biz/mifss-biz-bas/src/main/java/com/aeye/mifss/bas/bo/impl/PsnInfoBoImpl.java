@@ -8,4 +8,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PsnInfoBoImpl extends ServiceImpl<PsnInfoMapper, PsnInfoDO> implements PsnInfoBo {
+
+
 }

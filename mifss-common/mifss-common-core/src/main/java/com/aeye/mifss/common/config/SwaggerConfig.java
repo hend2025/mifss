@@ -1,4 +1,4 @@
-package com.aeye.mifss.common.core.config;
+package com.aeye.mifss.common.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
