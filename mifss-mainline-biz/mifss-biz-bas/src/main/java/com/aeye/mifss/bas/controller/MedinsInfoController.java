@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/bas/medinsInfo")
 public class MedinsInfoController {
 
-    @Autowired
-    private MedinsInfoService medinsInfoBo;
-
-    @ApiOperation("根据ID查询医疗机构")
-    @GetMapping("/{id}")
-    public MedinsInfoDTO getById(@ApiParam("医疗机构ID") @PathVariable("id") String id) {
-        MedinsInfoDTO bean = medinsInfoBo.getById(id);
-        return bean;
-    }
+//    @Autowired
+//    private MedinsInfoService medinsInfoBo;
+//
+//    @ApiOperation("根据ID查询医疗机构")
+//    @GetMapping("/{id}")
+//    public MedinsInfoDTO getById(@ApiParam("医疗机构ID") @PathVariable("id") String id) {
+//        MedinsInfoDTO bean = medinsInfoBo.getById(id);
+//        return bean;
+//    }
 
 }

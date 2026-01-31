@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/bas/psnInfo")
 public class PsnInfoController {
 
-    @Autowired
-    private PsnInfoService psnInfoService;
-
-    @ApiOperation("根据ID查询人员")
-    @GetMapping("/{id}")
-    public PsnInfoDTO getById(@ApiParam("人员模板号") @PathVariable("id") String id) {
-        PsnInfoDTO bean = psnInfoService.getById(id);
-        return bean;
-    }
+//    @Autowired
+//    private PsnInfoService psnInfoService;
+//
+//    @ApiOperation("根据ID查询人员")
+//    @GetMapping("/{id}")
+//    public PsnInfoDTO getById(@ApiParam("人员模板号") @PathVariable("id") String id) {
+//        PsnInfoDTO bean = psnInfoService.getById(id);
+//        return bean;
+//    }
 
 }

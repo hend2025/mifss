@@ -1,6 +1,8 @@
 package com.aeye.mifss.bio.controller;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.aeye.mifss.bio.dto.FaceFturDTO;
+import com.aeye.mifss.bio.entity.FaceFturDO;
 import com.aeye.mifss.bio.service.FaceFturService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -21,13 +23,19 @@ public class FaceFturController {
     @ApiOperation("根据ID查询人脸特征")
     @GetMapping("/{id}")
     public FaceFturDTO getById(@ApiParam("人脸特征ID") @PathVariable("id") String id) {
-        return faceFturService.getById(id);
+
+        FaceFturDO bean = faceFturService.getById(id);
+
+        FaceFturDTO dto = BeanUtil.copyProperties(bean, FaceFturDTO.class);
+
+        return dto;
     }
 
     @ApiOperation("查询人脸特征列表")
     @PostMapping("/queryList")
     public List<FaceFturDTO> queryList(@RequestBody FaceFturDTO dto) {
-        return faceFturService.queryList(dto);
+
+        return null;
     }
 
 }
