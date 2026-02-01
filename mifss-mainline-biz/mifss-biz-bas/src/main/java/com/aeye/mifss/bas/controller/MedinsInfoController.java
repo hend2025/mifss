@@ -4,11 +4,16 @@ import cn.hutool.core.bean.BeanUtil;
 import com.aeye.mifss.bas.dto.MedinsInfoDTO;
 import com.aeye.mifss.bas.entity.MedinsInfoDO;
 import com.aeye.mifss.bas.service.MedinsInfoService;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Api(tags = "医疗机构信息管理")
 @RestController
@@ -26,6 +31,18 @@ public class MedinsInfoController {
             return null;
         }
         return BeanUtil.toBean(bean, MedinsInfoDTO.class);
+    }
+
+    @ApiOperation("医疗机构Top10")
+    @PostMapping("/list")
+    public List<MedinsInfoDO> list(@RequestBody MedinsInfoDTO medinsInfoDTO) {
+        List<MedinsInfoDO> list =  medinsInfoService.list(
+                new LambdaQueryWrapper<MedinsInfoDO>()
+                        .like(!StringUtils.isEmpty(medinsInfoDTO.getMedinsCode()),MedinsInfoDO::getMedinsCode, medinsInfoDTO.getMedinsCode())
+                        .like(!StringUtils.isEmpty(medinsInfoDTO.getMedinsName()),MedinsInfoDO::getMedinsName, medinsInfoDTO.getMedinsName())
+                        .last("limit 5")
+        );
+        return BeanUtil.copyToList(list,MedinsInfoDO.class);
     }
 
 }
