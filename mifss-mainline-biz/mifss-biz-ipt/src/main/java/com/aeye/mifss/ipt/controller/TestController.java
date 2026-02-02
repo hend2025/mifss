@@ -1,5 +1,7 @@
 package com.aeye.mifss.ipt.controller;
 
+import cn.hsa.hsaf.core.fsstore.FSEntity;
+import cn.hsa.ims.common.utils.AeyeFSManager;
 import com.aeye.mifss.bio.dto.FaceFturDTO;
 import com.aeye.mifss.bio.service.RpcFaceFturService;
 import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
@@ -33,6 +35,7 @@ public class TestController {
                 .select(FaceFturDTO::getFaceBosgId,FaceFturDTO::getFaceImgUrl,FaceFturDTO::getCrteTime)
                 .orderByDesc(FaceFturDTO::getFaceBosgId)
                 .last("limit 10"));
+
         return list;
     }
 

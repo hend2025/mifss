@@ -136,4 +136,5 @@ public class AeyeSpringContextUtils implements ApplicationContextAware {
     public static String getServerPort() {
         return serverPort;
     }
+
 }

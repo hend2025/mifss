@@ -34,6 +34,15 @@ dubbo:
   scan:
     base-packages: com.aeye.mifss
 
+fsstore:
+  type: minio
+  bucket: group1
+
+mio:
+  endpoint: http://192.168.17.13:9900
+  accessKeyId: aeye
+  secretAccessKey: Zhy778899
+
 security:
   type: hsa-sso
   isPrivilege: true

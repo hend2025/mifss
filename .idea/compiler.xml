@@ -75,6 +75,8 @@
       <module name="mifss-bio-generic" target="1.8" />
       <module name="mifss-bio-huawei" target="1.8" />
       <module name="mifss-bio-tencent" target="1.8" />
+      <module name="mifss-biz-bas (1)" target="1.5" />
+      <module name="mifss-biz-ipt (1)" target="1.5" />
       <module name="mifss-chrdise" target="1.8" />
       <module name="mifss-chrdise-ali" target="1.8" />
       <module name="mifss-chrdise-biz" target="1.8" />
@@ -142,11 +144,13 @@
       <module name="mifss-app-trt" options="-parameters" />
       <module name="mifss-app-video" options="-parameters" />
       <module name="mifss-biz-bas" options="-parameters" />
+      <module name="mifss-biz-bas (1)" options="-parameters" />
       <module name="mifss-biz-bio" options="-parameters" />
       <module name="mifss-biz-chr" options="-parameters" />
       <module name="mifss-biz-fraud" options="-parameters" />
       <module name="mifss-biz-hd" options="-parameters" />
       <module name="mifss-biz-ipt" options="-parameters" />
+      <module name="mifss-biz-ipt (1)" options="-parameters" />
       <module name="mifss-biz-job" options="-parameters" />
       <module name="mifss-biz-mcp" options="-parameters" />
       <module name="mifss-biz-openapi" options="-parameters" />
