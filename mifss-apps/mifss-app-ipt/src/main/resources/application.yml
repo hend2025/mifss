@@ -7,8 +7,7 @@ spring:
   profiles:
     active: @cloud.provider@
 
-# Swagger 配置
 swagger:
   title: MIFSS IPT API
   description: MIFSS 住院服务 API 文档
-  version: "1.0"
+  version: 1.0.0

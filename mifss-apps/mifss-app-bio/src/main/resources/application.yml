@@ -11,4 +11,4 @@ spring:
 swagger:
   title: MIFSS BIO API
   description: MIFSS 生物特征识别服务 API 文档
-  version: "1.0"
+  version: 1.0.0
