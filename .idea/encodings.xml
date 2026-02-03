@@ -51,8 +51,10 @@
     <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-extension/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-infra/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-infra/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-orm/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-common/mifss-common-swagger/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-bas/src/main/java" charset="UTF-8" />

@@ -15,14 +15,19 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-common-core</artifactId>
             <version>${project.version}</version>
-            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-common-orm</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-common-swagger</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.aeye.mifss</groupId>

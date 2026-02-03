@@ -17,38 +17,40 @@
         <module name="mifss-app-bio" />
         <module name="mifss-project-guangxi" />
         <module name="mifss-common-infra" />
-        <module name="mifss-biz-mcp" />
         <module name="mifss-app-openapi" />
+        <module name="mifss-biz-mcp" />
         <module name="mifss-intf-video" />
         <module name="mifss-project-hunan" />
         <module name="mifss-adapter-generic" />
         <module name="mifss-biz-job" />
-        <module name="mifss-biz-video" />
         <module name="mifss-app-rules" />
         <module name="mifss-app-trt" />
+        <module name="mifss-biz-video" />
         <module name="mifss-app-opt" />
+        <module name="mifss-common-orm" />
         <module name="mifss-common-core" />
         <module name="mifss-biz-bio" />
-        <module name="mifss-common-security" />
         <module name="mifss-app-video" />
+        <module name="mifss-common-security" />
         <module name="mifss-app-hd" />
         <module name="mifss-app-job" />
         <module name="mifss-intf-bc" />
         <module name="mifss-adapter-aliyun" />
-        <module name="mifss-intf-rules" />
-        <module name="mifss-biz-ipt" />
-        <module name="mifss-biz-chr" />
         <module name="mifss-app-all" />
+        <module name="mifss-intf-rules" />
+        <module name="mifss-biz-chr" />
+        <module name="mifss-biz-ipt" />
         <module name="mifss-biz-opt" />
         <module name="mifss-app-pha" />
+        <module name="mifss-common-swagger" />
         <module name="mifss-biz-fraud" />
         <module name="mifss-biz-trt" />
         <module name="mifss-adapter-huawei" />
         <module name="mifss-common-extension" />
         <module name="mifss-biz-openapi" />
         <module name="mifss-biz-rules-engine" />
-        <module name="mifss-app-chr" />
         <module name="mifss-app-ipt" />
+        <module name="mifss-app-chr" />
         <module name="mifss-adapter-tencent" />
         <module name="mifss-intf-bio" />
         <module name="mifss-biz-hd" />
@@ -89,7 +91,6 @@
       <module name="mifss-common-log" target="1.8" />
       <module name="mifss-common-mq" target="1.8" />
       <module name="mifss-common-redis" target="1.8" />
-      <module name="mifss-common-swagger" target="1.8" />
       <module name="mifss-intf-audit" target="1.8" />
       <module name="mifss-intf-base" target="1.8" />
       <module name="mifss-intf-chrdise" target="1.8" />
@@ -163,7 +164,9 @@
       <module name="mifss-common-dubbo" options="-parameters" />
       <module name="mifss-common-extension" options="-parameters" />
       <module name="mifss-common-infra" options="-parameters" />
+      <module name="mifss-common-orm" options="-parameters" />
       <module name="mifss-common-security" options="-parameters" />
+      <module name="mifss-common-swagger" options="-parameters" />
       <module name="mifss-intf-bas" options="-parameters" />
       <module name="mifss-intf-bc" options="-parameters" />
       <module name="mifss-intf-bio" options="-parameters" />

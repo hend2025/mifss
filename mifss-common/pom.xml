@@ -14,6 +14,8 @@
         <module>mifss-common-security</module>
         <module>mifss-common-extension</module>
         <module>mifss-common-infra</module>
+        <module>mifss-common-orm</module>
+        <module>mifss-common-swagger</module>
     </modules>
 
     <dependencies>

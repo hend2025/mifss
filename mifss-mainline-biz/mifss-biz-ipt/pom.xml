@@ -18,16 +18,15 @@
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-common-core</artifactId>
             <version>${project.version}</version>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-biz-bas</artifactId>
+            <artifactId>mifss-common-orm</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-intf-bio</artifactId>
+            <artifactId>mifss-common-swagger</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
