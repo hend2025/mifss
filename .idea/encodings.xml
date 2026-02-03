@@ -61,14 +61,22 @@
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-bc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-bio/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-bio/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-chr/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-fraud/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-hd/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-ipt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-job/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-mcp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-mcp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-monitor/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-monitor/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-openapi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-openapi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-opt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-pha/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-rules/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-rules/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-trt/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/mifss-intf-video/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-intf/src/main/resources" charset="UTF-8" />

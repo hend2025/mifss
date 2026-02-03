@@ -8,54 +8,62 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mifss-intf-mcp" />
-        <module name="mifss-intf-openapi" />
         <module name="mifss-biz-bas" />
         <module name="mifss-app-bc" />
-        <module name="mifss-intf-bas" />
         <module name="mifss-app-fraud" />
         <module name="mifss-app-bio" />
-        <module name="mifss-project-guangxi" />
         <module name="mifss-common-infra" />
         <module name="mifss-app-openapi" />
         <module name="mifss-biz-mcp" />
         <module name="mifss-intf-video" />
         <module name="mifss-project-hunan" />
+        <module name="mifss-intf-pha" />
+        <module name="mifss-app-rules" />
+        <module name="mifss-biz-video" />
+        <module name="mifss-biz-bio" />
+        <module name="mifss-common-security" />
+        <module name="mifss-intf-bc" />
+        <module name="mifss-adapter-aliyun" />
+        <module name="mifss-intf-opt" />
+        <module name="mifss-intf-trt" />
+        <module name="mifss-app-pha" />
+        <module name="mifss-biz-fraud" />
+        <module name="mifss-adapter-huawei" />
+        <module name="mifss-common-extension" />
+        <module name="mifss-intf-job" />
+        <module name="mifss-adapter-tencent" />
+        <module name="mifss-biz-hd" />
+        <module name="mifss-biz-pha" />
+        <module name="mifss-intf-mcp" />
+        <module name="mifss-intf-openapi" />
+        <module name="mifss-intf-hd" />
+        <module name="mifss-intf-bas" />
+        <module name="mifss-project-guangxi" />
+        <module name="mifss-intf-fraud" />
         <module name="mifss-adapter-generic" />
         <module name="mifss-biz-job" />
-        <module name="mifss-app-rules" />
         <module name="mifss-app-trt" />
-        <module name="mifss-biz-video" />
         <module name="mifss-app-opt" />
         <module name="mifss-common-orm" />
         <module name="mifss-common-core" />
-        <module name="mifss-biz-bio" />
         <module name="mifss-app-video" />
-        <module name="mifss-common-security" />
         <module name="mifss-app-hd" />
+        <module name="mifss-intf-chr" />
+        <module name="mifss-intf-ipt" />
         <module name="mifss-app-job" />
-        <module name="mifss-intf-bc" />
-        <module name="mifss-adapter-aliyun" />
         <module name="mifss-app-all" />
         <module name="mifss-intf-rules" />
         <module name="mifss-biz-chr" />
         <module name="mifss-biz-ipt" />
         <module name="mifss-biz-opt" />
-        <module name="mifss-app-pha" />
         <module name="mifss-common-swagger" />
-        <module name="mifss-biz-fraud" />
         <module name="mifss-biz-trt" />
-        <module name="mifss-adapter-huawei" />
-        <module name="mifss-common-extension" />
         <module name="mifss-biz-openapi" />
         <module name="mifss-biz-rules-engine" />
         <module name="mifss-app-ipt" />
         <module name="mifss-app-chr" />
-        <module name="mifss-adapter-tencent" />
         <module name="mifss-intf-bio" />
-        <module name="mifss-biz-hd" />
         <module name="mifss-app-mcp" />
-        <module name="mifss-biz-pha" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -170,10 +178,18 @@
       <module name="mifss-intf-bas" options="-parameters" />
       <module name="mifss-intf-bc" options="-parameters" />
       <module name="mifss-intf-bio" options="-parameters" />
+      <module name="mifss-intf-chr" options="-parameters" />
+      <module name="mifss-intf-fraud" options="-parameters" />
+      <module name="mifss-intf-hd" options="-parameters" />
+      <module name="mifss-intf-ipt" options="-parameters" />
+      <module name="mifss-intf-job" options="-parameters" />
       <module name="mifss-intf-mcp" options="-parameters" />
       <module name="mifss-intf-monitor" options="-parameters" />
       <module name="mifss-intf-openapi" options="-parameters" />
+      <module name="mifss-intf-opt" options="-parameters" />
+      <module name="mifss-intf-pha" options="-parameters" />
       <module name="mifss-intf-rules" options="-parameters" />
+      <module name="mifss-intf-trt" options="-parameters" />
       <module name="mifss-intf-video" options="-parameters" />
       <module name="mifss-project-changsha" options="-parameters" />
       <module name="mifss-project-guangdong" options="-parameters" />

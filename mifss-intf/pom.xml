@@ -17,6 +17,14 @@
         <module>mifss-intf-rules</module>
         <module>mifss-intf-mcp</module>
         <module>mifss-intf-openapi</module>
+        <module>mifss-intf-chr</module>
+        <module>mifss-intf-fraud</module>
+        <module>mifss-intf-hd</module>
+        <module>mifss-intf-ipt</module>
+        <module>mifss-intf-job</module>
+        <module>mifss-intf-opt</module>
+        <module>mifss-intf-pha</module>
+        <module>mifss-intf-trt</module>
     </modules>
 
     <dependencies>
