@@ -32,6 +32,7 @@
     <properties>
         <dubbo.version>3.2.0</dubbo.version>
         <jackson.version>2.13.5</jackson.version>
+        <redis.clients.version>2.9.3</redis.clients.version>
     </properties>
 
     <dependencyManagement>
@@ -41,13 +42,20 @@
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>3.2.0</version>
+                <version>${dubbo.version}</version>
             </dependency>
             <!-- Nacos 注册中心 -->
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-registry-nacos</artifactId>
                 <version>${dubbo.version}</version>
+            </dependency>
+
+            <!-- Redis clients -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${redis.clients.version}</version>
             </dependency>
 
             <!-- Jackson -->
@@ -66,6 +74,7 @@
                 <artifactId>jackson-annotations</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 

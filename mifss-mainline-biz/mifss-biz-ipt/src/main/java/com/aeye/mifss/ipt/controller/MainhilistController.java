@@ -1,5 +1,7 @@
 package com.aeye.mifss.ipt.controller;
 
+import cn.hsa.hsaf.core.framework.context.HsafContextHolder;
+import cn.hsa.hsaf.core.framework.util.CurrentUser;
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import cn.hsa.ims.common.utils.AeyePageResult;
 import io.swagger.annotations.Api;
@@ -20,6 +22,9 @@ public class MainhilistController {
     @ApiOperation(value = "查询列表")
     @RequestMapping(value = "/list", method = { RequestMethod.POST })
     public WrapperResponse<List<MainHilistDTO>> list(MainHilistDTO params) throws Exception {
+
+        CurrentUser user = HsafContextHolder.getContext().getCurrentUser();
+
         List<MainHilistDTO> list = new ArrayList();
         MainHilistDTO baean1 = new MainHilistDTO();
         baean1.setHilistCode("1000000000001");
