@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mifss-mainline</artifactId>
+        <groupId>com.aeye.mifss</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mifss-app</artifactId>
+    <description>主干-发布包构建模�</description>
+    <packaging>pom</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-bio</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-ipt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-opt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-hd</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-bas</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-pha</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-trt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-video</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-job</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-bc</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <includeGroupIds>com.aeye.mifss</includeGroupIds>
+                            <includeArtifactIds>
+                                mifss-biz-bio,
+                                mifss-biz-ipt,
+                                mifss-biz-opt,
+                                mifss-biz-hd,
+                                mifss-biz-bas,
+                                mifss-biz-pha,
+                                mifss-biz-trt,
+                                mifss-biz-video,
+                                mifss-biz-job,
+                                mifss-biz-api,
+                                mifss-biz-bc
+                            </includeArtifactIds>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>true</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                            <!-- Strip version if needed, but usually version is good for traceability -->
+                            <!-- <stripVersion>true</stripVersion> -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

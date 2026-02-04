@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: mifss-biz-bio
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+server:
+  port: 8801
+  servlet:
+    context-path: /mifss-biz-bio
+dubbo:
+  application:
+    name: mifss-biz-bio
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://127.0.0.1:8848

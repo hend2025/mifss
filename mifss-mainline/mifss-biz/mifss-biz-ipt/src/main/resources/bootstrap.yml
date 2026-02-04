@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: mifss-ipt
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+server:
+  port: 8802
+  servlet:
+    context-path: /mifss/ipt
+dubbo:
+  registry:
+    address: nacos://127.0.0.1:8848
+  metadata-report:
+    address: nacos://127.0.0.1:8848
+  application:
+    name: mifss-ipt
+    parameters:
+      dubbo.application.service-discovery.migration: FORCE_INTERFACE
