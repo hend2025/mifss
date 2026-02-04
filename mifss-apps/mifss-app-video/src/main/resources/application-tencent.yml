@@ -1,6 +1,0 @@
-﻿mifss:
-  cloud:
-    provider: tencent
-    storage: cos
-    database: tdsql
-    message-queue: tdmq

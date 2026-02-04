@@ -1,6 +1,0 @@
-﻿mifss:
-  cloud:
-    provider: huawei
-    storage: obs
-    database: gaussdb
-    message-queue: dms

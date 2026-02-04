@@ -1,6 +1,0 @@
-mifss:
-  cloud:
-    provider: generic
-    storage: minio
-    database: mysql
-    message-queue: rabbitmq

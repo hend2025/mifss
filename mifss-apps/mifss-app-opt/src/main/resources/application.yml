@@ -1,8 +1,0 @@
-﻿spring:
-  application:
-    name: mifss-app-opt
-  profiles:
-    active: @cloud.provider@
-
-server:
-  port: 8080
