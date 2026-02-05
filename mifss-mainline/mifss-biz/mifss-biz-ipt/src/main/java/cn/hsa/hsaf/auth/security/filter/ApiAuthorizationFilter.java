@@ -26,6 +26,7 @@ public class ApiAuthorizationFilter implements Filter {
                 isPrivilege = ctx.getEnvironment().getProperty("security.isPrivilege", Boolean.class, false);
             }
         } catch (Exception e) {
+            e.printStackTrace();
             isPrivilege = true;
         }
 

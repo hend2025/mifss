@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="097fe104-4d62-47be-899d-ff7843e77719" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/cn/hsa/hsaf/auth/security/filter/ApiAuthorizationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/MainhilistController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/dto/MainHilistDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bio/src/main/java/com/aeye/mifss/bio/service/RpcFaceRecognitionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/controller/BioFaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/controller/BioFaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/FaceRecognitionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/FaceRecognitionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/IptFaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/IptFaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bio/src/main/java/com/aeye/mifss/bio/service/FaceRecognitionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/service/FaceRecognitionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/GuangxiFaceRecognitionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/GuangxiFaceRecognitionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/GuangxiIptFaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/GuangxiIptFaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/cn/hsa/hsaf/auth/security/filter/ApiAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/cn/hsa/hsaf/auth/security/filter/ApiAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/IptApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/IptApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,8 +184,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.IptApplication" />
         <item itemvalue="Spring Boot.BioApplication" />
+        <item itemvalue="Spring Boot.IptApplication" />
         <item itemvalue="Spring Boot.GuangxiIptApplication" />
         <item itemvalue="Spring Boot.GuangxiBioApplication" />
       </list>
@@ -217,11 +209,22 @@
       <workItem from="1770213618003" duration="2750000" />
       <workItem from="1770257232778" duration="17402000" />
       <workItem from="1770277759997" duration="3673000" />
-      <workItem from="1770281704431" duration="1939000" />
+      <workItem from="1770281704431" duration="3851000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/cn/hsa/hsaf/auth/security/filter/ApiAuthorizationFilter.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
