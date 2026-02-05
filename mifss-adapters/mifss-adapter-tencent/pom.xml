@@ -11,12 +11,61 @@
 
     <artifactId>mifss-adapter-tencent</artifactId>
 
+    <properties>
+        <awsjavasdk.version>1.11.603</awsjavasdk.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-adapter-api</artifactId>
         </dependency>
-        <!-- Add Tencent Cloud SDK dependencies here -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hsa.hsaf.core</groupId>
+            <artifactId>hsaf-core</artifactId>
+            <version>1.2.5</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--TStack 文件存储-->
+        <dependency>
+            <groupId>cn.hsa.hsaf.adapt</groupId>
+            <artifactId>hsaf-tencent-fsstore</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <!-- ceph s3 need -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-s3</artifactId>
+            <version>${awsjavasdk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-core</artifactId>
+            <version>${awsjavasdk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-kms</artifactId>
+            <version>${awsjavasdk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>jmespath-java</artifactId>
+            <version>${awsjavasdk.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>
