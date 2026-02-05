@@ -9,6 +9,8 @@ swagger:
   version: 1.0.0
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: mifss-ipt
 #  profiles:
@@ -69,6 +71,10 @@ dubbo:
     timeout: 10000
   scan:
     base-packages: com.aeye.mifss
+
+mifss:
+  dubbo:
+    group: guangxi
 
 fsstore:
   type: minio

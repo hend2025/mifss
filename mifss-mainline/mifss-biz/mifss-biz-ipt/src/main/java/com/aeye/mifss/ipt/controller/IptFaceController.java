@@ -8,13 +8,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping("/face")
 public class IptFaceController {
 
-
-    @DubboReference(check = false)
+    @DubboReference(check = false, group = "${mifss.dubbo.group:}")
     private FaceRecognitionService faceRecognitionService;
 
     @PostMapping("/detect")

@@ -11,6 +11,7 @@ public class FaceRecognitionServiceImpl implements FaceRecognitionService {
 
     @Override
     public String detectFace(FaceImageReq request) {
+        System.out.println("Parent - detectFace");
         if (request == null || request.getImageData() == null) {
             return "Error: Empty Request";
         }
@@ -19,7 +20,9 @@ public class FaceRecognitionServiceImpl implements FaceRecognitionService {
 
     @Override
     public boolean authenticate(FaceImageReq request) {
+        System.out.println("Parent - authenticate");
         return request != null && request.getImageData() != null && !request.getImageData().isEmpty();
     }
+
 
 }
