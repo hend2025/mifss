@@ -1,7 +1,7 @@
 package com.aeye.mifss.ipt.controller;
 
 import com.aeye.mifss.bio.dto.FaceImageReq;
-import com.aeye.mifss.bio.service.FaceRecognitionService;
+import com.aeye.mifss.bio.service.RpcFaceRecognitionService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class IptFaceController {
 
     @DubboReference(check = false, group = "${mifss.dubbo.group:}")
-    private FaceRecognitionService faceRecognitionService;
+    private RpcFaceRecognitionService faceRecognitionService;
 
     @PostMapping("/detect")
     public String detectFace(@RequestBody FaceImageReq request) {

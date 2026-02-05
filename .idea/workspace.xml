@@ -5,23 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="097fe104-4d62-47be-899d-ff7843e77719" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-api/src/main/java/cn/hsa/ims/common/utils/AeyeFSManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/hsaf/generic/minio/MINIOStoreGenericManagerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/ims/generic/config/FDFSStoreConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/ims/generic/config/MINIOStoreConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-huawei/src/main/java/cn/hsa/ims/huawei/config/OBSStoreConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-tencent/src/main/java/cn/hsa/ims/tencent/config/TStackStoreConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/src/main/java/cn/hsa/ims/common/utils/AeyeCurrentUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/src/main/java/cn/hsa/ims/common/utils/AeyeLoginUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/cn/hsa/hsaf/auth/security/filter/ApiAuthorizationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/MainhilistController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/dto/MainHilistDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bio/src/main/java/com/aeye/mifss/bio/service/RpcFaceRecognitionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-aliyun/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-aliyun/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-huawei/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-huawei/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-tencent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-tencent/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/controller/BioFaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/controller/BioFaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/FaceRecognitionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/FaceRecognitionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/IptFaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/IptFaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bio/src/main/java/com/aeye/mifss/bio/service/FaceRecognitionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/service/FaceRecognitionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/GuangxiFaceRecognitionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/GuangxiFaceRecognitionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/GuangxiIptFaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/GuangxiIptFaceController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +64,7 @@
     "Spring Boot.IptApplication.executor": "Debug",
     "git-widget-placeholder": "v2.0.0",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/mifss-parent/mifss/mifss-commons/mifss-commons-security",
+    "last_opened_file_path": "D:/mifss-parent/mifss/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,23 +75,28 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-biz\mifss-biz-ipt\src\main\java\com\aeye\mifss\ipt" />
+      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-biz\mifss-biz-ipt\src\main\java\com\aeye\mifss\ipt\controller" />
       <recent name="D:\mifss-parent\mifss\mifss-commons\mifss-commons-security" />
       <recent name="D:\mifss-parent\mifss\mifss-commons\mifss-commons-core" />
       <recent name="D:\mifss-parent\mifss\mifss-adapters\mifss-adapter-api" />
-      <recent name="D:\mifss-parent\mifss\mifss-adapters\mifss-adapter-tencent" />
-      <recent name="D:\mifss-parent\mifss\mifss-adapters\mifss-adapter-huawei" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\mifss-parent\mifss\mifss-projects\mifss-guangxi\mifss-guangxi-biz\mifss-guangxi-biz-ipt\src\main\java\com\aeye\mifss\controller" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.aeye.mifss.bio.service" />
       <recent name="com.aeye.mifss" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.aeye.guangxi.controller" />
       <recent name="com.aeye.mifss.bio.service.impl" />
+      <recent name="cn.hsa.hsaf.auth.security.filter" />
+      <recent name="com.aeye.guangxi.controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -112,15 +113,17 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
+              <entry key="BioApplication" value="STOPPED" />
               <entry key="GuangxiBioApplication" value="STOPPED" />
               <entry key="GuangxiIptApplication" value="STOPPED" />
+              <entry key="IptApplication" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GuangxiIptApplication">
+  <component name="RunManager" selected="Spring Boot.IptApplication">
     <configuration name="BioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="mifss-biz-bio" />
@@ -189,10 +192,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GuangxiIptApplication" />
-        <item itemvalue="Spring Boot.GuangxiBioApplication" />
         <item itemvalue="Spring Boot.IptApplication" />
         <item itemvalue="Spring Boot.BioApplication" />
+        <item itemvalue="Spring Boot.GuangxiIptApplication" />
+        <item itemvalue="Spring Boot.GuangxiBioApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -213,22 +216,12 @@
       <updated>1770213616393</updated>
       <workItem from="1770213618003" duration="2750000" />
       <workItem from="1770257232778" duration="17402000" />
-      <workItem from="1770277759997" duration="2854000" />
+      <workItem from="1770277759997" duration="3673000" />
+      <workItem from="1770281704431" duration="1939000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/GuangxiIptFaceController.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

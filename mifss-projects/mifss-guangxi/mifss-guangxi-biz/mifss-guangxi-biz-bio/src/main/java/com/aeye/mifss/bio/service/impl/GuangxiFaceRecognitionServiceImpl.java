@@ -1,13 +1,13 @@
 package com.aeye.mifss.bio.service.impl;
 
 import com.aeye.mifss.bio.dto.FaceImageReq;
-import com.aeye.mifss.bio.service.FaceRecognitionService;
+import com.aeye.mifss.bio.service.RpcFaceRecognitionService;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 @Service
-@DubboService(interfaceClass = FaceRecognitionService.class, group = "guangxi")
+@DubboService(interfaceClass = RpcFaceRecognitionService.class, group = "guangxi")
 @Primary
 public class GuangxiFaceRecognitionServiceImpl extends FaceRecognitionServiceImpl {
 

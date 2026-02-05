@@ -2,12 +2,13 @@ package com.aeye.mifss.bio.service.impl;
 
 import com.aeye.mifss.bio.dto.FaceImageReq;
 import com.aeye.mifss.bio.service.FaceRecognitionService;
+import com.aeye.mifss.bio.service.RpcFaceRecognitionService;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.stereotype.Service;
 
 @Service
-@DubboService(interfaceClass = FaceRecognitionService.class)
-public class FaceRecognitionServiceImpl implements FaceRecognitionService {
+@DubboService(interfaceClass = RpcFaceRecognitionService.class)
+public class FaceRecognitionServiceImpl implements FaceRecognitionService,RpcFaceRecognitionService {
 
     @Override
     public String detectFace(FaceImageReq request) {

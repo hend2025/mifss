@@ -8,10 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * BIO Module Face Controller
- * Local calls to FaceRecognitionService
- */
 @RestController
 @RequestMapping("/face")
 public class BioFaceController {
@@ -27,7 +23,7 @@ public class BioFaceController {
         return faceRecognitionService.detectFace(request);
     }
 
-    @PostMapping("/authenticate")
+    @PostMapping(value = "/authenticate")
     public boolean authenticate(@RequestBody FaceImageReq request) {
         if (request == null || request.getImageData() == null || request.getImageData().isEmpty()) {
             return false;
