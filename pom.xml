@@ -24,6 +24,7 @@
         <spring-boot.version>2.0.9.RELEASE</spring-boot.version>
         <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
         <dubbo.version>3.0.7</dubbo.version>
+        <maven-dependency-plugin.version>3.1.2</maven-dependency-plugin.version>
     </properties>
 
     <build>

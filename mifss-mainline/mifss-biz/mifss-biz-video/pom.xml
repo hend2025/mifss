@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-biz-video</artifactId>
-    <description>视频监控接入与分�</description>
+    <description>视频监控</description>
 
     <dependencies>
         <dependency>

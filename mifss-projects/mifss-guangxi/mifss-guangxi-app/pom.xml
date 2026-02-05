@@ -28,7 +28,7 @@
             <artifactId>mifss-guangxi-biz-hd</artifactId>
         </dependency>
 
-        <!-- Mainline Modules (To be renamed) -->
+        <!-- Mainline Modules -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-biz-bas</artifactId>
@@ -68,7 +68,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.1.2</version>
+                <version>${maven-dependency-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>copy-dependencies</id>

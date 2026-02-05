@@ -5,14 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="097fe104-4d62-47be-899d-ff7843e77719" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/service/BaseServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/service/LocalService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/service/RpcService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/LambdaUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/OrderBy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcQueryWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcUpdateWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcWrapperConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/SFunction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/SqlOperator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-dependencies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-dependencies/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/GuangxiBioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/GuangxiBioApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-video/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-video/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bio/src/main/java/com/aeye/mifss/bio/service/FaceRecognitionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bio/src/main/java/com/aeye/mifss/bio/service/FaceRecognitionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/GuangxiFaceRecognitionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/GuangxiFaceRecognitionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/java/com/aeye/mifss/GuangxiIptApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/java/com/aeye/mifss/GuangxiIptApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +64,7 @@
   "keyToString": {
     "Maven.mifss [clean].executor": "Run",
     "Maven.mifss [package].executor": "Run",
+    "Maven.mifss [verify].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -55,7 +76,7 @@
     "Spring Boot.IptApplication.executor": "Debug",
     "git-widget-placeholder": "v2.0.0",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/mifss-parent/mifss/mifss-commons/mifss-commons-core",
+    "last_opened_file_path": "D:/mifss-parent/mifss/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,11 +88,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mifss-parent\mifss\mifss-projects\mifss-guangxi\mifss-guangxi-biz\mifss-guangxi-biz-ipt\src\main\resources" />
+      <recent name="D:\mifss-parent\mifss\mifss-projects\mifss-guangxi\mifss-guangxi-biz\mifss-guangxi-biz-bio\src\main\resources" />
       <recent name="D:\mifss-parent\mifss\mifss-commons\mifss-commons-core" />
       <recent name="D:\mifss-parent\mifss\mifss-commons\mifss-commons-core\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.IptApplication">
+  <component name="RunManager" selected="Spring Boot.BioApplication">
     <configuration name="BioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="mifss-biz-bio" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.aeye.mifss.BioApplication" />
@@ -100,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.IptApplication" />
         <item itemvalue="Spring Boot.BioApplication" />
+        <item itemvalue="Spring Boot.IptApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +144,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770213616393</updated>
       <workItem from="1770213618003" duration="2750000" />
-      <workItem from="1770257232778" duration="4121000" />
+      <workItem from="1770257232778" duration="5634000" />
     </task>
     <servers />
   </component>
