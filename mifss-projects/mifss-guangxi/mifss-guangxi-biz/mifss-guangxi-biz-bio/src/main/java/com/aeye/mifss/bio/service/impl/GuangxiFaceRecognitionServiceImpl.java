@@ -1,7 +1,6 @@
 package com.aeye.mifss.bio.service.impl;
 
 import com.aeye.mifss.bio.dto.FaceImageReq;
-import com.aeye.mifss.bio.service.impl.MainlineFaceRecognitionServiceImpl;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service("guangxiFaceRecognitionService")
 @Primary // Ensures this bean is preferred when injecting FaceRecognitionService
 @DubboService
-public class GuangxiFaceRecognitionServiceImpl extends MainlineFaceRecognitionServiceImpl {
+public class GuangxiFaceRecognitionServiceImpl extends FaceRecognitionServiceImpl {
 
     @Override
     public String detectFace(FaceImageReq request) {

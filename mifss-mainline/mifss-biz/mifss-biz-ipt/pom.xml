@@ -19,12 +19,10 @@
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-intf-bio</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-biz-bas</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -35,13 +33,11 @@
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>3.2.0</version>
         </dependency>
         <!-- Nacos 注册中心 -->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-registry-nacos</artifactId>
-            <version>3.2.0</version>
         </dependency>
 
         <dependency>
@@ -56,11 +52,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.3.1</version>
-        </dependency>
+        <!-- Removed duplicate mybatis-plus -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

@@ -6,40 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="097fe104-4d62-47be-899d-ff7843e77719" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-aliyun/src/main/java/cn/hsa/ims/ali/config/OSSStoreConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/hsaf/generic/minio/MINIOStoreGenericManagerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/ims/generic/config/FDFSStoreConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/ims/generic/config/MINIOStoreConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-huawei/src/main/java/cn/hsa/ims/huawei/config/OBSStoreConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-tencent/src/main/java/cn/hsa/ims/tencent/config/TStackStoreConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/cn/hsa/ims/common/utils/AeyeFSManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/cn/hsa/ims/common/utils/AeyePageResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/cn/hsa/ims/common/utils/AeyeSpringContextUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/service/BaseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/LocalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/service/LocalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/RpcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/service/RpcService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/wrapper/LambdaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/LambdaUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/wrapper/OrderBy.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/OrderBy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcCondition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcQueryWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcQueryWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcUpdateWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcUpdateWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcWrapperConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/RpcWrapperConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/wrapper/SFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/SFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/wrapper/SqlOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/com/aeye/mifss/common/mybatis/wrapper/SqlOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/src/main/java/cn/hsa/ims/common/utils/AeyeCurrentUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/src/main/java/cn/hsa/ims/common/utils/AeyeLoginUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-swagger/src/main/java/com/aeye/mifss/common/swagger/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-swagger/src/main/java/com/aeye/mifss/common/swagger/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-dependencies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-dependencies/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/BioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/BioApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/MainlineFaceRecognitionServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/IptApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/IptApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/IptFaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/IptFaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/GuangxiBioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/GuangxiBioApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/GuangxiFaceRecognitionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-bio/src/main/java/com/aeye/mifss/bio/service/impl/GuangxiFaceRecognitionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/java/com/aeye/mifss/GuangxiIptApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-biz/mifss-guangxi-biz-ipt/src/main/java/com/aeye/mifss/GuangxiIptApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770213616393</updated>
       <workItem from="1770213618003" duration="2750000" />
-      <workItem from="1770257232778" duration="3049000" />
+      <workItem from="1770257232778" duration="4121000" />
     </task>
     <servers />
   </component>
