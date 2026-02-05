@@ -15,7 +15,7 @@ spring:
 #    active: @cloud.provider@
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${mysql_host_port:127.0.0.1:3306}/${database_name:medicare_202588}?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
 
@@ -63,7 +63,7 @@ dubbo:
     name: dubbo
     port: 20881
   registry:
-    address: nacos://${nacos_host_port:127.0.0.1:8848}
+    address: nacos://127.0.0.1:8848
   consumer:
     check: false
     timeout: 10000

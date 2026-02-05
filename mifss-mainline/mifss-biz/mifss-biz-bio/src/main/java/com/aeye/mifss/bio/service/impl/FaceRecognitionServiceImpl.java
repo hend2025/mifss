@@ -5,16 +5,12 @@ import com.aeye.mifss.bio.service.FaceRecognitionService;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.stereotype.Service;
 
-/**
- * Mainline implementation of FaceRecognitionService
- */
-@Service("faceRecognitionService")
-@DubboService
-public class MainlineFaceRecognitionServiceImpl implements FaceRecognitionService {
+@Service
+@DubboService(interfaceClass = FaceRecognitionService.class)
+public class FaceRecognitionServiceImpl implements FaceRecognitionService {
 
     @Override
     public String detectFace(FaceImageReq request) {
-        // Mainline standard algorithm
         if (request == null || request.getImageData() == null) {
             return "Error: Empty Request";
         }
@@ -23,8 +19,7 @@ public class MainlineFaceRecognitionServiceImpl implements FaceRecognitionServic
 
     @Override
     public boolean authenticate(FaceImageReq request) {
-        // Mainline standard authentication logic
-        // Mock implementation
         return request != null && request.getImageData() != null && !request.getImageData().isEmpty();
     }
+
 }

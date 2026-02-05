@@ -1,15 +1,14 @@
 package com.aeye.mifss.common.mybatis.service;
 
 import cn.hutool.core.bean.BeanUtil;
-
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
 import com.aeye.mifss.common.mybatis.wrapper.RpcUpdateWrapper;
 import com.aeye.mifss.common.mybatis.wrapper.RpcWrapperConverter;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.IService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.Collection;

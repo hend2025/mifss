@@ -12,24 +12,34 @@
     <artifactId>mifss-biz-bio</artifactId>
 
     <dependencies>
-         <dependency>
+        <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-intf-bio</artifactId>
+            <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-bas</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
+        <!-- Dubbo3 依赖 -->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>3.2.0</version>
         </dependency>
-        <!-- Nacos Discovery -->
+        <!-- Nacos 注册中心 -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-registry-nacos</artifactId>
+            <version>3.2.0</version>
         </dependency>
-        <!-- Nacos Config -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-web</artifactId>
@@ -38,6 +48,20 @@
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-swagger</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
