@@ -20,14 +20,14 @@ public class BioFaceController {
         if (request == null || request.getImageData() == null || request.getImageData().isEmpty()) {
             return "Error: Empty Image Data";
         }
-        return faceRecognitionService.detectFace(request);
+        return faceRecognitionService.faceDetect(request);
     }
 
-    @PostMapping(value = "/authenticate")
-    public boolean authenticate(@RequestBody FaceImageReq request) {
+    @PostMapping(value = "/faceAuthenticate")
+    public boolean faceAuthenticate(@RequestBody FaceImageReq request) {
         if (request == null || request.getImageData() == null || request.getImageData().isEmpty()) {
             return false;
         }
-        return faceRecognitionService.authenticate(request);
+        return faceRecognitionService.faceAuthenticate(request);
     }
 }

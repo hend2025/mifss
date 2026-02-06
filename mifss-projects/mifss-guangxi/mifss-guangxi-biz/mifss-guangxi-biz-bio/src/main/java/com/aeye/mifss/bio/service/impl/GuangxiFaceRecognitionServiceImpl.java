@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class GuangxiFaceRecognitionServiceImpl extends FaceRecognitionServiceImpl {
 
     @Override
-    public String detectFace(FaceImageReq request) {
+    public String faceDetect(FaceImageReq request) {
         System.out.println("Guangxi - detectFace");
         if (request == null || request.getImageData() == null) {
             return "Error: Empty Request";

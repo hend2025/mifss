@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class FaceRecognitionServiceImpl implements FaceRecognitionService,RpcFaceRecognitionService {
 
     @Override
-    public String detectFace(FaceImageReq request) {
+    public String faceDetect(FaceImageReq request) {
         System.out.println("Parent - detectFace");
         if (request == null || request.getImageData() == null) {
             return "Error: Empty Request";
@@ -20,7 +20,7 @@ public class FaceRecognitionServiceImpl implements FaceRecognitionService,RpcFac
     }
 
     @Override
-    public boolean authenticate(FaceImageReq request) {
+    public boolean faceAuthenticate(FaceImageReq request) {
         System.out.println("Parent - authenticate");
         return request != null && request.getImageData() != null && !request.getImageData().isEmpty();
     }

@@ -4,7 +4,7 @@ import com.aeye.mifss.bio.dto.FaceImageReq;
 
 public interface RpcFaceRecognitionService {
 
-    String detectFace(FaceImageReq request);
+    String faceDetect(FaceImageReq request);
 
-    boolean authenticate(FaceImageReq request);
+    boolean faceAuthenticate(FaceImageReq request);
 }

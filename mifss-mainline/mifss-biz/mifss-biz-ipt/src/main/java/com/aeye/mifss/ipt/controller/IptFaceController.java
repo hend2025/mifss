@@ -1,5 +1,6 @@
 package com.aeye.mifss.ipt.controller;
 
+import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import com.aeye.mifss.bio.dto.FaceImageReq;
 import com.aeye.mifss.bio.service.RpcFaceRecognitionService;
 import org.apache.dubbo.config.annotation.DubboReference;
@@ -16,19 +17,21 @@ public class IptFaceController {
     private RpcFaceRecognitionService faceRecognitionService;
 
     @PostMapping("/detect")
-    public String detectFace(@RequestBody FaceImageReq request) {
+    public WrapperResponse<String> faceDetect(@RequestBody FaceImageReq request) {
         if (request == null || request.getImageData() == null || request.getImageData().isEmpty()) {
-            return "Error: Empty Image Data";
+            return WrapperResponse.fail("Error: Empty Image Data");
         }
-        return faceRecognitionService.detectFace(request);
+        String ret = faceRecognitionService.faceDetect(request);
+        return WrapperResponse.success(ret);
     }
 
-    @PostMapping("/authenticate")
-    public boolean authenticate(@RequestBody FaceImageReq request) {
+    @PostMapping("/faceAuthenticate")
+    public WrapperResponse<Boolean> faceAuthenticate(@RequestBody FaceImageReq request) {
         if (request == null || request.getImageData() == null || request.getImageData().isEmpty()) {
-            return false;
+            return WrapperResponse.success(false);
         }
-        return faceRecognitionService.authenticate(request);
+        boolean ret = faceRecognitionService.faceAuthenticate(request);
+        return WrapperResponse.success(ret);
     }
 
 }

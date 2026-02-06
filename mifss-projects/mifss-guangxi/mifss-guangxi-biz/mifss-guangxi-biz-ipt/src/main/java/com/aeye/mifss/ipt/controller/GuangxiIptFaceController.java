@@ -1,5 +1,6 @@
 package com.aeye.mifss.ipt.controller;
 
+import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import com.aeye.mifss.bio.dto.FaceImageReq;
 import com.aeye.mifss.bio.service.RpcFaceRecognitionService;
 import org.apache.dubbo.config.annotation.DubboReference;
@@ -15,19 +16,21 @@ public class GuangxiIptFaceController extends IptFaceController {
     @DubboReference(check = false, group = "${mifss.dubbo.group:guangxi}")
     private RpcFaceRecognitionService faceRecognitionService;
 
-    @PostMapping("/authenticate")
-    public boolean authenticate(@RequestBody FaceImageReq request) {
-        System.out.println(" Guangxi   authenticate ");
+    @PostMapping("/faceAuthenticate")
+    public WrapperResponse<Boolean> faceAuthenticate(@RequestBody FaceImageReq request) {
+        System.out.println(" Guangxi   faceAuthenticate ");
         if (request == null || request.getImageData() == null || request.getImageData().isEmpty()) {
-            return false;
+            return WrapperResponse.success(false);
         }
-        return faceRecognitionService.authenticate(request);
+        boolean ret = faceRecognitionService.faceAuthenticate(request);
+        return WrapperResponse.success(ret);
     }
 
-    @PostMapping("/detectFace22")
-    public String detectFace22(@RequestBody FaceImageReq request) {
-        System.out.println(" Guangxi   detectFace22 ");
-        return faceRecognitionService.detectFace(request);
+    @PostMapping("/faceDetect22")
+    public WrapperResponse<String> faceDetect22(@RequestBody FaceImageReq request) {
+        System.out.println(" Guangxi   faceDetect22 ");
+        String ret = faceRecognitionService.faceDetect(request);
+        return WrapperResponse.success(ret);
     }
 
 }

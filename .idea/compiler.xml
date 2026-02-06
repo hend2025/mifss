@@ -13,6 +13,7 @@
         <module name="mifss-intf-bas" />
         <module name="mifss-commons-web" />
         <module name="mifss-guangxi-biz-bio" />
+        <module name="mifss-app-bio" />
         <module name="mifss-biz-api" />
         <module name="mifss-intf-pha" />
         <module name="mifss-intf-video" />
@@ -34,6 +35,7 @@
         <module name="mifss-biz-trt" />
         <module name="mifss-adapter-huawei" />
         <module name="mifss-intf-job" />
+        <module name="mifss-app-ipt" />
         <module name="mifss-guangxi-intf" />
         <module name="mifss-adapter-tencent" />
         <module name="mifss-intf-bio" />
