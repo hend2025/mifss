@@ -3,24 +3,19 @@
   servlet:
     context-path: /mifss/ipt
 
-swagger:
-  title: MIFSS IPT API
-  description: MIFSS 住院服务 API 文档
-  version: 1.0.0
-
 spring:
   application:
     name: mifss-ipt
 
 #  profiles:
 #    active: @cloud.provider@
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
   
-
 security:
   type: hsa-mock
   isPrivilege: true
@@ -80,3 +75,8 @@ mio:
   endpoint: http://192.168.17.13:9900
   accessKeyId: aeye
   secretAccessKey: Zhy778899
+
+swagger:
+  title: MIFSS IPT API
+  description: MIFSS 住院服务 API 文档
+  version: 1.0.0

@@ -12,21 +12,21 @@
     <artifactId>mifss-biz-bio</artifactId>
     <description>Bio-Metric Business Implementation (生物识别业务实现)</description>
 
+    <properties>
+        <!-- 无属性：强制通过 BOM 继承版本 -->
+    </properties>
+
     <dependencies>
         <!-- =================================================================== -->
-        <!-- 接口依赖 (Interface Dependencies)                                    -->
+        <!-- 1. Spring Boot & Web 基础                                          -->
         <!-- =================================================================== -->
         <dependency>
-            <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-intf-bio</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-biz-bas</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <!-- =================================================================== -->
-        <!-- 通用组件 (Commons)                                                  -->
+        <!-- 2. 内部公共层与接口 (Internal Commons & Interfaces)                   -->
         <!-- =================================================================== -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
@@ -40,10 +40,42 @@
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-swagger</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-commons-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-intf-bio</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-bas</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-adapter-api</artifactId>
+        </dependency>
 
         <!-- =================================================================== -->
-        <!-- RPC & Registry                                                      -->
+        <!-- 3. 中间件集成 (Middleware: Redis, Dubbo, Nacos)                       -->
         <!-- =================================================================== -->
+        <!-- Redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+
+        <!-- Dubbo & Nacos -->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
@@ -51,6 +83,15 @@
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-registry-nacos</artifactId>
+        </dependency>
+
+        <!-- =================================================================== -->
+        <!-- 4. 工具与辅助 (Tools: Lombok)                                        -->
+        <!-- =================================================================== -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

@@ -60,8 +60,6 @@
         </constructor-arg>
     </bean>
 
-
-
     <bean id="hsafRedisTemplate" class="org.springframework.data.redis.core.RedisTemplate" primary="true">
         <!-- connectionFactory:可引用单机版，也可引用集群版，这里引入单机-->
         <property name="connectionFactory" ref="distributedJedisConnectionFactory" />
@@ -84,4 +82,3 @@
     </bean>
 
 </beans>
-

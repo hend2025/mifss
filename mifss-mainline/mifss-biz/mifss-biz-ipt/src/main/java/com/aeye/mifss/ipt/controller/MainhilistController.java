@@ -21,7 +21,7 @@ public class MainhilistController {
 
     @ApiOperation(value = "查询列表")
     @RequestMapping(value = "/list", method = { RequestMethod.POST })
-    public WrapperResponse<List<MainHilistDTO>> list(MainHilistDTO params) throws Exception {
+    public WrapperResponse<List<MainHilistDTO>> list() throws Exception {
 
         CurrentUser user = HsafContextHolder.getContext().getCurrentUser();
 
