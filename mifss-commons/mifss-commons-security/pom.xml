@@ -13,14 +13,23 @@
     <description>Common Security Configuration (通用安全认证配置)</description>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-core</artifactId>
         </dependency>
 
-        <!-- =================================================================== -->
-        <!-- Security & OAuth2 核心组件                                           -->
-        <!-- =================================================================== -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
@@ -44,9 +53,6 @@
             <artifactId>spring-security-oauth2-autoconfigure</artifactId>
         </dependency>
 
-        <!-- =================================================================== -->
-        <!-- HSAF 集成 (Internal Framework)                                       -->
-        <!-- =================================================================== -->
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
@@ -70,13 +76,15 @@
             <artifactId>hsaf-cache-redis</artifactId>
         </dependency>
 
-        <!-- =================================================================== -->
-        <!-- 工具 (Tools)                                                        -->
-        <!-- =================================================================== -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
         </dependency>
 
     </dependencies>

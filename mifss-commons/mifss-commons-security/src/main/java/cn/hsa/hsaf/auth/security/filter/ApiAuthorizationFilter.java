@@ -7,6 +7,7 @@ import cn.hutool.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Primary;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -14,11 +15,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+@Primary
 public class ApiAuthorizationFilter implements Filter {
     private static Logger log = LoggerFactory.getLogger(ApiAuthorizationFilter.class);
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
         Boolean isPrivilege = true;
         try {
             ApplicationContext ctx = AeyeSpringContextUtils.getApplicationContext();
@@ -26,7 +29,7 @@ public class ApiAuthorizationFilter implements Filter {
                 isPrivilege = ctx.getEnvironment().getProperty("security.isPrivilege", Boolean.class, false);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
             isPrivilege = true;
         }
 
@@ -37,9 +40,10 @@ public class ApiAuthorizationFilter implements Filter {
         }
     }
 
-    public void doHsaFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        HttpServletRequest httprequest = (HttpServletRequest)request;
-        HttpServletResponse httpresponse = (HttpServletResponse)response;
+    public void doHsaFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
+        HttpServletRequest httprequest = (HttpServletRequest) request;
+        HttpServletResponse httpresponse = (HttpServletResponse) response;
         ApiVerifyUtil apiVerifyUtil = new ApiVerifyUtil();
 
         try {

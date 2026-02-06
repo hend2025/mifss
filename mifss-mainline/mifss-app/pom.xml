@@ -77,8 +77,6 @@
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <includeGroupIds>com.aeye.mifss</includeGroupIds>
                             <includeArtifactIds>
-                                mifss-biz-bio,
-                                mifss-biz-ipt,
                                 mifss-biz-opt,
                                 mifss-biz-hd,
                                 mifss-biz-bas,
@@ -92,8 +90,25 @@
                             <overWriteReleases>false</overWriteReleases>
                             <overWriteSnapshots>true</overWriteSnapshots>
                             <overWriteIfNewer>true</overWriteIfNewer>
-                            <!-- Strip version if needed, but usually version is good for traceability -->
-                            <!-- <stripVersion>true</stripVersion> -->
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy-exec-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <includeGroupIds>com.aeye.mifss</includeGroupIds>
+                            <includeArtifactIds>
+                                mifss-biz-bio,
+                                mifss-biz-ipt
+                            </includeArtifactIds>
+                            <classifier>exec</classifier>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>true</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
                         </configuration>
                     </execution>
                 </executions>

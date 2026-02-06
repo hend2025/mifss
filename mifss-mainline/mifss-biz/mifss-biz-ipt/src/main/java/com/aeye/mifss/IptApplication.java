@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableDubbo
-@SpringBootApplication(scanBasePackages = { "com.aeye.mifss" })
+@SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa.ims" })
 public class IptApplication {
     public static void main(String[] args) {
         SpringApplication.run(IptApplication.class, args);

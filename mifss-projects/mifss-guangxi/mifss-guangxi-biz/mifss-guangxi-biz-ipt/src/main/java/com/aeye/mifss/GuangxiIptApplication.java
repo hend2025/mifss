@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 
-@SpringBootApplication
 @EnableDubbo
-@ComponentScan(basePackages = {"com.aeye.mifss"}, excludeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, classes = WildcardControllerFilter.class ))
+@SpringBootApplication
+@ComponentScan(basePackages = {"com.aeye.mifss", "cn.hsa.ims" }, excludeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, classes = WildcardControllerFilter.class ))
 public class GuangxiIptApplication {
     public static void main(String[] args) {
         SpringApplication.run(GuangxiIptApplication.class, args);

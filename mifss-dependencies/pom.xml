@@ -83,6 +83,7 @@
         <swagger.version>2.9.2</swagger.version>
         <knife4j.version>2.0.9</knife4j.version>
         <okhttp.version>3.8.1</okhttp.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <!-- Jackson: 必须与 Spring Boot 保持一致 -->
         <jackson.version>2.13.5</jackson.version>
     </properties>
@@ -496,6 +497,11 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-ui</artifactId>
                 <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
 
             <!-- 5.6 Jackson Customization (Explicit) -->
