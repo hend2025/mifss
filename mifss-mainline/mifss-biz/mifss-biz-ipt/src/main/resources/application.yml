@@ -11,6 +11,7 @@ swagger:
 spring:
   application:
     name: mifss-ipt
+
 #  profiles:
 #    active: @cloud.provider@
   datasource:
@@ -18,6 +19,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
+  
 
 security:
   type: hsa-mock

@@ -15,22 +15,6 @@
 
     <dependencyManagement>
         <dependencies>
-             <!-- Trunk Dependencies -->
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-guangxi-biz-bio</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-guangxi-biz-ipt</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-guangxi-biz-hd</artifactId>
-                <version>${project.version}</version>
-            </dependency>
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
                 <artifactId>mifss-dependencies</artifactId>

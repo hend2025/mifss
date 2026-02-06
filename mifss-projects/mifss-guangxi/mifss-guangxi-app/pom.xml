@@ -14,7 +14,6 @@
     <packaging>pom</packaging>
 
     <dependencies>
-        <!-- Custom Modules -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-guangxi-biz-bio</artifactId>

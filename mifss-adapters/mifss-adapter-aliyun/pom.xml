@@ -30,18 +30,15 @@
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
-            <version>${hsaf.core.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-ali-fsstore</artifactId>
-            <version>${hsaf.fsstore.ali.version}</version>
         </dependency>
         <dependency>
             <groupId>com.aliyun.oss</groupId>
             <artifactId>aliyun-sdk-oss</artifactId>
-            <version>${aliyun.oss.version}</version>
         </dependency>
 
     </dependencies>

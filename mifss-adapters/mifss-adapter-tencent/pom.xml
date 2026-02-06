@@ -34,7 +34,6 @@
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
-            <version>${hsaf.core.version}</version>
             <scope>compile</scope>
         </dependency>
 
@@ -42,28 +41,23 @@
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-tencent-fsstore</artifactId>
-            <version>${hsaf.fsstore.tencent.version}</version>
         </dependency>
         <!-- ceph s3 need -->
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
-            <version>${awsjavasdk.version}</version>
         </dependency>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-core</artifactId>
-            <version>${awsjavasdk.version}</version>
         </dependency>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-kms</artifactId>
-            <version>${awsjavasdk.version}</version>
         </dependency>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>jmespath-java</artifactId>
-            <version>${awsjavasdk.version}</version>
         </dependency>
 
     </dependencies>
