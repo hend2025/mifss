@@ -10,12 +10,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-adapter-tencent</artifactId>
+    <description>Tencent Adapter (腾讯云 COS 实现)</description>
 
     <properties>
-        <awsjavasdk.version>1.11.603</awsjavasdk.version>
+        <!-- 无属性：统一继承 -->
     </properties>
 
     <dependencies>
+        <!-- =================================================================== -->
+        <!-- 适配器接口 (API & Core)                                             -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-adapter-api</artifactId>
@@ -31,18 +35,24 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- =================================================================== -->
+        <!-- HSAF 实现 (HSAF Framework Implementation)                            -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
             <scope>compile</scope>
         </dependency>
 
-        <!--TStack 文件存储-->
+        <!-- TStack 文件存储 -->
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-tencent-fsstore</artifactId>
         </dependency>
-        <!-- ceph s3 need -->
+        
+        <!-- =================================================================== -->
+        <!-- Cloud SDKs (AWS S3 Compatible)                                      -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>

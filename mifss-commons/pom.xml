@@ -11,9 +11,23 @@
 
     <artifactId>mifss-commons</artifactId>
     <packaging>pom</packaging>
+    <description>MIFSS Commons Layer (公共组件层父工程)</description>
+
+    <!--
+        ================================================================================
+        公共层模块结构 (COMMONS MODULE STRUCTURE)
+        ================================================================================
+        - mifss-commons-core:     最基础的工具类，无业务属性。
+        - mifss-commons-web:      Web层通用配置 (统一异常处理, 拦截器等)。
+        - mifss-commons-orm:      持久层通用配置 (MyBatis-Plus, Druid等)。
+        - mifss-commons-security: 安全认证通用配置 (OAuth2, Spring Security)。
+        - mifss-commons-swagger:  API文档通用配置。
+        ================================================================================
+    -->
 
     <dependencyManagement>
         <dependencies>
+            <!-- 自身版本管理 (Self-management for internal resolution) -->
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
                 <artifactId>mifss-dependencies</artifactId>

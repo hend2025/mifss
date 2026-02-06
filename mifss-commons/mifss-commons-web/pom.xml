@@ -10,12 +10,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-commons-web</artifactId>
+    <description>Common Web Configuration (通用Web层配置)</description>
+
+    <properties>
+        <!-- 继承自 BOM -->
+    </properties>
 
     <dependencies>
+        <!-- =================================================================== -->
+        <!-- Spring Boot Web                                                     -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        
+        <!-- =================================================================== -->
+        <!-- 内部依赖 (Internal Dependencies)                                     -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-core</artifactId>

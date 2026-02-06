@@ -10,9 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-guangxi-biz-bio</artifactId>
+    <description>Project: Guangxi BIO Customization (广西生物识别定制)</description>
 
     <dependencies>
-         <!-- Inherit/Depend on Trunk Implementation -->
+         <!-- 继承主干实现 (Overlay Mainline Implementation) -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-biz-bio</artifactId>

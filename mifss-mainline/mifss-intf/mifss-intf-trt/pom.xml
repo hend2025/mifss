@@ -10,10 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-intf-trt</artifactId>
-    <description>理疗场景监控接口</description>
+    <description>TRT Interface Definition (待遇接口)</description>
 
     <dependencies>
-        <dependency>
+         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-core</artifactId>
         </dependency>

@@ -10,10 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-intf-job</artifactId>
-    <description>调度任务接口</description>
+    <description>JOB Interface Definition (定时任务接口)</description>
 
     <dependencies>
-        <dependency>
+         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-core</artifactId>
         </dependency>

@@ -10,10 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-intf-bas</artifactId>
-    <description>监控基础模块接口</description>
+    <description>BAS Interface Definition (基础信息接口)</description>
 
     <dependencies>
-        <dependency>
+         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-core</artifactId>
         </dependency>

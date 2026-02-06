@@ -12,53 +12,91 @@
     <artifactId>mifss-dependencies</artifactId>
     <packaging>pom</packaging>
 
+    <!--
+        ================================================================================
+        依赖仲裁宪法与架构规则 (DEPENDENCY ARBITRATION CONSTITUTION)
+        ================================================================================
+        1. 就近原则 (Rule of Nearest Definition):
+           当前 POM 中定义的版本优先于父 POM。
+           警告: 严禁在子模块中重新定义如 'jackson.version' 等基础属性，这会导致版本分裂。
+
+        2. BOM 优先原则 (BOM Precedence):
+           本 BOM 继承自 spring-boot-dependencies。
+           所有标准库 (Jackson, Logback 等) 必须与 Spring Boot 内置版本保持同频。
+
+        3. 作用域策略 (Scope Policy):
+           - compile:  默认。能不用就不用。
+           - provided: 编译期需要但运行时由容器提供 (如 Lombok, Servlet API)。
+           - test:     仅测试用 (如 JUnit, Mockito)。
+           - runtime:  仅运行时需要 (如 MySQL Driver，防止代码耦合具体实现)。
+        ================================================================================
+    -->
 
     <properties>
+        <!-- =================================================================== -->
+        <!-- 第1梯队: 核心框架 (Tier 1: Core Framework)                           -->
+        <!-- =================================================================== -->
         <spring-boot.version>2.0.9.RELEASE</spring-boot.version>
+        <spring.security.version>5.7.12</spring.security.version>
+        <!-- Security OAuth versions -->
+        <spring.security.oauth.version>2.3.4.RELEASE</spring.security.oauth.version>
+        <spring.security.oauth.auto.version>2.0.9.RELEASE</spring.security.oauth.auto.version>
+
+        <!-- =================================================================== -->
+        <!-- 第2梯队: 云原生基础设施 (Tier 2: Cloud Native Infra)                   -->
+        <!-- =================================================================== -->
         <spring-cloud.version>Finchley.SR4</spring-cloud.version>
         <spring-cloud-alibaba.version>2.0.0.RELEASE</spring-cloud-alibaba.version>
         <dubbo.version>3.2.0</dubbo.version>
-        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
         <nacos.version>2.2.0</nacos.version>
-        <spring.security.version>5.7.12</spring.security.version>
-        <hutool.version>5.8.25</hutool.version>
-        
-        <!-- HSAF -->
-        <hsaf.core.version>1.2.5</hsaf.core.version>
-        <hsaf.fsstore.ali.version>1.0.1</hsaf.fsstore.ali.version>
-        <hsaf.fsstore.generic.version>1.0.1</hsaf.fsstore.generic.version>
-        <hsaf.fsstore.huawei.version>1.0.0</hsaf.fsstore.huawei.version>
-        <hsaf.fsstore.tencent.version>1.0.1</hsaf.fsstore.tencent.version>
-        <hsaf.auth.security.version>1.1.7</hsaf.auth.security.version>
-        <hsaf.cache.redis.version>1.0.0</hsaf.cache.redis.version>
-        
-        <!-- Cloud Storage -->
+
+        <!-- =================================================================== -->
+        <!-- 第3梯队: 数据与存储 (Tier 3: Data & Storage)                         -->
+        <!-- =================================================================== -->
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <mysql.version>8.0.28</mysql.version>
+
+        <!-- Cloud SDKs -->
         <aliyun.oss.version>2.8.3</aliyun.oss.version>
         <minio.version>7.0.2</minio.version>
         <fastdfs.client.version>1.27.2</fastdfs.client.version>
         <huawei.obs.version>3.20.6</huawei.obs.version>
-        
-        <!-- Network & Auth -->
-        <okhttp.version>3.8.1</okhttp.version>
-        <spring.security.oauth.version>2.3.4.RELEASE</spring.security.oauth.version>
-        <spring.security.oauth.auto.version>2.0.9.RELEASE</spring.security.oauth.auto.version>
-        
-        <!-- AWS -->
         <awsjavasdk.version>1.11.1000</awsjavasdk.version>
 
-        <mysql.version>8.0.28</mysql.version>
+        <!-- =================================================================== -->
+        <!-- 第4梯队: 内部框架 (Tier 4: Internal Frameworks)                      -->
+        <!-- =================================================================== -->
+        <!-- HSAF Core -->
+        <hsaf.core.version>1.2.5</hsaf.core.version>
+        <hsaf.auth.security.version>1.1.7</hsaf.auth.security.version>
+        <hsaf.cache.redis.version>1.0.0</hsaf.cache.redis.version>
+        <!-- HSAF Storage Adapters -->
+        <hsaf.fsstore.ali.version>1.0.1</hsaf.fsstore.ali.version>
+        <hsaf.fsstore.generic.version>1.0.1</hsaf.fsstore.generic.version>
+        <hsaf.fsstore.huawei.version>1.0.0</hsaf.fsstore.huawei.version>
+        <hsaf.fsstore.tencent.version>1.0.1</hsaf.fsstore.tencent.version>
+
+        <!-- =================================================================== -->
+        <!-- 第5梯队: 工具与辅助 (Tier 5: Utilities & Tools)                      -->
+        <!-- =================================================================== -->
+        <hutool.version>5.8.25</hutool.version>
         <swagger.version>2.9.2</swagger.version>
         <knife4j.version>2.0.9</knife4j.version>
+        <okhttp.version>3.8.1</okhttp.version>
+        <!-- Jackson: 必须与 Spring Boot 保持一致 -->
         <jackson.version>2.13.5</jackson.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- Force Jackson Version -->
+            <!-- ******************************************************************* -->
+            <!-- 组1: Spring生态系统管理 (Spring Ecosystem / Import Scopes)           -->
+            <!-- ******************************************************************* -->
+            <!-- Spring Boot Dependencies -->
             <dependency>
-                <groupId>com.fasterxml.jackson</groupId>
-                <artifactId>jackson-bom</artifactId>
-                <version>${jackson.version}</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -78,8 +116,19 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+             <!-- Jackson BOM -->
+            <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${jackson.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
-            <!-- Commons -->
+            <!-- ******************************************************************* -->
+            <!-- 组2: 内部模块 (MIFSS Internal Modules)                              -->
+            <!-- ******************************************************************* -->
+            <!-- 2.1 公共层 Commons Layer -->
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
                 <artifactId>mifss-commons-core</artifactId>
@@ -106,7 +155,7 @@
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- Interfaces -->
+            <!-- 2.2 接口定义层 Interface Definitions (Intf) -->
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
                 <artifactId>mifss-intf-bio</artifactId>
@@ -158,7 +207,7 @@
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- Biz Implementations -->
+            <!-- 2.3 业务实现层 Business Implementations (Biz) -->
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
                 <artifactId>mifss-biz-bio</artifactId>
@@ -214,7 +263,8 @@
                 <artifactId>mifss-biz-bc</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <!-- Adapters -->
+
+            <!-- 2.4 适配器层 Adapters -->
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
                 <artifactId>mifss-adapter-api</artifactId>
@@ -241,210 +291,7 @@
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- 3rd Party Dependencies -->
-            <dependency>
-                <groupId>com.alibaba.nacos</groupId>
-                <artifactId>nacos-client</artifactId>
-                <version>${nacos.version}</version>
-            </dependency>
-            <!-- Spring Boot Dependencies -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- Mybatis Plus -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-extension</artifactId>
-                <version>${mybatis-plus.version}</version>
-            </dependency>
-
-            <!-- Dubbo Dependencies -->
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-zookeeper-curator-spring-boot-starter</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-registry-nacos</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-
-            <!-- Security -->
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-core</artifactId>
-                <version>${spring.security.version}</version>
-            </dependency>
-
-            <!-- Utils -->
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-all</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-
-
-            <!-- MySQL -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
-            </dependency>
-
-            <!-- Swagger -->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-spring-ui</artifactId>
-                <version>${knife4j.version}</version>
-            </dependency>
-
-            <!-- 3rd Party: HSAF -->
-            <dependency>
-                <groupId>cn.hsa.hsaf.core</groupId>
-                <artifactId>hsaf-core</artifactId>
-                <version>${hsaf.core.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-ali-fsstore</artifactId>
-                <version>${hsaf.fsstore.ali.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-generic-fsstore</artifactId>
-                <version>${hsaf.fsstore.generic.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-huawei-fsstore</artifactId>
-                <version>${hsaf.fsstore.huawei.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-tencent-fsstore</artifactId>
-                <version>${hsaf.fsstore.tencent.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.auth.security</groupId>
-                <artifactId>hsaf-auth-security</artifactId>
-                <version>${hsaf.auth.security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-cache-redis</artifactId>
-                <version>${hsaf.cache.redis.version}</version>
-            </dependency>
-
-            <!-- 3rd Party: Cloud SDKs -->
-            <dependency>
-                <groupId>com.aliyun.oss</groupId>
-                <artifactId>aliyun-sdk-oss</artifactId>
-                <version>${aliyun.oss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.minio</groupId>
-                <artifactId>minio</artifactId>
-                <version>${minio.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.tobato</groupId>
-                <artifactId>fastdfs-client</artifactId>
-                <version>${fastdfs.client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.huawei.storage</groupId>
-                <artifactId>esdk-obs-java</artifactId>
-                <version>${huawei.obs.version}</version>
-            </dependency>
-             <dependency>
-                <groupId>com.squareup.okhttp3</groupId>
-                <artifactId>okhttp</artifactId>
-                <version>${okhttp.version}</version>
-            </dependency>
-
-            <!-- Jackson (Explicit) -->
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-core</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-annotations</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-
-            <!-- 3rd Party: AWS SDK -->
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-s3</artifactId>
-                <version>${awsjavasdk.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-core</artifactId>
-                <version>${awsjavasdk.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-kms</artifactId>
-                <version>${awsjavasdk.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>jmespath-java</artifactId>
-                <version>${awsjavasdk.version}</version>
-            </dependency>
-
-             <!-- Spring Security OAuth -->
-            <dependency>
-                <groupId>org.springframework.security.oauth</groupId>
-                <artifactId>spring-security-oauth2</artifactId>
-                <version>${spring.security.oauth.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security.oauth.boot</groupId>
-                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
-                <version>${spring.security.oauth.auto.version}</version>
-            </dependency>
-
-            <!-- Guangxi Modules -->
+            <!-- 2.5 区域扩展 Regional Extensions (Guangxi) -->
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
                 <artifactId>mifss-guangxi-biz-bio</artifactId>
@@ -466,7 +313,212 @@
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- Add other internal modules here if needed -->
+
+            <!-- ******************************************************************* -->
+            <!-- 组3: 自间件与基础设施 (Middleware & Infrastructure)                   -->
+            <!-- ******************************************************************* -->
+            <!-- 3.1 Nacos Client -->
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos.version}</version>
+            </dependency>
+
+            <!-- 3.2 Dubbo RPC -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-zookeeper-curator-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-registry-nacos</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <!-- 3.3 Database & ORM -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+
+            <!-- ******************************************************************* -->
+            <!-- 组4: 内部框架集成 (Internal Framework / HSAF)                       -->
+            <!-- ******************************************************************* -->
+            <dependency>
+                <groupId>cn.hsa.hsaf.core</groupId>
+                <artifactId>hsaf-core</artifactId>
+                <version>${hsaf.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.auth.security</groupId>
+                <artifactId>hsaf-auth-security</artifactId>
+                <version>${hsaf.auth.security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-cache-redis</artifactId>
+                <version>${hsaf.cache.redis.version}</version>
+            </dependency>
+            <!-- HSAF Storage Adapters -->
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-ali-fsstore</artifactId>
+                <version>${hsaf.fsstore.ali.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-generic-fsstore</artifactId>
+                <version>${hsaf.fsstore.generic.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-huawei-fsstore</artifactId>
+                <version>${hsaf.fsstore.huawei.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-fsstore</artifactId>
+                <version>${hsaf.fsstore.tencent.version}</version>
+            </dependency>
+
+
+            <!-- ******************************************************************* -->
+            <!-- 组5: 第三方工具与SDK (3rd Party Utilities & SDKs)                   -->
+            <!-- ******************************************************************* -->
+            <!-- 5.1 Cloud Storage SDKs -->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun.oss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${minio.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.tobato</groupId>
+                <artifactId>fastdfs-client</artifactId>
+                <version>${fastdfs.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.huawei.storage</groupId>
+                <artifactId>esdk-obs-java</artifactId>
+                <version>${huawei.obs.version}</version>
+            </dependency>
+
+            <!-- 5.2 Network & Http -->
+             <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp.version}</version>
+            </dependency>
+
+            <!-- 5.3 AWS SDK -->
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-s3</artifactId>
+                <version>${awsjavasdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-core</artifactId>
+                <version>${awsjavasdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-kms</artifactId>
+                <version>${awsjavasdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>jmespath-java</artifactId>
+                <version>${awsjavasdk.version}</version>
+            </dependency>
+
+             <!-- 5.4 Legacy Security OAuth -->
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring.security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>${spring.security.oauth.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security.oauth.boot</groupId>
+                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+                <version>${spring.security.oauth.auto.version}</version>
+            </dependency>
+
+            <!-- 5.5 Documentation & DevTools -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-ui</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <!-- 5.6 Jackson Customization (Explicit) -->
+            <!--
+                 注意: 此处显式版本仅作备份，
+                 从概念上讲，这必须与 Spring Boot 强绑定。
+            -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

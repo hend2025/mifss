@@ -10,9 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-guangxi-biz-hd</artifactId>
+    <description>Project: Guangxi HD Customization (广西核定定制)</description>
 
     <dependencies>
-         <!-- Inherit/Depend on Trunk Implementation -->
+         <!-- 继承主干实现 (Overlay Mainline Implementation) -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-biz-hd</artifactId>

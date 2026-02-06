@@ -11,9 +11,9 @@
 
     <artifactId>mifss-guangxi-biz</artifactId>
     <packaging>pom</packaging>
+    <description>Project: Guangxi Business Customization (广西业务定制层)</description>
 
     <modules>
-        <!-- Custom Modules -->
         <module>mifss-guangxi-biz-ipt</module>
         <module>mifss-guangxi-biz-hd</module>
         <module>mifss-guangxi-biz-bio</module>

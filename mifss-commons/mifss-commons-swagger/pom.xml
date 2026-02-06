@@ -10,12 +10,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-commons-swagger</artifactId>
+    <description>API Documentation Configuration (Swagger/Knife4j 配置)</description>
 
     <dependencies>
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-web</artifactId>
         </dependency>
+        
+        <!-- =================================================================== -->
+        <!-- API 文档工具 (API Documentation Tools)                               -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>

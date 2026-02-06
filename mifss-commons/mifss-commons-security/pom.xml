@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-commons-security</artifactId>
+    <description>Common Security Configuration (通用安全认证配置)</description>
 
     <dependencies>
         <dependency>
@@ -17,7 +18,9 @@
             <artifactId>mifss-commons-core</artifactId>
         </dependency>
 
-        <!-- Security & OAuth2 -->
+        <!-- =================================================================== -->
+        <!-- Security & OAuth2 核心组件                                           -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
@@ -41,7 +44,9 @@
             <artifactId>spring-security-oauth2-autoconfigure</artifactId>
         </dependency>
 
-        <!-- HSAF -->
+        <!-- =================================================================== -->
+        <!-- HSAF 集成 (Internal Framework)                                       -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
@@ -65,6 +70,9 @@
             <artifactId>hsaf-cache-redis</artifactId>
         </dependency>
 
+        <!-- =================================================================== -->
+        <!-- 工具 (Tools)                                                        -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

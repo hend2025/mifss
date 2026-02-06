@@ -10,12 +10,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-commons-orm</artifactId>
+    <description>Common ORM Configuration (通用持久层配置)</description>
+
+    <properties>
+        <!-- 继承自 BOM -->
+    </properties>
 
     <dependencies>
+        <!-- =================================================================== -->
+        <!-- 内部依赖 (Internal Dependencies)                                     -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-core</artifactId>
         </dependency>
+
+        <!-- =================================================================== -->
+        <!-- 持久层框架 (Persistence Frameworks)                                  -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -24,6 +36,10 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-extension</artifactId>
         </dependency>
+        
+        <!-- =================================================================== -->
+        <!-- 数据库驱动 (Database Drivers)                                        -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

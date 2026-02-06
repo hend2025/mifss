@@ -10,22 +10,35 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-commons-core</artifactId>
+    <description>Core utilities and shared components foundation (核心工具与公共组件基座)</description>
 
     <properties>
+        <!-- 此处无属性定义：所有版本必须由 mifss-dependencies BOM 统一管理 -->
     </properties>
 
     <dependencies>
+        <!-- =================================================================== -->
+        <!-- 核心工具 (CORE UTILITIES)                                            -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-        </dependency>
+
+        <!-- =================================================================== -->
+        <!-- 日志框架 (LOGGING FRAMEWORK)                                         -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <!-- =================================================================== -->
+        <!-- Spring 上下文 (SPRING CONTEXT - Minimal)                             -->
+        <!-- =================================================================== -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
         </dependency>
 
     </dependencies>

@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-biz-bas</artifactId>
-    <description>监控基础模块，管理机构、人员、参数等</description>
+    <description>Basic Info Business Implementation (基础信息业务实现)</description>
 
     <dependencies>
         <dependency>

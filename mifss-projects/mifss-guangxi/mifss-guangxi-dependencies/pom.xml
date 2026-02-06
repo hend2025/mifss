@@ -12,15 +12,39 @@
 
     <artifactId>mifss-guangxi-dependencies</artifactId>
     <packaging>pom</packaging>
+    <description>Project: Guangxi BOM (广西项目依赖管理)</description>
 
     <dependencyManagement>
         <dependencies>
+            <!-- 继承全局 BOM -->
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
                 <artifactId>mifss-dependencies</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            
+            <!-- 定义广西项目内部模块版本 -->
+             <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-guangxi-intf</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+             <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-guangxi-biz-ipt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-guangxi-biz-bio</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+             <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-guangxi-biz-hd</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

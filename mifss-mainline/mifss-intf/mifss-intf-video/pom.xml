@@ -10,10 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-intf-video</artifactId>
-    <description>视频监控接口</description>
+    <description>VIDEO Interface Definition (音视频接口)</description>
 
     <dependencies>
-        <dependency>
+         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-core</artifactId>
         </dependency>

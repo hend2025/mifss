@@ -11,6 +11,21 @@
 
     <artifactId>mifss-intf</artifactId>
     <packaging>pom</packaging>
+    <description>MIFSS Interface Layer (接口定义层父工程)</description>
+
+    <!--
+        ================================================================================
+        接口层规则 (INTERFACE LAYER RULES)
+        ================================================================================
+        1. 纯净原则 (Purity):
+           本层仅包含 POJO (DTO/VO) 和 Dubbo Service 接口定义。
+           严禁包含任何业务逻辑实现。
+           
+        2. 依赖限制 (Dependency Restrictions):
+           只能依赖 POJO 相关的基础库 (mifss-commons-core, lombok)。
+           严禁引入 Spring Boot Starter, MyBatis, Redis 等重量级依赖。
+        ================================================================================
+    -->
 
     <modules>
         <module>mifss-intf-bio</module>

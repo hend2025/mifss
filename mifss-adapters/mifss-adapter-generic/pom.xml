@@ -10,8 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-adapter-generic</artifactId>
+    <description>Generic Storage Adapter (通用/本地存储实现)</description>
 
     <dependencies>
+        <!-- =================================================================== -->
+        <!-- 适配器接口与Spring (API & Spring)                                     -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-adapter-api</artifactId>
@@ -27,17 +31,22 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- =================================================================== -->
+        <!-- HSAF 实现 (HSAF Framework Implementation)                            -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
         </dependency>
-
-        <!--文件存储-->
+        <!-- 文件存储实现 -->
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-generic-fsstore</artifactId>
         </dependency>
 
+        <!-- =================================================================== -->
+        <!-- 客户端 SDK (Client SDKs)                                            -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>io.minio</groupId>
             <artifactId>minio</artifactId>

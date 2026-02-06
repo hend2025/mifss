@@ -11,6 +11,20 @@
 
     <artifactId>mifss-projects</artifactId>
     <packaging>pom</packaging>
+    <description>MIFSS Projects Layer (交付项目层父工程)</description>
+
+    <!--
+        ================================================================================
+        项目层规则 (PROJECTS LAYER RULES)
+        ================================================================================
+        1. 定义 (Definition):
+           包含针对特定客户 (如广西、腾讯等) 的定制化实现和应用打包。
+           
+        2. 结构 (Structure):
+           - mifss-guangxi: 广西医保项目
+           - (未来可扩展其他项目)
+        ================================================================================
+    -->
 
     <dependencyManagement>
         <dependencies>

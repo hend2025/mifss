@@ -10,10 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-guangxi-app</artifactId>
-    <description>广西-发布包构建模</description>
+    <description>Project: Guangxi Application Package (广西-发布包构建)</description>
     <packaging>pom</packaging>
 
     <dependencies>
+        <!-- =================================================================== -->
+        <!-- Custom Modules (Guangxi Specific)                                   -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-guangxi-biz-bio</artifactId>
@@ -27,7 +30,9 @@
             <artifactId>mifss-guangxi-biz-hd</artifactId>
         </dependency>
 
-        <!-- Mainline Modules -->
+        <!-- =================================================================== -->
+        <!-- Mainline Modules (Reused Standard Modules)                          -->
+        <!-- =================================================================== -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-biz-bas</artifactId>
@@ -64,6 +69,11 @@
 
     <build>
         <plugins>
+            <!-- 
+                Packaging Plugin:
+                Copies all dependencies to target directory.
+                Mainline modules are renamed to match project convention (mifss-guangxi-biz-*).
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>

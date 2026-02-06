@@ -11,6 +11,18 @@
 
     <artifactId>mifss-guangxi</artifactId>
     <packaging>pom</packaging>
+    <description>Project: Guangxi (广西项目父工程)</description>
+
+    <!--
+        ================================================================================
+        广西项目结构 (GUANGXI PROJECT STRUCTURE)
+        ================================================================================
+        - mifss-guangxi-dependencies: 项目私有依赖管理 (BOM)。
+        - mifss-guangxi-intf:         项目私有接口扩展。
+        - mifss-guangxi-biz:          项目私有业务定制 (Overlay Mainline)。
+        - mifss-guangxi-app:          项目启动入口 (Application Starter)。
+        ================================================================================
+    -->
 
     <dependencyManagement>
         <dependencies>
