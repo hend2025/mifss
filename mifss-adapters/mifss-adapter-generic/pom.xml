@@ -30,27 +30,26 @@
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
-            <version>1.2.5</version>
-            <scope>compile</scope>
+            <version>${hsaf.core.version}</version>
         </dependency>
 
         <!--文件存储-->
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-generic-fsstore</artifactId>
-            <version>1.0.1</version>
+            <version>${hsaf.fsstore.generic.version}</version>
         </dependency>
 
         <dependency>
             <groupId>io.minio</groupId>
             <artifactId>minio</artifactId>
-            <version>7.0.2</version>
+            <version>${minio.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.github.tobato</groupId>
             <artifactId>fastdfs-client</artifactId>
-            <version>1.27.2</version>
+            <version>${fastdfs.client.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>

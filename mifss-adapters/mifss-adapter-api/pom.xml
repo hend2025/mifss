@@ -24,12 +24,12 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.8.25</version>
+            <version>${hutool.version}</version>
         </dependency>
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
-            <version>1.2.5</version>
+            <version>${hsaf.core.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

@@ -30,24 +30,24 @@
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
-            <version>1.2.5</version>
+            <version>${hsaf.core.version}</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-huawei-fsstore</artifactId>
-            <version>1.0.0</version>
+            <version>${hsaf.fsstore.huawei.version}</version>
         </dependency>
         <dependency>
             <groupId>com.huawei.storage</groupId>
             <artifactId>esdk-obs-java</artifactId>
-            <version>3.20.6</version>
+            <version>${huawei.obs.version}</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <version>3.8.1</version>
+            <version>${okhttp.version}</version>
         </dependency>
 
     </dependencies>

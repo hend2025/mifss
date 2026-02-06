@@ -21,12 +21,12 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
-            <version>5.7.12</version>
+            <version>${spring.security.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.security.oauth</groupId>
             <artifactId>spring-security-oauth2</artifactId>
-            <version>2.3.4.RELEASE</version>
+            <version>${spring.security.oauth.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.security</groupId>
@@ -41,19 +41,19 @@
         <dependency>
             <groupId>org.springframework.security.oauth.boot</groupId>
             <artifactId>spring-security-oauth2-autoconfigure</artifactId>
-            <version>2.0.9.RELEASE</version>
+            <version>${spring.security.oauth.auto.version}</version>
         </dependency>
 
         <!-- HSAF -->
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
-            <version>1.2.5</version>
+            <version>${hsaf.core.version}</version>
         </dependency>
         <dependency>
             <groupId>cn.hsa.hsaf.auth.security</groupId>
             <artifactId>hsaf-auth-security</artifactId>
-            <version>1.1.7</version>
+            <version>${hsaf.auth.security.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.security</groupId>
@@ -68,7 +68,7 @@
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-cache-redis</artifactId>
-            <version>1.0.0</version>
+            <version>${hsaf.cache.redis.version}</version>
         </dependency>
 
         <dependency>
