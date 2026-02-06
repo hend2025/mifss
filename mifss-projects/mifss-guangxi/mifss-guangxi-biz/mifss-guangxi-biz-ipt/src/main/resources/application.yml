@@ -3,18 +3,24 @@
   servlet:
     context-path: /mifss/ipt
 
-swagger:
-  title: MIFSS IPT API
-  description: MIFSS 住院服务 API 文档
-  version: 1.0.0
+project:
+  override:
+    # 主干代码的根路径（通配符的起点）
+    main-root: com.aeye.mifss
+    # 现场代码的根路径
+    site-root: com.aeye.mifss
+    # 现场类名的前缀，如 SiteUserController。如果完全同名请留空 ""
+    class-prefix: Guangxi
+
+mifss:
+  dubbo:
+    group: guangxi
 
 spring:
-  main:
-    allow-bean-definition-overriding: true
   application:
     name: mifss-ipt
-#  profiles:
-#    active: @cloud.provider@
+  #  profiles:
+  #    active: @cloud.provider@
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
@@ -22,7 +28,7 @@ spring:
     password: 123456
 
 security:
-  type: hsa-sso
+  type: hsa-mock
   isPrivilege: true
   oauth2:
     client:
@@ -72,10 +78,6 @@ dubbo:
   scan:
     base-packages: com.aeye.mifss
 
-mifss:
-  dubbo:
-    group: guangxi
-
 fsstore:
   type: minio
   bucket: group1
@@ -84,3 +86,8 @@ mio:
   endpoint: http://192.168.17.13:9900
   accessKeyId: aeye
   secretAccessKey: Zhy778899
+
+swagger:
+  title: MIFSS IPT API
+  description: MIFSS 住院服务 API 文档
+  version: 1.0.0

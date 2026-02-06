@@ -3,10 +3,9 @@
   servlet:
     context-path: /mifss/bio
 
-swagger:
-  title: MIFSS BIO API
-  description: MIFSS 生物特征识别服务 API 文档
-  version: 1.0.0
+mifss:
+  dubbo:
+    group: guangxi
 
 spring:
   application:
@@ -32,3 +31,8 @@ dubbo:
     address: nacos://127.0.0.1:8848
   scan:
     base-packages: com.aeye.mifss
+
+swagger:
+  title: MIFSS BIO API
+  description: MIFSS 生物特征识别服务 API 文档
+  version: 1.0.0
