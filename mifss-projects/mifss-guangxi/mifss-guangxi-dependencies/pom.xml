@@ -33,17 +33,17 @@
             </dependency>
              <dependency>
                 <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-guangxi-biz-ipt</artifactId>
+                <artifactId>mifss-guangxi-app-ipt</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-guangxi-biz-bio</artifactId>
+                <artifactId>mifss-guangxi-app-bio</artifactId>
                 <version>${project.version}</version>
             </dependency>
              <dependency>
                 <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-guangxi-biz-hd</artifactId>
+                <artifactId>mifss-guangxi-app-hd</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

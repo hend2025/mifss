@@ -28,7 +28,6 @@
     <modules>
         <module>mifss-guangxi-dependencies</module>
         <module>mifss-guangxi-intf</module>
-        <module>mifss-guangxi-biz</module>
         <module>mifss-guangxi-app</module>
     </modules>
 

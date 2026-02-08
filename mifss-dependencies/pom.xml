@@ -261,29 +261,6 @@
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- 2.5 区域扩展 Regional Extensions (Guangxi) -->
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-guangxi-biz-bio</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-guangxi-biz-ipt</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-guangxi-biz-hd</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-guangxi-intf</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-
             <!-- ******************************************************************* -->
             <!-- 组3: 中间件与基础设施 (Middleware & Infrastructure)                  -->
             <!-- ******************************************************************* -->

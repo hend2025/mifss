@@ -64,15 +64,15 @@ mifss/
         ├── mifss-guangxi-intf/                    # 广西扩展API
         └── mifss-guangxi-biz/                     # 广西定制服务
             ├── pom.xml
-            ├── mifss-guangxi-biz-bio/             # 定制生物识别服务
-            ├── mifss-guangxi-biz-ipt/             # 定制住院场景服务
-            └── mifss-guangxi-biz-hd/              # 定制血透场景服务
+            ├── mifss-guangxi-app-bio/             # 定制生物识别服务
+            ├── mifss-guangxi-app-ipt/             # 定制住院场景服务
+            └── mifss-guangxi-app-hd/              # 定制血透场景服务
 
 
 请使用jdk1.8、springboot2.0.9、mysql5.7、mybatis plus、Dubbo3.0、spring-security-core5.7.12、redis、hutool-all、fastjson等创建这个系统的手脚架。
 要求1: 模块命名严格按照上面的定义。
 要求2: 现场版本继承主干，同时可以新增功能、也可以重写主干原有功能，如：重写主干中的类、或只重写类中的一个方法。
-要求3: 以mifss-guangxi-biz-bio为示例，采用继承/重写的方式实现人脸识别服务主干版本和现场版本的定制需求。
+要求3: 以mifss-guangxi-app-bio为示例，采用继承/重写的方式实现人脸识别服务主干版本和现场版本的定制需求。
 
 
 你是一位拥有 20 年经验的 Java 首席架构师，精通 Maven 依赖仲裁机制、类加载隔离及 JVM 性能优化。

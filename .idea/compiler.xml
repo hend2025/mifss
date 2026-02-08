@@ -12,16 +12,15 @@
         <module name="mifss-intf-hd" />
         <module name="mifss-intf-bas" />
         <module name="mifss-commons-web" />
-        <module name="mifss-guangxi-biz-bio" />
         <module name="mifss-app-bio" />
         <module name="mifss-biz-api" />
         <module name="mifss-intf-pha" />
         <module name="mifss-intf-video" />
         <module name="mifss-adapter-generic" />
         <module name="mifss-biz-job" />
-        <module name="mifss-guangxi-biz-ipt" />
         <module name="mifss-biz-video" />
         <module name="mifss-biz-bio" />
+        <module name="mifss-guangxi-app-ipt" />
         <module name="mifss-intf-ipt" />
         <module name="mifss-commons-swagger" />
         <module name="mifss-adapter-aliyun" />
@@ -41,12 +40,13 @@
         <module name="mifss-biz-hd" />
         <module name="mifss-biz-bc" />
         <module name="mifss-commons-security" />
+        <module name="mifss-guangxi-app-bio" />
         <module name="mifss-commons-core" />
         <module name="mifss-biz-pha" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mifss-guangxi-biz-hd" target="1.8" />
+      <module name="mifss-guangxi-app-all" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
