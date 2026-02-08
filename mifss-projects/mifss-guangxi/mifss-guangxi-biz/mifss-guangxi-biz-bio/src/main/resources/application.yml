@@ -63,22 +63,23 @@ session:
       testOnBorrow: true
       testOnReturn: true
 
-# Dubbo3 配置 (服务消费方)
+# Dubbo 配置
 dubbo:
   application:
     name: ${spring.application.name}
-    qos-port: 22222
-    qos-enable: true
+    logger: slf4j
   protocol:
     name: dubbo
-    port: 20880
-  registry:
-    address: nacos://127.0.0.1:8848
+    port: -1
   consumer:
-    check: false
+    timeout: 60000 #远程服务调用超时时间(毫秒)
+  provider:
+    retries: 0 #远程服务调用重试次数，不包括第一次调用，不需要重试请设为0
+  registry:
+    address: zookeeper://127.0.0.1:2181
     timeout: 10000
-  scan:
-    base-packages: com.aeye.mifss
+  metadata-report:
+    address: zookeeper://127.0.0.1:2181
 
 fsstore:
   type: minio

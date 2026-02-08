@@ -4,9 +4,12 @@ import cn.hsa.hsaf.core.framework.context.HsafContextHolder;
 import cn.hsa.hsaf.core.framework.util.CurrentUser;
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import cn.hsa.ims.common.utils.AeyePageResult;
+import com.aeye.mifss.bio.dto.FaceImageReq;
+import com.aeye.mifss.bio.service.RpcFaceRecognitionService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import com.aeye.mifss.ipt.dto.MainHilistDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,11 +22,20 @@ import java.util.List;
 @RequestMapping("/mainhilist")
 public class MainhilistController {
 
+    @Autowired(required = false)
+    private RpcFaceRecognitionService rpcFaceRecognitionService;
+
     @ApiOperation(value = "查询列表")
     @RequestMapping(value = "/list", method = { RequestMethod.POST })
     public WrapperResponse<List<MainHilistDTO>> list() throws Exception {
 
         CurrentUser user = HsafContextHolder.getContext().getCurrentUser();
+        System.out.println("user = " + user);
+
+        FaceImageReq request = new FaceImageReq();
+        request.setImageData("123");
+        boolean res = rpcFaceRecognitionService.faceAuthenticate(request);
+        System.out.println("res = " + res);
 
         List<MainHilistDTO> list = new ArrayList();
         MainHilistDTO baean1 = new MainHilistDTO();

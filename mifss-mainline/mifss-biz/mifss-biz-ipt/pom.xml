@@ -63,7 +63,7 @@
         </dependency>
 
         <!-- =================================================================== -->
-        <!-- 3. 中间件集成 (Middleware: Redis, Dubbo, Nacos)                       -->
+        <!-- 3. 中间件集成 (Middleware: Redis)                                     -->
         <!-- =================================================================== -->
         <!-- Redis -->
         <dependency>
@@ -77,16 +77,6 @@
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-        </dependency>
-
-        <!-- Dubbo & Nacos -->
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-registry-nacos</artifactId>
         </dependency>
 
         <!-- =================================================================== -->

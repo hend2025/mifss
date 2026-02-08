@@ -3,7 +3,7 @@ package com.aeye.mifss.ipt.controller;
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import com.aeye.mifss.bio.dto.FaceImageReq;
 import com.aeye.mifss.bio.service.RpcFaceRecognitionService;
-import org.apache.dubbo.config.annotation.DubboReference;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/face")
 public class GuangxiIptFaceController extends IptFaceController {
 
-    @DubboReference(check = false, group = "${mifss.dubbo.group:guangxi}")
+    @Autowired(required = false)
     private RpcFaceRecognitionService faceRecognitionService;
 
     @PostMapping("/faceAuthenticate")

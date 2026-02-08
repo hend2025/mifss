@@ -47,8 +47,7 @@
         <!-- =================================================================== -->
         <spring-cloud.version>Finchley.SR4</spring-cloud.version>
         <spring-cloud-alibaba.version>2.0.0.RELEASE</spring-cloud-alibaba.version>
-        <dubbo.version>3.2.0</dubbo.version>
-        <nacos.version>2.2.0</nacos.version>
+
 
         <!-- =================================================================== -->
         <!-- 第3梯队: 数据与存储 (Tier 3: Data & Storage)                         -->
@@ -84,8 +83,6 @@
         <knife4j.version>2.0.9</knife4j.version>
         <okhttp.version>3.8.1</okhttp.version>
         <fastjson.version>1.2.83</fastjson.version>
-        <!-- Jackson: 必须与 Spring Boot 保持一致 -->
-        <jackson.version>2.13.5</jackson.version>
     </properties>
 
     <dependencyManagement>
@@ -114,14 +111,6 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring-cloud-alibaba.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-             <!-- Jackson BOM -->
-            <dependency>
-                <groupId>com.fasterxml.jackson</groupId>
-                <artifactId>jackson-bom</artifactId>
-                <version>${jackson.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -316,38 +305,9 @@
 
 
             <!-- ******************************************************************* -->
-            <!-- 组3: 自间件与基础设施 (Middleware & Infrastructure)                   -->
+            <!-- 组3: 中间件与基础设施 (Middleware & Infrastructure)                  -->
             <!-- ******************************************************************* -->
-            <!-- 3.1 Nacos Client -->
-            <dependency>
-                <groupId>com.alibaba.nacos</groupId>
-                <artifactId>nacos-client</artifactId>
-                <version>${nacos.version}</version>
-            </dependency>
-
-            <!-- 3.2 Dubbo RPC -->
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-zookeeper-curator-spring-boot-starter</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-registry-nacos</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-
-            <!-- 3.3 Database & ORM -->
+            <!-- 3.1 Database & ORM -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -504,26 +464,50 @@
                 <version>${fastjson.version}</version>
             </dependency>
 
-            <!-- 5.6 Jackson Customization (Explicit) -->
-            <!--
-                 注意: 此处显式版本仅作备份，
-                 从概念上讲，这必须与 Spring Boot 强绑定。
-            -->
+
+            <!--  dubbo 相关  -->
             <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-core</artifactId>
-                <version>${jackson.version}</version>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-generic-rpc</artifactId>
+                <version>1.1.0</version>
             </dependency>
             <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson.version}</version>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>2.7.3</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-annotations</artifactId>
-                <version>${jackson.version}</version>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-dependencies-zookeeper</artifactId>
+                <version>2.7.3</version>
+                <type>pom</type>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>1.9.7</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
