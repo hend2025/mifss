@@ -14,14 +14,11 @@
     <description>Inpatient Application (住院服务发布包)</description>
 
     <dependencies>
-        <!-- 核心业务模块 -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-biz-ipt</artifactId>
         </dependency>
 
-
-        <!--  dubbo 相关  -->
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-generic-rpc</artifactId>

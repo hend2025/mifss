@@ -1,11 +1,9 @@
 package com.aeye.mifss.ipt.dto;
 
-import cn.hsa.hsaf.core.framework.validation.L2;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -23,7 +21,6 @@ public class MainHilistDTO implements Serializable {
 	/**
 	 * 医保目录编码
 	 */
-	@NotNull(message="hilistCode 不能为空", groups = {L2.class})
 	@ApiModelProperty(value = "医保目录编码-主键")
 	private String hilistCode;
 

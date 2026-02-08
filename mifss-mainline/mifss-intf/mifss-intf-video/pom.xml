@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-intf-video</artifactId>
-    <description>VIDEO Interface Definition (音视频接口)</description>
+    <description>VIDEO Interface Definition (视频接口)</description>
 
     <dependencies>
          <dependency>

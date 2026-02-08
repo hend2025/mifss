@@ -13,21 +13,6 @@
     <packaging>pom</packaging>
     <description>MIFSS Adapters Layer (适配器层父工程)</description>
 
-    <!--
-        ================================================================================
-        适配器层结构 (ADAPTERS MODULE STRUCTURE)
-        ================================================================================
-        作用: 作为防腐层 (ACL)，隔离外部存储/服务调用的具体实现。
-        
-        模块清单:
-        - mifss-adapter-api:      统一抽象接口定义 (所有业务模块仅依赖此模块)。
-        - mifss-adapter-generic:  通用/本地实现 (Local File System)。
-        - mifss-adapter-aliyun:   阿里云 OSS 实现。
-        - mifss-adapter-tencent:  腾讯云 COS 实现。
-        - mifss-adapter-huawei:   华为云 OBS 实现。
-        ================================================================================
-    -->
-
     <dependencyManagement>
         <dependencies>
             <dependency>

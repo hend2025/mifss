@@ -14,14 +14,11 @@
     <description>Bio-Metric Application (生物识别服务发布包)</description>
 
     <dependencies>
-        <!-- 核心业务模块 -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-biz-bio</artifactId>
         </dependency>
 
-
-        <!--  dubbo 相关  -->
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-generic-rpc</artifactId>
@@ -63,7 +60,6 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.7</version>
         </dependency>
-
 
     </dependencies>
 

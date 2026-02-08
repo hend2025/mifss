@@ -11,9 +11,6 @@
 
     <artifactId>mifss-guangxi-biz-ipt</artifactId>
 
-    <properties>
-    </properties>
-
     <dependencies>
         <!-- Inherit/Depend on Trunk Implementation -->
         <dependency>

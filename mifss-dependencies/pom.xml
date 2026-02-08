@@ -12,26 +12,6 @@
     <artifactId>mifss-dependencies</artifactId>
     <packaging>pom</packaging>
 
-    <!--
-        ================================================================================
-        依赖仲裁宪法与架构规则 (DEPENDENCY ARBITRATION CONSTITUTION)
-        ================================================================================
-        1. 就近原则 (Rule of Nearest Definition):
-           当前 POM 中定义的版本优先于父 POM。
-           警告: 严禁在子模块中重新定义如 'jackson.version' 等基础属性，这会导致版本分裂。
-
-        2. BOM 优先原则 (BOM Precedence):
-           本 BOM 继承自 spring-boot-dependencies。
-           所有标准库 (Jackson, Logback 等) 必须与 Spring Boot 内置版本保持同频。
-
-        3. 作用域策略 (Scope Policy):
-           - compile:  默认。能不用就不用。
-           - provided: 编译期需要但运行时由容器提供 (如 Lombok, Servlet API)。
-           - test:     仅测试用 (如 JUnit, Mockito)。
-           - runtime:  仅运行时需要 (如 MySQL Driver，防止代码耦合具体实现)。
-        ================================================================================
-    -->
-
     <properties>
         <!-- =================================================================== -->
         <!-- 第1梯队: 核心框架 (Tier 1: Core Framework)                           -->

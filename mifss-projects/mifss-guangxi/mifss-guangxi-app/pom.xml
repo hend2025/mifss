@@ -69,11 +69,6 @@
 
     <build>
         <plugins>
-            <!-- 
-                Packaging Plugin:
-                Copies all dependencies to target directory.
-                Mainline modules are renamed to match project convention (mifss-guangxi-biz-*).
-            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>

@@ -9,29 +9,12 @@
     <name>mifss</name>
     <description>Medical Insurance Front Service System</description>
 
-    <!--
-        ================================================================================
-        项目结构与模块注册表 (PROJECT STRUCTURE)
-        ================================================================================
-        1. mifss-dependencies: BOM (Bill of Materials)，版本控制的唯一真值来源。
-        2. mifss-commons:      公共工具与核心框架扩展层。
-        3. mifss-adapters:     外部系统集成的防腐层 (ACL)。
-        4. mifss-intf:         接口定义层 (API Contracts)。
-        5. mifss-biz:          业务实现层 (Business Implementation)。
-        ================================================================================
-    -->
-
     <modules>
-        <!-- 基础层 Foundation -->
         <module>mifss-dependencies</module>
         <module>mifss-commons</module>
-        
-        <!-- 集成层 Integration Layer -->
         <module>mifss-adapters</module>
-        
-        <!-- 业务层 Business Layer -->
-        <module>mifss-mainline</module> <!-- 包含 intf 与 biz -->
-        <module>mifss-projects</module> <!-- 区域扩展 (Regional extensions) -->
+        <module>mifss-mainline</module>
+        <module>mifss-projects</module>
     </modules>
 
     <properties>

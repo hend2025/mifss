@@ -13,9 +13,7 @@
     <description>Huawei Adapter (华为云 OBS 实现)</description>
 
     <dependencies>
-        <!-- =================================================================== -->
-        <!-- 适配器接口 (API & Core)                                             -->
-        <!-- =================================================================== -->
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-adapter-api</artifactId>
@@ -31,9 +29,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- =================================================================== -->
-        <!-- HSAF 实现 (HSAF Framework Implementation)                            -->
-        <!-- =================================================================== -->
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>
@@ -44,10 +39,7 @@
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-huawei-fsstore</artifactId>
         </dependency>
-        
-        <!-- =================================================================== -->
-        <!-- Cloud SDKs                                                          -->
-        <!-- =================================================================== -->
+
         <dependency>
             <groupId>com.huawei.storage</groupId>
             <artifactId>esdk-obs-java</artifactId>

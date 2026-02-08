@@ -13,20 +13,6 @@
     <packaging>pom</packaging>
     <description>MIFSS Business Logic Layer (业务逻辑层父工程)</description>
 
-    <!--
-        ================================================================================
-        业务层规则 (BUSINESS LAYER RULES)
-        ================================================================================
-        1. 职责 (Responsibility):
-           实现具体的业务逻辑，即 Interface 的实现类。
-           
-        2. 依赖 (Dependencies):
-           - 必须依赖对应的 Interface 模块 (mifss-intf-*)。
-           - 可以依赖 commons 组件 (web, orm, security 等)。
-           - 可以引入第三方业务库。
-        ================================================================================
-    -->
-
     <modules>
         <module>mifss-biz-bio</module>
         <module>mifss-biz-ipt</module>

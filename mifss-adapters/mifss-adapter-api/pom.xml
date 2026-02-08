@@ -13,9 +13,7 @@
     <description>Adapter Interface Definition (适配器通用接口)</description>
 
     <dependencies>
-        <!-- =================================================================== -->
-        <!-- 基础依赖 (Foundation)                                               -->
-        <!-- =================================================================== -->
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-core</artifactId>
@@ -30,9 +28,6 @@
             <artifactId>hutool-all</artifactId>
         </dependency>
 
-        <!-- =================================================================== -->
-        <!-- HSAF 核心 (Framework Core)                                           -->
-        <!-- =================================================================== -->
         <dependency>
             <groupId>cn.hsa.hsaf.core</groupId>
             <artifactId>hsaf-core</artifactId>

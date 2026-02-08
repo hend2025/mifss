@@ -12,22 +12,13 @@
     <artifactId>mifss-biz-ipt</artifactId>
     <description>Inpatient Business Module (住院业务模块)</description>
 
-    <properties>
-        <!-- 无属性：强制通过 BOM 继承版本 -->
-    </properties>
-
     <dependencies>
-        <!-- =================================================================== -->
-        <!-- 1. Spring Boot & Web 基础                                          -->
-        <!-- =================================================================== -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         
-        <!-- =================================================================== -->
-        <!-- 2. 内部公共层与接口 (Internal Commons & Interfaces)                   -->
-        <!-- =================================================================== -->
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-web</artifactId>
@@ -62,10 +53,6 @@
             <artifactId>mifss-adapter-api</artifactId>
         </dependency>
 
-        <!-- =================================================================== -->
-        <!-- 3. 中间件集成 (Middleware: Redis)                                     -->
-        <!-- =================================================================== -->
-        <!-- Redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -79,9 +66,6 @@
             <artifactId>jedis</artifactId>
         </dependency>
 
-        <!-- =================================================================== -->
-        <!-- 4. 工具与辅助 (Tools: Lombok)                                        -->
-        <!-- =================================================================== -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

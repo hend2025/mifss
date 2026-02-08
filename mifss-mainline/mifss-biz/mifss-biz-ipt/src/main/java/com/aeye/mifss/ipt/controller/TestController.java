@@ -3,15 +3,14 @@ package com.aeye.mifss.ipt.controller;
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import com.aeye.mifss.bio.dto.FaceImageReq;
 import com.aeye.mifss.bio.service.RpcFaceRecognitionService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+@Api(tags = "RPC测试人脸接口")
 @RestController
 @RequestMapping("/face")
-public class IptFaceController {
+public class TestController {
 
     @Autowired(required = false)
     private RpcFaceRecognitionService rpcFaceRecognitionService;

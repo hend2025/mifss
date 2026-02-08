@@ -15,7 +15,6 @@
 
     <modules>
         <module>mifss-guangxi-biz-ipt</module>
-        <module>mifss-guangxi-biz-hd</module>
         <module>mifss-guangxi-biz-bio</module>
     </modules>
 

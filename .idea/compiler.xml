@@ -22,7 +22,6 @@
         <module name="mifss-guangxi-biz-ipt" />
         <module name="mifss-biz-video" />
         <module name="mifss-biz-bio" />
-        <module name="mifss-guangxi-biz-hd" />
         <module name="mifss-intf-ipt" />
         <module name="mifss-commons-swagger" />
         <module name="mifss-adapter-aliyun" />
@@ -46,5 +45,8 @@
         <module name="mifss-biz-pha" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mifss-guangxi-biz-hd" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
