@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="BUILD_PROCESS_HEAP_SIZE" value="2048" />
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -45,15 +44,5 @@
         <module name="mifss-biz-pha" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="mifss-adapter-aliyun" target="1.8" />
-      <module name="mifss-app-bio" target="1.8" />
-      <module name="mifss-app-bio-aliyun" target="1.5" />
-      <module name="mifss-app-bio-common" target="1.5" />
-      <module name="mifss-app-bio-generic" target="1.5" />
-      <module name="mifss-app-ipt" target="1.8" />
-      <module name="mifss-guangxi-app-all" target="1.8" />
-      <module name="mifss-guangxi-dependencies" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
