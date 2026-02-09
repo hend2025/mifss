@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fd390e63-630d-4c5e-a156-dbd2a5865735" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-bio/src/main/resources/config/adapt/rpc/huawei/rpc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-bio/src/main/resources/config/adapt/rpc/tencent/rpc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-aliyun/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-aliyun/src/main/java/cn/hsa/ims/ali/config/OSSStoreConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-huawei/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-huawei/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-tencent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-tencent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-swagger/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-swagger/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-dependencies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-dependencies/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-bio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-bio/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-bio/src/main/java/com/aeye/mifss/BioApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-ipt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-ipt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-ipt/src/main/java/com/aeye/mifss/IptApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-ipt/src/main/java/com/aeye/mifss/IptApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-hd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-hd/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-job/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-job/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-opt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-opt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-pha/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-pha/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-trt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-trt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-video/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-video/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bas/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bio/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-hd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-hd/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-ipt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-ipt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-job/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-job/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-opt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-opt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-pha/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-pha/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-trt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-trt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-video/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-video/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-app-bio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-app-bio/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-app-ipt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-app-ipt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-intf/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-intf/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="D:\software\apache-maven-3.8.9" />
+        <option name="localRepository" value="D:\software\apache-maven-3.8.9\repository" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="D:\software\apache-maven-3.8.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="39OL0zm606g7xgW5pm6X8auyAvL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.mifss [clean].executor": "Run",
+    "Maven.mifss [install].executor": "Run",
+    "Maven.mifss [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BioApplication.executor": "Debug",
+    "Spring Boot.GenericBioApplication.executor": "Debug",
+    "Spring Boot.GuangxiBioApplication.executor": "Debug",
+    "Spring Boot.GuangxiIptApplication.executor": "Debug",
+    "Spring Boot.IptApplication.executor": "Debug",
+    "git-widget-placeholder": "v2.0.0",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/mifss-parent/mifss/mifss-mainline/mifss-app/mifss-app-bio/src/main/resources/config/adapt/rpc",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-app-bio\src\main\resources\config\adapt\rpc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.aeye.mifss" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="BioApplication" value="STOPPED" />
+              <entry key="GuangxiBioApplication" value="STOPPED" />
+              <entry key="GuangxiIptApplication" value="STOPPED" />
+              <entry key="IptApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.IptApplication">
+    <configuration name="BioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mifss-bio" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aeye.mifss.BioApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GuangxiBioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="mifss-guangxi-app-bio" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aeye.mifss.GuangxiBioApplication" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GuangxiIptApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="mifss-guangxi-app-ipt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aeye.mifss.GuangxiIptApplication" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IptApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="mifss-ipt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aeye.mifss.IptApplication" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BioApplication" />
+      <item itemvalue="Spring Boot.IptApplication" />
+      <item itemvalue="Spring Boot.GuangxiBioApplication" />
+      <item itemvalue="Spring Boot.GuangxiIptApplication" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd390e63-630d-4c5e-a156-dbd2a5865735" name="Changes" comment="" />
+      <created>1770561951434</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770561951434</updated>
+      <workItem from="1770561952741" duration="582000" />
+      <workItem from="1770562735263" duration="495000" />
+      <workItem from="1770599608993" duration="3729000" />
+      <workItem from="1770619610431" duration="9981000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

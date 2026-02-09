@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mifss-projects</artifactId>
+        <groupId>com.aeye.mifss</groupId>
+        <version>v2026.01</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mifss-guangxi</artifactId>
+    <packaging>pom</packaging>
+    <description>Project: Guangxi (广西项目父工程)</description>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-dependencies</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>mifss-guangxi-intf</module>
+        <module>mifss-guangxi-app</module>
+    </modules>
+
+</project>

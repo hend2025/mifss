@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mifss-mainline</artifactId>
+        <groupId>com.aeye.mifss</groupId>
+        <version>v2026.01</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mifss-biz</artifactId>
+    <packaging>pom</packaging>
+    <description>MIFSS Business Logic Layer (业务逻辑层父工程)</description>
+
+    <modules>
+        <module>mifss-biz-bio</module>
+        <module>mifss-biz-ipt</module>
+        <module>mifss-biz-opt</module>
+        <module>mifss-biz-hd</module>
+        <module>mifss-biz-bas</module>
+        <module>mifss-biz-pha</module>
+        <module>mifss-biz-trt</module>
+        <module>mifss-biz-video</module>
+        <module>mifss-biz-job</module>
+        <module>mifss-biz-api</module>
+        <module>mifss-biz-bc</module>
+    </modules>
+
+</project>
