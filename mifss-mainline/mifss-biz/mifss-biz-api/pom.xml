@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-biz-api</artifactId>
-    <description>Gateway &amp; Auth Implementation (网关鉴权/IoT接入实现)</description>
+    <description>移动端|桌面端|两点机构|IoT接入实现</description>
 
     <dependencies>
         <dependency>

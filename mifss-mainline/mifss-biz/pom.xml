@@ -11,7 +11,7 @@
 
     <artifactId>mifss-biz</artifactId>
     <packaging>pom</packaging>
-    <description>MIFSS Business Logic Layer (业务逻辑层父工程)</description>
+    <description>业务逻辑层父工程</description>
 
     <modules>
         <module>mifss-biz-bio</module>

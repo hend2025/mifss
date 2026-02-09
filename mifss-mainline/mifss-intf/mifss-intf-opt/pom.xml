@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-intf-opt</artifactId>
-    <description>OPT Interface Definition (门诊接口)</description>
+    <description>门诊接口</description>
 
     <dependencies>
          <dependency>

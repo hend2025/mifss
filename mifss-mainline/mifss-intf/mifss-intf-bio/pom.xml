@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-intf-bio</artifactId>
-    <description>BIO Interface Definition (生物识别接口)</description>
+    <description>生物识别接口</description>
 
     <dependencies>
         <dependency>

@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-guangxi-intf</artifactId>
-    <description>Project: Guangxi Interface Extensions (广西项目接口扩展)</description>
+    <description>广西项目接口扩展</description>
 
     <dependencies>
         <dependency>

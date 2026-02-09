@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-commons-web</artifactId>
-    <description>Common Web Configuration (通用Web层配置)</description>
+    <description>通用Web层配置</description>
 
     <dependencies>
         <dependency>

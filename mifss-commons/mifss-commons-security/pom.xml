@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-commons-security</artifactId>
-    <description>Common Security Configuration (通用安全认证配置)</description>
+    <description>通用安全认证配置</description>
 
     <dependencies>
 

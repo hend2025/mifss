@@ -29,10 +29,10 @@
     <file url="file://$PROJECT_DIR$/mifss-commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-dependencies/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-dependencies/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-bio/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-bio/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-ipt/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-app-ipt/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-api/src/main/java" charset="UTF-8" />
@@ -85,10 +85,10 @@
     <file url="file://$PROJECT_DIR$/mifss-mainline/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-app-all/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-app-all/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-app-bio/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-app-bio/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-app-ipt/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-app-ipt/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-bio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-bio/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-ipt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/mifss-guangxi-ipt/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-dependencies/src/main/java" charset="UTF-8" />
@@ -97,6 +97,8 @@
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-intf/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

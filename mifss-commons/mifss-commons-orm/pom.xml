@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-commons-orm</artifactId>
-    <description>Common ORM Configuration (通用持久层配置)</description>
+    <description>通用持久层配置</description>
 
     <dependencies>
 

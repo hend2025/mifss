@@ -14,8 +14,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>mifss-app-bio</module>
-        <module>mifss-app-ipt</module>
+        <module>mifss-bio</module>
+        <module>mifss-ipt</module>
     </modules>
 
 </project>

@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-intf-job</artifactId>
-    <description>JOB Interface Definition (定时任务接口)</description>
+    <description>定时任务接口</description>
 
     <dependencies>
          <dependency>

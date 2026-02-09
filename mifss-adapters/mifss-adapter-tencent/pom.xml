@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-adapter-tencent</artifactId>
-    <description>Tencent Adapter (腾讯云 COS 实现)</description>
+    <description>腾讯云适配</description>
 
 
     <dependencies>

@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-biz-job</artifactId>
-    <description>Job Scheduling Implementation (定时任务调度实现)</description>
+    <description>定时任务调度实现</description>
 
     <dependencies>
         <dependency>

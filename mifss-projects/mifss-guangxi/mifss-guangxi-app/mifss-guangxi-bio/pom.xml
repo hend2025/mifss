@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-guangxi-bio</artifactId>
-    <description>Project: Guangxi BIO Customization (广西生物识别定制)</description>
+    <description>广西生物识别定制</description>
 
     <dependencies>
          <!-- 继承主干实现 (Overlay Mainline Implementation) -->

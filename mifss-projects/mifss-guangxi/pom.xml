@@ -11,7 +11,7 @@
 
     <artifactId>mifss-guangxi</artifactId>
     <packaging>pom</packaging>
-    <description>Project: Guangxi (广西项目父工程)</description>
+    <description>广西项目父工程</description>
 
     <dependencyManagement>
         <dependencies>

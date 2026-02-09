@@ -11,11 +11,11 @@
 
     <artifactId>mifss-guangxi-app</artifactId>
     <packaging>pom</packaging>
-    <description>Project: Guangxi Business Customization (广西业务定制层)</description>
+    <description>广西业务定制</description>
 
     <modules>
-        <module>mifss-guangxi-app-ipt</module>
-        <module>mifss-guangxi-app-bio</module>
+        <module>mifss-guangxi-ipt</module>
+        <module>mifss-guangxi-bio</module>
     </modules>
 
 </project>

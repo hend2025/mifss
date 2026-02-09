@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-intf-hd</artifactId>
-    <description>HD Interface Definition (核定接口)</description>
+    <description>血透业务实现</description>
 
     <dependencies>
          <dependency>

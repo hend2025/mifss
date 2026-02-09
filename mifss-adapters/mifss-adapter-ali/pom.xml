@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-adapter-ali</artifactId>
-    <description>Aliyun Adapter (阿里云 OSS 实现)</description>
+    <description>阿里云适配</description>
 
     <dependencies>
 

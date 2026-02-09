@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-adapter-api</artifactId>
-    <description>Adapter Interface Definition (适配器通用接口)</description>
+    <description>适配器通用接口</description>
 
     <dependencies>
 

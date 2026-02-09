@@ -9,14 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mifss-ipt</artifactId>
+    <artifactId>mifss-bio</artifactId>
     <packaging>jar</packaging>
-    <description>Inpatient Application (住院服务发布包)</description>
+    <description>生物识别服务发布包</description>
 
+    <!-- 公共依赖 -->
     <dependencies>
         <dependency>
             <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-biz-ipt</artifactId>
+            <artifactId>mifss-biz-bio</artifactId>
         </dependency>
 
         <!-- RPC 适配包（所有平台共用） -->
@@ -63,9 +64,9 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.7</version>
         </dependency>
-
     </dependencies>
 
+    <!-- 多云平台 Profile 配置 -->
     <profiles>
         <!-- 开源云 -->
         <profile>
@@ -75,7 +76,7 @@
             </activation>
             <properties>
                 <platform.type>generic</platform.type>
-                <platform.mainClass>com.aeye.mifss.IptApplication</platform.mainClass>
+                <platform.mainClass>com.aeye.mifss.BioApplication</platform.mainClass>
             </properties>
             <dependencies>
                 <dependency>
@@ -90,7 +91,7 @@
             <id>ali</id>
             <properties>
                 <platform.type>ali</platform.type>
-                <platform.mainClass>com.aeye.mifss.IptApplicationAli</platform.mainClass>
+                <platform.mainClass>com.aeye.mifss.BioApplicationAli</platform.mainClass>
             </properties>
             <dependencies>
                 <dependency>
@@ -105,7 +106,7 @@
             <id>tencent</id>
             <properties>
                 <platform.type>tencent</platform.type>
-                <platform.mainClass>com.aeye.mifss.IptApplicationTencent</platform.mainClass>
+                <platform.mainClass>com.aeye.mifss.BioApplicationTencent</platform.mainClass>
             </properties>
             <dependencies>
                 <dependency>
@@ -120,7 +121,7 @@
             <id>huawei</id>
             <properties>
                 <platform.type>huawei</platform.type>
-                <platform.mainClass>com.aeye.mifss.IptApplicationHuawei</platform.mainClass>
+                <platform.mainClass>com.aeye.mifss.BioApplicationHuawei</platform.mainClass>
             </properties>
             <dependencies>
                 <dependency>
@@ -132,7 +133,12 @@
     </profiles>
 
     <build>
-        <finalName>mifss-ipt-${platform.type}-${project.version}</finalName>
+        <finalName>mifss-bio-${platform.type}-${project.version}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

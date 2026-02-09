@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-biz-pha</artifactId>
-    <description>Pharmacy Business Implementation (药店业务实现)</description>
+    <description>药店业务实现</description>
 
     <dependencies>
         <dependency>

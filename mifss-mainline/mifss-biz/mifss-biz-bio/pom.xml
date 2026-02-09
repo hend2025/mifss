@@ -10,8 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-biz-bio</artifactId>
-    <description>Bio-Metric Business Implementation (生物识别业务实现)</description>
-
+    <description>生物识别业务实现</description>
 
     <dependencies>
 

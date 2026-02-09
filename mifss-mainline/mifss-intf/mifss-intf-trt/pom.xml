@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-intf-trt</artifactId>
-    <description>TRT Interface Definition (待遇接口)</description>
+    <description>康复理疗业务实现</description>
 
     <dependencies>
          <dependency>

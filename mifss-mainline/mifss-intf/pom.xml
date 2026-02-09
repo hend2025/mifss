@@ -11,7 +11,7 @@
 
     <artifactId>mifss-intf</artifactId>
     <packaging>pom</packaging>
-    <description>MIFSS Interface Layer (接口定义层父工程)</description>
+    <description>接口定义层父工程</description>
 
     <modules>
         <module>mifss-intf-bio</module>

@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>mifss-adapter-generic</artifactId>
-    <description>Generic Storage Adapter (通用/本地存储实现)</description>
+    <description>开源云适配</description>
 
     <dependencies>
 

@@ -11,7 +11,7 @@
 
     <artifactId>mifss-adapters</artifactId>
     <packaging>pom</packaging>
-    <description>MIFSS Adapters Layer (适配器层父工程)</description>
+    <description>适配器层父工程</description>
 
     <dependencyManagement>
         <dependencies>
