@@ -6,6 +6,8 @@
 spring:
   application:
     name: mifss-bas
+  main:
+    allow-bean-definition-overriding: true
   profiles:
     active:
       - huawei
@@ -62,6 +64,11 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
+
+mybatis-plus:
+  configuration:
+    # 这里的 log-impl 会将 SQL 打印到控制台
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 security:
   type: hsa-mock

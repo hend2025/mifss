@@ -7,7 +7,7 @@ import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@Api(tags = "RPC测试人脸接口")
+@Api(tags = "RPC测试")
 @RestController
 @RequestMapping("/face")
 public class FaceController {
