@@ -19,51 +19,6 @@
             <artifactId>mifss-biz-ipt</artifactId>
         </dependency>
 
-        <!-- RPC 适配包（所有平台共用） -->
-        <dependency>
-            <groupId>cn.hsa.hsaf.adapt</groupId>
-            <artifactId>hsaf-generic-rpc</artifactId>
-            <version>1.1.0</version>
-        </dependency>
-
-        <!-- Dubbo -->
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>2.7.3</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-dependencies-zookeeper</artifactId>
-            <version>2.7.3</version>
-            <type>pom</type>
-            <exclusions>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.7</version>
-        </dependency>
-
     </dependencies>
 
     <profiles>
@@ -100,6 +55,21 @@
             </dependencies>
         </profile>
 
+        <!-- 华为云 -->
+        <profile>
+            <id>huawei</id>
+            <properties>
+                <platform.type>huawei</platform.type>
+                <platform.mainClass>com.aeye.mifss.IptApplicationHuawei</platform.mainClass>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.aeye.mifss</groupId>
+                    <artifactId>mifss-adapter-huawei</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+
         <!-- 腾讯云 -->
         <profile>
             <id>tencent</id>
@@ -115,20 +85,6 @@
             </dependencies>
         </profile>
 
-        <!-- 华为云 -->
-        <profile>
-            <id>huawei</id>
-            <properties>
-                <platform.type>huawei</platform.type>
-                <platform.mainClass>com.aeye.mifss.IptApplicationHuawei</platform.mainClass>
-            </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>com.aeye.mifss</groupId>
-                    <artifactId>mifss-adapter-huawei</artifactId>
-                </dependency>
-            </dependencies>
-        </profile>
     </profiles>
 
     <build>

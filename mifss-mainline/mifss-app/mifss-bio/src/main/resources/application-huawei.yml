@@ -1,0 +1,112 @@
+﻿server:
+  port: 8801
+  servlet:
+    context-path: /mifss/bio
+
+spring:
+  application:
+    name: mifss-bio
+  profiles:
+    active:
+      - huawei
+      - ev-test
+  cloud:
+    servicecomb:
+      config:
+        #配置中心地址
+        server-addr: http://127.0.0.1:30103
+        #默认轮询配置周期
+        watch:
+          delay: 10000
+        #服务名
+        service-name: ${spring.application.name}
+        #应用名
+        app-name: hsa
+        #yml文件
+        file-source:
+        #服务版本号
+        version: 1.0.0
+        #启动ServiceComb配置，默认为true
+        enabled: true
+      discovery:
+        #启动ServiceComb服务发现
+        enabled: true
+        #服务中心地址
+        address: http://127.0.0.1:30100
+        #服务版本号
+        version: 1.0.0
+        #启动健康检查
+        health-check: true
+        #健康检查间隔时间
+        health-check-interval: 30
+        #服务名
+        service-name: ${spring.application.name}
+        #应用名
+        app-name: hsa
+        #是否开启websocket watch机制,专业版引擎不支持，需要配置为false
+        watch: false
+      #如果要对接专业版引擎，需要配置aksk进行IAM认证
+      credentials:
+        #开启认证
+        enabled: false
+        #租户的AK
+        accessKey: xx
+        #租户的SK
+        secretKey: xx
+        #Cipher（填写default）
+        akskCustomCipher: default
+        #填写regoin名称
+        project: cn-east-3
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+security:
+  type: hsa-sso
+  isPrivilege: true
+  oauth2:
+    client:
+      permits: /,/index.html,/home,/home/**,/login,/logout,/user/forceLogout**,/captcha,/assets/**,/favicon.ico,/doc.html,/swagger-ui.html,/swagger-ui.html/**,/webjars/**,/*/api-docs,/v2/**,/**/swagger-resources/**
+
+cache:
+  alone:
+    deployType: 1
+    cacheName: defaultCache
+    clusterNodes: 127.0.0.1:6379
+    password: 123456
+  cluster:
+    deployType: 2
+    cacheName: defaultCache
+    clusterNodes: 127.0.0.1:6379
+    password: 123456
+    maxRedirects: 3
+
+session:
+  redis:
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+    database: 5
+    timeout: 6000
+    pool:
+      maxIdle: 50
+      maxTotal: 100
+      maxWaitMillis: -1
+      testOnBorrow: true
+      testOnReturn: true
+
+fsstore:
+  type: minio
+  bucket: group1
+
+mio:
+  endpoint: http://192.168.17.13:9900
+  accessKeyId: aeye
+  secretAccessKey: Zhy778899
+
+swagger:
+  title: MIFSS BIO API
+  description: MIFSS 生物特征识别服务 API 文档
+  version: 1.0.0

@@ -1,35 +1,42 @@
 ﻿server:
-  port: 8802
+  port: 8801
   servlet:
-    context-path: /mifss/ipt
+    context-path: /mifss/bio
 
-# Dubbo 配置
-dubbo:
-  application:
-    name: mifss-biz-ipt112
-    logger: slf4j
-  protocol:
-    name: dubbo
-    port: -1
-  consumer:
-    timeout: 60000 #远程服务调用超时时间(毫秒)
-  provider:
-    retries: 0 #远程服务调用重试次数，不包括第一次调用，不需要重试请设为0
-  registry:
-    address: zookeeper://127.0.0.1:2181
-    timeout: 10000
-  metadata-report:
-    address: zookeeper://127.0.0.1:2181
-
+#此处为阿里云EDAS注册配置中心环境
 spring:
   application:
-    name: mifss-ipt
+    name: mifss-bio
+  profiles:
+    active:
+      - ali
+      - ev-test
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    alicloud:
+      edas:
+        namespace: cn-haikou-hkybhx-d01
+        enabled: true
+      acm:
+        #在阿里云ACM上必须是yaml，不能是yml
+        file-extension: yaml
+        #超时
+        timeout: 3000
+        #默认就是true
+        refresh-enabled: true
+        group: hsa-ims-his
+        endpoint: jmenv-dncs.cn-haikou-hkybhx-am1813001-a.res.private-cloud.hainyb.com
+        server-mode: EDAS
+        namespace: 740c9d9a-0cc5-4c11-883f-d85ecf45cebf
+      access-key: 68b4ecc5f8de48679f745004dde33878
+      secret-key: GMp2xAVW2Eo+mG4E67c/Pd7mLAU=
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
-  
+
 security:
   type: hsa-sso
   isPrivilege: true
@@ -74,6 +81,6 @@ mio:
   secretAccessKey: Zhy778899
 
 swagger:
-  title: MIFSS IPT API
-  description: MIFSS 住院服务 API 文档
+  title: MIFSS BIO API
+  description: MIFSS 生物特征识别服务 API 文档
   version: 1.0.0

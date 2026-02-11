@@ -1,12 +1,12 @@
 ﻿server:
-  port: 8801
+  port: 8802
   servlet:
-    context-path: /mifss/bio
+    context-path: /mifss/ipt
 
 # Dubbo 配置
 dubbo:
   application:
-    name: mifss-biz-bio
+    name: mifss-ipt
     logger: slf4j
   protocol:
     name: dubbo
@@ -23,7 +23,11 @@ dubbo:
 
 spring:
   application:
-    name: mifss-app-bio
+    name: mifss-ipt
+  profiles:
+    active:
+      - generic
+      - ev-test
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
@@ -74,6 +78,6 @@ mio:
   secretAccessKey: Zhy778899
 
 swagger:
-  title: MIFSS BIO API
-  description: MIFSS 生物特征识别服务 API 文档
+  title: MIFSS IPT API
+  description: MIFSS 住院服务 API 文档
   version: 1.0.0

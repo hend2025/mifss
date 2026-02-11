@@ -5,33 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd390e63-630d-4c5e-a156-dbd2a5865735" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/application-huawei.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/application-tencent.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/ali/rpc-consumer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/ali/rpc-provider.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/ali/rpc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/huawei/rpc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/tencent/rpc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/application-ali.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/application-generic.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/application-huawei.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/application-tencent.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/ali/rpc-consumer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/ali/rpc-provider.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/ali/rpc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-ali/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-ali/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-huawei/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-huawei/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-tencent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-tencent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationAli.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationAli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/cache/cache.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/rpc/ali/consumer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/generic/rpc-consumer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/rpc/ali/provider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/generic/rpc-provider.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/rpc/ali/rpc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/rpc/generic/consumer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/rpc/generic/provider.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/rpc/generic/rpc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/generic/rpc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/rpc/huawei/rpc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/rpc/tencent/rpc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationHuawei.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationHuawei.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationTencent.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationTencent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/application-ali.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationAli.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationAli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/cache/cache.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/rpc/ali/consumer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/rpc/ali/provider.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/rpc/ali/rpc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/config/adapt/generic/rpc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/rpc/generic/consumer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/generic/rpc-consumer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/rpc/generic/provider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/generic/rpc-provider.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/rpc/generic/rpc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/rpc/huawei/rpc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/rpc/tencent/rpc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/resources/config/adapt/cache/cache.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/config/adapt/cache/cache.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationHuawei.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationHuawei.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationTencent.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationTencent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/resources/application-generic.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/generic/rpc-provider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config/adapt/generic/rpc-provider.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +54,7 @@
         <option name="userSettingsFile" value="D:\software\apache-maven-3.8.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="explicitlyEnabledProfiles" value="generic" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -79,15 +84,15 @@
     "Spring Boot.IptApplication.executor": "Debug",
     "git-widget-placeholder": "v2.0.0",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/mifss-parent/mifss/mifss-mainline/mifss-app/mifss-ipt/src/main/resources/config",
+    "last_opened_file_path": "D:/mifss-parent/mifss/mifss-mainline/mifss-app/mifss-ipt/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
@@ -98,13 +103,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-ipt\src\main\resources\config" />
-      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-bio\src\main\resources\config" />
       <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-ipt\src\main\resources" />
-      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-bio\src\main\resources\config\generic" />
-      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-app-bio\src\main\resources\config\adapt\rpc" />
+      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-ipt\src\main\resources\config" />
+      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-bio\src\main\resources" />
+      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-bio\src\main\resources\config\adapt\tencent" />
+      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-bio\src\main\resources\config\adapt\huawei" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-ipt\src\main\resources" />
       <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-bio\src\main\resources\config\adapt" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -125,8 +131,8 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="BioApplication" value="STOPPED" />
-              <entry key="GuangxiBioApplication" value="FAILED" />
+              <entry key="BioApplication" value="FAILED" />
+              <entry key="GuangxiBioApplication" value="STOPPED" />
               <entry key="GuangxiIptApplication" value="STOPPED" />
               <entry key="IptApplication" value="STOPPED" />
             </map>
@@ -138,6 +144,7 @@
   <component name="RunManager" selected="Spring Boot.BioApplication">
     <configuration name="BioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="mifss-bio" />
+      <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.aeye.mifss.BioApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,8 +171,15 @@
     <configuration name="IptApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="mifss-ipt" />
+      <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.aeye.mifss.IptApplication" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -199,6 +213,10 @@
       <workItem from="1770631535927" duration="414000" />
       <workItem from="1770637111131" duration="5322000" />
       <workItem from="1770642495135" duration="1323000" />
+      <workItem from="1770644187356" duration="657000" />
+      <workItem from="1770770954917" duration="9425000" />
+      <workItem from="1770780977925" duration="11000" />
+      <workItem from="1770781019097" duration="5003000" />
     </task>
     <servers />
   </component>
