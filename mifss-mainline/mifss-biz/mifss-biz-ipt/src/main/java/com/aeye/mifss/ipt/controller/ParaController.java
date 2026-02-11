@@ -3,10 +3,11 @@ package com.aeye.mifss.ipt.controller;
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import cn.hsa.ims.common.contoller.AeyeAbstractController;
 import cn.hsa.ims.common.utils.AeyePageInfo;
+import cn.hsa.ims.common.utils.AeyePageResult;
 import com.aeye.mifss.bas.dto.ParaDTO;
 import com.aeye.mifss.bas.service.RpcParaService;
+import com.aeye.mifss.common.dto.RpcMergeDTO;
 import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -29,21 +30,18 @@ public class ParaController extends AeyeAbstractController {
     @ApiOperation("查询列表")
     @PostMapping("/list")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum", value = "当前页码", dataType = "int", paramType = "header"),
-            @ApiImplicitParam(name = "pageSize", value = "每页条目", dataType = "int", paramType = "header"),
+            @ApiImplicitParam(name = "pageNum", value = "当前页码", dataType = "int", paramType = "header", example = "1"),
+            @ApiImplicitParam(name = "pageSize", value = "每页条目", dataType = "int", paramType = "header", example = "10"),
             @ApiImplicitParam(name = "orderField", value = "排序字段", dataType = "string", paramType = "header"),
             @ApiImplicitParam(name = "orderType", value = "排序类型", dataType = "string", paramType = "header", example = "asc或者desc")
     })
     public WrapperResponse<List<ParaDTO>> list() throws Exception {
         AeyePageInfo pageInfo = buildPageInfo();
-        RpcQueryWrapper<ParaDTO> queryWrapper = new RpcQueryWrapper<ParaDTO>();
-        Page<ParaDTO> page = new Page<>();
-        page.setCurrent(pageInfo.getPageNum());
-        page.setSize(pageInfo.getPageSize());
-        queryWrapper.like(ParaDTO::getParaName,"check");
-        queryWrapper.setLastSql("limit 10");
-        Page<ParaDTO> list = (Page<ParaDTO>) paraService.pageRpc(page,queryWrapper);
-        return (WrapperResponse) WrapperResponse.success(list);
+        RpcMergeDTO<ParaDTO> rpcMergeDTO = new RpcMergeDTO(pageInfo, new RpcQueryWrapper<ParaDTO>()
+                .like(ParaDTO::getParaName, "is_appl_no_check_model")
+                .last("limit 10"));
+        AeyePageResult<ParaDTO> result = paraService.pageRpc(rpcMergeDTO);
+        return (WrapperResponse) WrapperResponse.success(result);
     }
 
 }

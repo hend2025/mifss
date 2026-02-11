@@ -1,14 +1,22 @@
 package com.aeye.mifss.common.mybatis.service;
 
+import cn.hsa.ims.common.utils.AeyePageInfo;
+import cn.hsa.ims.common.utils.AeyePageResult;
 import cn.hutool.core.bean.BeanUtil;
+import com.aeye.mifss.common.dto.RpcMergeDTO;
 import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
 import com.aeye.mifss.common.mybatis.wrapper.RpcUpdateWrapper;
 import com.aeye.mifss.common.mybatis.wrapper.RpcWrapperConverter;
+import com.aeye.mifss.common.utils.PageUtils;
+import com.aeye.mifss.common.utils.Query;
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.Collection;
@@ -95,8 +103,11 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
     }
 
     @Override
-    public IPage<Entity> page(IPage<Entity> page, Wrapper<Entity> queryWrapper) {
-        return bo.page(page, queryWrapper);
+    public AeyePageResult<Entity> page(AeyePageInfo pageParam, Wrapper queryWrapper) throws Exception{
+        IPage<Entity> page = bo.page(
+                new Query<Entity>().getPage(pageParam)
+                ,queryWrapper);
+        return PageUtils.pageConvert(page);
     }
 
     @Override
@@ -178,10 +189,13 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
     }
 
     @Override
-    public IPage<DTO> pageRpc(IPage<DTO> page, RpcQueryWrapper<DTO> queryWrapper) {
-        IPage<Entity> entityPage = page.convert(this::toEntity);
-        IPage<Entity> resultPage = page(entityPage, RpcWrapperConverter.toQueryWrapper(queryWrapper));
-        return resultPage.convert(this::toDto);
+    public AeyePageResult<DTO> pageRpc(RpcMergeDTO<DTO> mergeDTO) throws Exception {
+        //转本地条件构造器
+        Wrapper<Entity> wrapper = RpcWrapperConverter.toQueryWrapper(mergeDTO.getQueryWrapper());
+        AeyePageResult pageResult = this.page(mergeDTO.getPageParam(), wrapper);
+        List<DTO> dtoList = getTargetDtoList(pageResult.getData());
+        pageResult.setData(dtoList);
+        return pageResult;
     }
 
     @Override
@@ -243,5 +257,11 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
     public Map<String, Object> getMapRpc(RpcQueryWrapper<DTO> queryWrapper) {
         return getMap(RpcWrapperConverter.toQueryWrapper(queryWrapper));
     }
+
+    protected List<DTO> getTargetDtoList(List<Entity> dtos) throws Exception{
+        String result = JSONObject.toJSONString(dtos);
+        return (List<DTO>) JSONObject.parseArray(result, getDtoClass());
+    }
+
 
 }

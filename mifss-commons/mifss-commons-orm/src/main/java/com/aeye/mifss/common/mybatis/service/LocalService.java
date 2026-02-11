@@ -1,5 +1,7 @@
 package com.aeye.mifss.common.mybatis.service;
 
+import cn.hsa.ims.common.utils.AeyePageInfo;
+import cn.hsa.ims.common.utils.AeyePageResult;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -29,7 +31,7 @@ public interface LocalService<Entity> {
     /**
      * 分页查询
      */
-    IPage<Entity> page(IPage<Entity> page, Wrapper<Entity> queryWrapper);
+    AeyePageResult<Entity> page(AeyePageInfo page, Wrapper<Entity> queryWrapper) throws Exception;
 
     /**
      * 插入一条记录

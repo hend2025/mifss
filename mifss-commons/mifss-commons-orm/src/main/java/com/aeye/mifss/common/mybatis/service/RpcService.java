@@ -1,8 +1,11 @@
 package com.aeye.mifss.common.mybatis.service;
 
+import cn.hsa.ims.common.utils.AeyePageResult;
+import com.aeye.mifss.common.dto.RpcMergeDTO;
 import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
 import com.aeye.mifss.common.mybatis.wrapper.RpcUpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -29,7 +32,9 @@ public interface RpcService<DTO> {
     /**
      * 分页查询
      */
-    IPage<DTO> pageRpc(IPage<DTO> page, RpcQueryWrapper<DTO> queryWrapper);
+//    IPage<DTO> pageRpc(IPage<DTO> page, RpcQueryWrapper<DTO> queryWrapper);
+    AeyePageResult<DTO> pageRpc(@RequestBody RpcMergeDTO<DTO> mergeDTO) throws Exception;
+
 
     /**
      * 插入一条记录

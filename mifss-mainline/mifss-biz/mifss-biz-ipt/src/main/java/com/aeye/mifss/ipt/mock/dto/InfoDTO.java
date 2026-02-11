@@ -1,4 +1,4 @@
-package com.aeye.mifss.ipt.dto;
+package com.aeye.mifss.ipt.mock.dto;
 
 import cn.hsa.hsaf.core.framework.validation.L2;
 import com.fasterxml.jackson.annotation.JsonFormat;
