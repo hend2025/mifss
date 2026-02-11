@@ -64,7 +64,7 @@ spring:
     password: 123456
 
 security:
-  type: hsa-sso
+  type: hsa-mock
   isPrivilege: true
   oauth2:
     client:

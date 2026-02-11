@@ -41,6 +41,7 @@ public class ParaController extends AeyeAbstractController {
         page.setCurrent(pageInfo.getPageNum());
         page.setSize(pageInfo.getPageSize());
         queryWrapper.like(ParaDTO::getParaName,"check");
+        queryWrapper.setLastSql("limit 10");
         Page<ParaDTO> list = (Page<ParaDTO>) paraService.pageRpc(page,queryWrapper);
         return (WrapperResponse) WrapperResponse.success(list);
     }

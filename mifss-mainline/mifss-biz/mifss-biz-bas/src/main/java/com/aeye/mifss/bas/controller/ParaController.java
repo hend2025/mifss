@@ -33,6 +33,8 @@ public class ParaController extends AeyeAbstractController {
     public WrapperResponse<List<ParaDTO>> list() throws Exception {
         AeyePageInfo pageInfo = buildPageInfo();
         LambdaQueryWrapper<ParaDO> queryWrapper = new LambdaQueryWrapper<ParaDO>();
+        queryWrapper.like(ParaDO::getParaName,"check");
+        queryWrapper.last("limit 10");
         Page<ParaDO> page = new Page<>();
         page.setCurrent(pageInfo.getPageNum());
         page.setSize(pageInfo.getPageSize());
