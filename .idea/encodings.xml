@@ -5,8 +5,8 @@
     <file url="file://$PROJECT_DIR$/mifss-adapters/mifss-adapter-ali/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-adapters/mifss-adapter-aliyun/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-adapters/mifss-adapter-aliyun/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mifss-adapters/mifss-adapter-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mifss-adapters/mifss-adapter-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-adapters/mifss-adapter-huawei/src/main/java" charset="UTF-8" />
@@ -97,6 +97,22 @@
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-intf/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-guangxi-app/mifss-guangxi-bio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-guangxi-app/mifss-guangxi-bio/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-guangxi-app/mifss-guangxi-ipt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-guangxi-app/mifss-guangxi-ipt/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-guangxi-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-guangxi-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-guangxi-intf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-guangxi-intf/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-app/mifss-hunan-bio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-app/mifss-hunan-bio/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-app/mifss-hunan-ipt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-app/mifss-hunan-ipt/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-intf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-intf/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/mifss-hunan/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mifss-projects/src/main/java" charset="UTF-8" />

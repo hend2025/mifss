@@ -26,7 +26,7 @@
     </dependencyManagement>
 
     <modules>
-        <module>mifss-adapter-api</module>
+        <module>mifss-adapter-core</module>
         <module>mifss-adapter-generic</module>
         <module>mifss-adapter-ali</module>
         <module>mifss-adapter-huawei</module>

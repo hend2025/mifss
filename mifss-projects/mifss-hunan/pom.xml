@@ -25,4 +25,9 @@
         </dependencies>
     </dependencyManagement>
 
+    <modules>
+        <module>mifss-hunan-intf</module>
+        <module>mifss-hunan-app</module>
+    </modules>
+
 </project>

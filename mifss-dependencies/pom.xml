@@ -237,7 +237,7 @@
             <!-- 2.4 适配器层 Adapters -->
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-adapter-api</artifactId>
+                <artifactId>mifss-adapter-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

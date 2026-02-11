@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication
+@Profile("ali")
 @ImportResource({
-        "classpath:config/adapt/rpc/generic/rpc.xml",
-        "classpath:config/adapt/rpc/generic/provider.xml",
-        "classpath:config/adapt/rpc/generic/consumer.xml"
+        "classpath:config/adapt/ali/rpc.xml"
 })
 @ComponentScan(basePackages = {"com.aeye.mifss", "cn.hsa.ims" }, excludeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, classes = WildcardControllerFilter.class ))
 public class GuangxiBioApplication {

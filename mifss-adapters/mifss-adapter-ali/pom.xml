@@ -16,7 +16,7 @@
 
         <dependency>
             <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-adapter-api</artifactId>
+            <artifactId>mifss-adapter-core</artifactId>
         </dependency>
 
         <dependency>

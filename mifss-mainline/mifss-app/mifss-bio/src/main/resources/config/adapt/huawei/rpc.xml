@@ -20,8 +20,8 @@
         <property name="order" value="5"/>
     </bean>
 
-<!--    <bean class="cn.hsa.ims.common.web.AeyeRequestMappingHandlerAdapter">-->
-<!--        <property name="order" value="5"/>-->
-<!--    </bean>-->
+    <bean class="cn.hsa.ims.common.web.AeyeRequestMappingHandlerAdapter">
+        <property name="order" value="5"/>
+    </bean>
 
 </beans>

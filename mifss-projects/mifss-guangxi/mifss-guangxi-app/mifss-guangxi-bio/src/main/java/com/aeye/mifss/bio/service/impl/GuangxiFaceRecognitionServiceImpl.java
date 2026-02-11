@@ -4,7 +4,7 @@ import com.aeye.mifss.bio.dto.FaceImageReq;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("faceRecognitionServiceImpl")
 @Primary
 public class GuangxiFaceRecognitionServiceImpl extends FaceRecognitionServiceImpl {
 
