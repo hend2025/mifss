@@ -19,7 +19,4 @@
     <!-- 接受端 -->
     <bean id="userContextHttpInterceptor" class="cn.hsa.hsaf.generic.rpc.UserContextHttpInterceptor"/>
 
-    <import resource="rpc-consumer.xml"/>
-    <import resource="rpc-provider.xml"/>
-
 </beans>

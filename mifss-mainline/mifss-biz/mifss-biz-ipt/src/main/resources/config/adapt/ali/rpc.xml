@@ -6,20 +6,16 @@
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 该文件需要项目自行引入-->
-    <bean id="rpcDubboServiceContextAspect" class="cn.hsa.hsaf.generic.rpc.RpcDubboServiceContextAspect"/>
+    <bean id="rpcHsfServiceContextAspect" class="cn.hsa.hsaf.generic.rpc.RpcHsfServiceContextAspect"/>
 
     <aop:config>
         <!-- 配置切点表达式 -->
         <aop:pointcut id="bosg-point" expression="execution(* com.aeye.mifss..*service.*Service.*(..))"/>
-        <aop:aspect ref="rpcDubboServiceContextAspect" order="9999">
+        <aop:aspect ref="rpcHsfServiceContextAspect" order="9999">
             <aop:before method="beforeInvokingSetContext" pointcut-ref="bosg-point"/>
         </aop:aspect>
     </aop:config>
 
-    <!-- 接受端 -->
-    <bean id="userContextHttpInterceptor" class="cn.hsa.hsaf.generic.rpc.UserContextHttpInterceptor"/>
-
-    <import resource="rpc-consumer.xml"/>
-    <import resource="rpc-provider.xml"/>
+    <bean id="restHsfServiceInterceptor" class="cn.hsa.hsaf.generic.rpc.RestHsfServiceInterceptor"/>
 
 </beans>

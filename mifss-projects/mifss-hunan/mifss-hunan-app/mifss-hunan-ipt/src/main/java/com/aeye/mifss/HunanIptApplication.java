@@ -9,9 +9,8 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication
-@Profile("generic")
 @ImportResource({
-        "classpath:config/adapt/generic/rpc.xml"
+        "classpath*:config/adapt/generic/*.xml"
 })
 @ComponentScan(basePackages = {"com.aeye.mifss", "cn.hsa.ims" }, excludeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, classes = WildcardControllerFilter.class ))
 public class HunanIptApplication {
