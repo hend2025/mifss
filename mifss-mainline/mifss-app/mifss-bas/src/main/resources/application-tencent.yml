@@ -1,0 +1,104 @@
+﻿server:
+  port: 8800
+  servlet:
+    context-path: /mifss/bas
+
+spring:
+  application:
+    name: mifss-bas
+  profiles:
+    active:
+      - tencent
+      - ev-test
+  main:
+    allow-bean-definition-overriding: true
+  #注意此处禁用腾讯云TraceJdbcAutoConfigration和启动类排除或spring.autoconfigure.exclude.TraceJdbcAutoConfigration一个效果
+  #如果不排除腾讯云的数据源代理，程序里面mybatis-plus的DynamicRoutingDataSource会取不到
+  sleuth:
+    jdbc:
+      enabled: false
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      config:
+        #配置默认文件名
+        default-context: ${spring.application.name}
+        #是否启用consul配置
+        enabled: true
+        #配置文件格式
+        format: YAML
+        #配置基本文件，默认值config
+        prefix: config
+        #配置文件名，默认data
+        data-key: data
+      discovery:
+        #是否启用服务发现
+        enabled: true
+        #配置健康检查路径
+        health-check-path: /actuator/health
+        #配置健康检查时间间隔
+        health-check-interval: 15s
+        #配置实例id
+        #        instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        #配置服务注册
+        register: true
+        #服务停止时取消注册，http://www.imooc.com/article/286883?block_id=tuijian_wz
+        deregister: true
+        #表示注册时使用ip而不是hostname
+        prefer-ip-address: true
+        #健康检查失败多长时间取消注册
+        health-check-critical-timeout: 30s
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+security:
+  type: hsa-sso
+  isPrivilege: true
+  oauth2:
+    client:
+      permits: /,/index.html,/home,/home/**,/login,/logout,/user/forceLogout**,/captcha,/assets/**,/favicon.ico,/doc.html,/swagger-ui.html,/swagger-ui.html/**,/webjars/**,/*/api-docs,/v2/**,/**/swagger-resources/**
+
+cache:
+  alone:
+    deployType: 1
+    cacheName: defaultCache
+    clusterNodes: 127.0.0.1:6379
+    password: 123456
+  cluster:
+    deployType: 2
+    cacheName: defaultCache
+    clusterNodes: 127.0.0.1:6379
+    password: 123456
+    maxRedirects: 3
+
+session:
+  redis:
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+    database: 5
+    timeout: 6000
+    pool:
+      maxIdle: 50
+      maxTotal: 100
+      maxWaitMillis: -1
+      testOnBorrow: true
+      testOnReturn: true
+
+fsstore:
+  type: minio
+  bucket: group1
+
+mio:
+  endpoint: http://192.168.17.13:9900
+  accessKeyId: aeye
+  secretAccessKey: Zhy778899
+
+swagger:
+  title: MIFSS BAS API
+  description: MIFSS 基础服务 API 文档
+  version: 1.0.0

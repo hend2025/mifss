@@ -46,7 +46,7 @@
         </dependency>
         <dependency>
             <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-biz-bas</artifactId>
+            <artifactId>mifss-intf-bas</artifactId>
         </dependency>
         <dependency>
             <groupId>com.aeye.mifss</groupId>

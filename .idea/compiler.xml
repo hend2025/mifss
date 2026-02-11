@@ -19,6 +19,7 @@
         <module name="mifss-intf-video" />
         <module name="mifss-adapter-generic" />
         <module name="mifss-biz-job" />
+        <module name="mifss-bas" />
         <module name="mifss-biz-video" />
         <module name="mifss-biz-bio" />
         <module name="mifss-intf-ipt" />

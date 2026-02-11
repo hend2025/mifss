@@ -45,23 +45,6 @@
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-biz-bas</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-adapter-core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>

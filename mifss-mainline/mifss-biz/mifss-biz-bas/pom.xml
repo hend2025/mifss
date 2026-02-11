@@ -13,14 +13,46 @@
     <description>基础信息业务实现</description>
 
     <dependencies>
+
         <dependency>
-            <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-intf-bas</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-commons-orm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-commons-swagger</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-commons-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-intf-bas</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-adapter-core</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

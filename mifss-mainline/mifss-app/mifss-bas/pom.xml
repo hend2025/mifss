@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mifss-app</artifactId>
+        <groupId>com.aeye.mifss</groupId>
+        <version>v2026.01</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mifss-bas</artifactId>
+    <packaging>jar</packaging>
+    <description>生物识别服务发布包</description>
+
+    <!-- 公共依赖 -->
+    <dependencies>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-biz-bas</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <!-- 多云平台 Profile 配置 -->
+    <profiles>
+        <!-- 开源云 -->
+        <profile>
+            <id>generic</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <platform.type>generic</platform.type>
+                <platform.mainClass>com.aeye.mifss.BasApplication</platform.mainClass>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.aeye.mifss</groupId>
+                    <artifactId>mifss-adapter-generic</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <!-- 阿里云 -->
+        <profile>
+            <id>ali</id>
+            <properties>
+                <platform.type>ali</platform.type>
+                <platform.mainClass>com.aeye.mifss.BasApplicationAli</platform.mainClass>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.aeye.mifss</groupId>
+                    <artifactId>mifss-adapter-ali</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <!-- 华为云 -->
+        <profile>
+            <id>huawei</id>
+            <properties>
+                <platform.type>huawei</platform.type>
+                <platform.mainClass>com.aeye.mifss.BasApplicationHuawei</platform.mainClass>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.aeye.mifss</groupId>
+                    <artifactId>mifss-adapter-huawei</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <!-- 腾讯云 -->
+        <profile>
+            <id>tencent</id>
+            <properties>
+                <platform.type>tencent</platform.type>
+                <platform.mainClass>com.aeye.mifss.BasApplicationTencent</platform.mainClass>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.aeye.mifss</groupId>
+                    <artifactId>mifss-adapter-tencent</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+
+    </profiles>
+
+    <build>
+        <finalName>mifss-bio-${platform.type}-${project.version}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.0.9.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>${platform.mainClass}</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

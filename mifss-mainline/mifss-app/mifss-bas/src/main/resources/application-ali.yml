@@ -1,0 +1,85 @@
+﻿server:
+  port: 8800
+  servlet:
+    context-path: /mifss/bas
+
+spring:
+  application:
+    name: mifss-bas
+  profiles:
+    active:
+      - ali
+      - ev-test
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    alicloud:
+      edas:
+        namespace: cn-haikou-hkybhx-d01
+        enabled: true
+      acm:
+        #在阿里云ACM上必须是yaml，不能是yml
+        file-extension: yaml
+        #超时
+        timeout: 3000
+        #默认就是true
+        refresh-enabled: true
+        group: hsa-ims-his
+        endpoint: jmenv-dncs.cn-haikou-hkybhx-am1813001-a.res.private-cloud.hainyb.com
+        server-mode: EDAS
+        namespace: 740c9d9a-0cc5-4c11-883f-d85ecf45cebf
+      access-key: 68b4ecc5f8de48679f745004dde33878
+      secret-key: GMp2xAVW2Eo+mG4E67c/Pd7mLAU=
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/medicare_202588?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+security:
+  type: hsa-sso
+  isPrivilege: true
+  oauth2:
+    client:
+      permits: /,/index.html,/home,/home/**,/login,/logout,/user/forceLogout**,/captcha,/assets/**,/favicon.ico,/doc.html,/swagger-ui.html,/swagger-ui.html/**,/webjars/**,/*/api-docs,/v2/**,/**/swagger-resources/**
+
+cache:
+  alone:
+    deployType: 1
+    cacheName: defaultCache
+    clusterNodes: 127.0.0.1:6379
+    password: 123456
+  cluster:
+    deployType: 2
+    cacheName: defaultCache
+    clusterNodes: 127.0.0.1:6379
+    password: 123456
+    maxRedirects: 3
+
+session:
+  redis:
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+    database: 5
+    timeout: 6000
+    pool:
+      maxIdle: 50
+      maxTotal: 100
+      maxWaitMillis: -1
+      testOnBorrow: true
+      testOnReturn: true
+
+fsstore:
+  type: minio
+  bucket: group1
+
+mio:
+  endpoint: http://192.168.17.13:9900
+  accessKeyId: aeye
+  secretAccessKey: Zhy778899
+
+swagger:
+  title: MIFSS BAS API
+  description: MIFSS 基础服务 API 文档
+  version: 1.0.0

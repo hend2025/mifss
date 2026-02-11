@@ -7,6 +7,4 @@
 
     <dubbo:reference id="rpcParaService" interface="com.aeye.mifss.bas.service.RpcParaService" check="false" timeout="60000"></dubbo:reference>
 
-    <dubbo:reference id="rpcFaceRecognitionService" interface="com.aeye.mifss.bio.service.RpcFaceRecognitionService" check="false" timeout="60000"></dubbo:reference>
-
 </beans>
