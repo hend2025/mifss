@@ -1,5 +1,6 @@
 package com.aeye.mifss.bas.entity;
 
+import com.aeye.mifss.common.annotation.CacheEntity;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -11,6 +12,7 @@ import java.util.Date;
  */
 @Data
 @TableName("scen_para_a")
+@CacheEntity(keyPrefix = "scen_para_a")
 public class ParaDO implements Serializable {
     private static final long serialVersionUID = 1L;
 

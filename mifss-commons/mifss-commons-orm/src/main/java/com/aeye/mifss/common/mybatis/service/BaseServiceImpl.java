@@ -1,6 +1,7 @@
 package com.aeye.mifss.common.mybatis.service;
 
 import cn.hsa.hsaf.core.framework.web.HsafRestPath;
+import cn.hsa.ims.common.cache.AeyeCacheManager;
 import cn.hsa.ims.common.utils.AeyePageInfo;
 import cn.hsa.ims.common.utils.AeyePageResult;
 import cn.hutool.core.bean.BeanUtil;
@@ -24,12 +25,16 @@ import java.lang.reflect.ParameterizedType;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+
+import com.aeye.mifss.common.annotation.CacheEntity;
+import cn.hutool.core.util.StrUtil;
 
 public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         implements LocalService<Entity>, RpcService<DTO> {
 
-    @Autowired
+    @Autowired(required = false)
     protected BO bo;
 
     /**
@@ -86,12 +91,37 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         return entityList.stream().map(this::toDto).collect(Collectors.toList());
     }
 
-
     // ================= LocalService Implementation =================
 
     @Override
     public Entity getById(Serializable id) {
+        CacheEntity cacheEntity = getEntityClass().getAnnotation(CacheEntity.class);
+        if (cacheEntity != null) {
+            String key = getCacheKey(cacheEntity, (Serializable) id);
+            Object obj = AeyeCacheManager.get(key,getEntityClass());
+            if (obj != null) {
+                return (Entity) obj;
+            }
+            Entity entity = bo.getById(id);
+            if (entity != null) {
+                long expire = cacheEntity.expire();
+                if (expire > 0) {
+                    AeyeCacheManager.putTTL(key,entity,expire);
+                } else {
+                    AeyeCacheManager.put(key,entity);
+                }
+            }
+            return entity;
+        }
         return bo.getById(id);
+    }
+
+    private String getCacheKey(CacheEntity cacheEntity, Serializable id) {
+        String prefix = cacheEntity.keyPrefix();
+        if (StrUtil.isEmpty(prefix)) {
+            prefix = getEntityClass().getSimpleName();
+        }
+        return prefix + ":" + id;
     }
 
     @Override
@@ -105,16 +135,19 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
     }
 
     @Override
-    public AeyePageResult<Entity> page(AeyePageInfo pageParam, Wrapper queryWrapper) throws Exception{
+    public AeyePageResult<Entity> page(AeyePageInfo pageParam, Wrapper queryWrapper) throws Exception {
         IPage<Entity> page = bo.page(
-                new Query<Entity>().getPage(pageParam)
-                ,queryWrapper);
+                new Query<Entity>().getPage(pageParam), queryWrapper);
         return PageUtils.pageConvert(page);
     }
 
     @Override
     public boolean save(Entity entity) {
-        return bo.save(entity);
+        boolean result = bo.save(entity);
+        if (result) {
+            updateCache(entity);
+        }
+        return result;
     }
 
     @Override
@@ -124,7 +157,11 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
 
     @Override
     public boolean updateById(Entity entity) {
-        return bo.updateById(entity);
+        boolean result = bo.updateById(entity);
+        if (result) {
+            updateCache(entity);
+        }
+        return result;
     }
 
     @Override
@@ -139,12 +176,20 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
 
     @Override
     public boolean saveOrUpdate(Entity entity) {
-        return bo.saveOrUpdate(entity);
+        boolean result = bo.saveOrUpdate(entity);
+        if (result) {
+            updateCache(entity);
+        }
+        return result;
     }
 
     @Override
     public boolean removeById(Serializable id) {
-        return bo.removeById(id);
+        boolean result = bo.removeById(id);
+        if (result) {
+            removeCache(id);
+        }
+        return result;
     }
 
     @Override
@@ -154,7 +199,63 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
 
     @Override
     public boolean removeByIds(Collection<? extends Serializable> idList) {
-        return bo.removeByIds(idList);
+        boolean result = bo.removeByIds(idList);
+        if (result && idList != null) {
+            for (Serializable id : idList) {
+                removeCache(id);
+            }
+        }
+        return result;
+    }
+
+    private void updateCache(Entity entity) {
+        CacheEntity cacheEntity = getEntityClass().getAnnotation(CacheEntity.class);
+        if (cacheEntity != null) {
+            try {
+                Object id = getIdVal(entity);
+                if (id != null) {
+                    String key = getCacheKey(cacheEntity, (Serializable) id);
+                    long expire = cacheEntity.expire();
+                    if (expire > 0) {
+                        AeyeCacheManager.putTTL(key,entity,expire);
+                    } else {
+                        AeyeCacheManager.put(key,entity);
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void removeCache(Serializable id) {
+        CacheEntity cacheEntity = getEntityClass().getAnnotation(CacheEntity.class);
+        if (cacheEntity != null) {
+            String key = getCacheKey(cacheEntity, id);
+            AeyeCacheManager.remove(key);
+        }
+    }
+
+    private Object getIdVal(Entity entity) {
+        try {
+            java.lang.reflect.Field[] fields = entity.getClass().getDeclaredFields();
+            for (java.lang.reflect.Field field : fields) {
+                if (field.isAnnotationPresent(com.baomidou.mybatisplus.annotation.TableId.class)) {
+                    field.setAccessible(true);
+                    return field.get(entity);
+                }
+            }
+            try {
+                java.lang.reflect.Field idField = entity.getClass().getDeclaredField("id");
+                idField.setAccessible(true);
+                return idField.get(entity);
+            } catch (NoSuchFieldException e) {
+                // ignore
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
@@ -171,7 +272,6 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
     public Map<String, Object> getMap(Wrapper<Entity> queryWrapper) {
         return bo.getMap(queryWrapper);
     }
-
 
     // ================= RpcService Implementation =================
 
@@ -196,7 +296,7 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
     @Override
     @HsafRestPath(value = "/pageRpc", method = RequestMethod.POST)
     public AeyePageResult<DTO> pageRpc(@RequestBody RpcMergeDTO<DTO> mergeDTO) throws Exception {
-        //转本地条件构造器
+        // 转本地条件构造器
         Wrapper<Entity> wrapper = RpcWrapperConverter.toQueryWrapper(mergeDTO.getQueryWrapper());
         AeyePageResult pageResult = this.page(mergeDTO.getPageParam(), wrapper);
         List<DTO> dtoList = getTargetDtoList(pageResult.getData());
@@ -270,7 +370,7 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         return getMap(RpcWrapperConverter.toQueryWrapper(queryWrapper));
     }
 
-    protected List<DTO> getTargetDtoList(List<Entity> dtos) throws Exception{
+    protected List<DTO> getTargetDtoList(List<Entity> dtos) throws Exception {
         String result = JSONObject.toJSONString(dtos);
         return (List<DTO>) JSONObject.parseArray(result, getDtoClass());
     }

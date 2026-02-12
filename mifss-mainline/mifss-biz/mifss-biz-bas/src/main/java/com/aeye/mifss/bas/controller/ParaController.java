@@ -7,6 +7,7 @@ import cn.hsa.ims.common.utils.AeyePageResult;
 import com.aeye.mifss.bas.dto.ParaDTO;
 import com.aeye.mifss.bas.entity.ParaDO;
 import com.aeye.mifss.bas.service.ParaService;
+import com.aeye.mifss.common.utils.AeyeBeanUtils;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,13 @@ public class ParaController extends AeyeAbstractController {
                 .like(ParaDO::getParaName, "check")
                 .last("limit 10"));
         return (WrapperResponse) WrapperResponse.success(pageData);
+    }
+
+    @ApiOperation(value = "查询")
+    @GetMapping(value = "/info/{KeyId}")
+    public WrapperResponse<ParaDTO> info(@PathVariable("KeyId") String KeyId) throws Exception {
+        ParaDO bean = paraService.getById(KeyId);
+        return WrapperResponse.success(AeyeBeanUtils.copyBean(bean, ParaDTO.class));
     }
 
 }

@@ -51,6 +51,7 @@
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-adapter-core</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
     </dependencies>

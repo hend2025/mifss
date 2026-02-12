@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa.ims" })
 @ImportResource({
-        "classpath*:config/adapt/generic/*.xml"
+        "classpath*:config/adapt/generic/*.xml",
+        "classpath:config/cache/cache.xml",
 })
 public class BasApplication {
     public static void main(String[] args) {
