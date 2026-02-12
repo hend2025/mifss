@@ -26,7 +26,6 @@
     </dependencyManagement>
 
     <modules>
-        <module>mifss-guangxi</module>
         <module>mifss-hunan</module>
     </modules>
 

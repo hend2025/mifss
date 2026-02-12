@@ -4,8 +4,9 @@ import cn.hsa.ims.common.utils.AeyePageResult;
 import com.aeye.mifss.common.dto.RpcMergeDTO;
 import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
 import com.aeye.mifss.common.mybatis.wrapper.RpcUpdateWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -17,84 +18,92 @@ public interface RpcService<DTO> {
     /**
      * 根据 ID 查询
      */
-    DTO getByIdRpc(Serializable id);
+    @PostMapping("/getByIdRpc")
+    DTO getByIdRpc(@RequestBody Serializable id);
 
     /**
      * 根据条件查询一条记录
      */
-    DTO getOneRpc(RpcQueryWrapper<DTO> queryWrapper);
+    @PostMapping("/getOneRpc")
+    DTO getOneRpc(@RequestBody RpcQueryWrapper<DTO> queryWrapper);
 
     /**
      * 根据条件查询列表
      */
-    List<DTO> listRpc(RpcQueryWrapper<DTO> queryWrapper);
+    @PostMapping("/listRpc")
+    List<DTO> listRpc(@RequestBody RpcQueryWrapper<DTO> queryWrapper);
 
     /**
      * 分页查询
      */
-//    IPage<DTO> pageRpc(IPage<DTO> page, RpcQueryWrapper<DTO> queryWrapper);
+    @PostMapping("/pageRpc")
     AeyePageResult<DTO> pageRpc(@RequestBody RpcMergeDTO<DTO> mergeDTO) throws Exception;
 
 
     /**
      * 插入一条记录
      */
-    boolean saveRpc(DTO dto);
+    @PostMapping("/saveRpc")
+    boolean saveRpc(@RequestBody DTO dto);
 
     /**
      * 插入（批量）
      */
-    boolean saveBatchRpc(Collection<DTO> dtoList);
+    @PostMapping("/saveBatchRpc")
+    boolean saveBatchRpc(@RequestBody Collection<DTO> dtoList);
 
     /**
      * 根据 ID 修改
      */
-    boolean updateByIdRpc(DTO dto);
+    @PostMapping("/updateByIdRpc")
+    boolean updateByIdRpc(@RequestBody DTO dto);
 
     /**
      * 根据 UpdateWrapper 条件，更新记录
      */
-    boolean updateRpc(DTO dto, RpcUpdateWrapper<DTO> updateWrapper);
+    @PostMapping("/updateRpc")
+    boolean updateRpc(@RequestBody DTO dto, RpcUpdateWrapper<DTO> updateWrapper);
 
     /**
      * 批量更新
      */
-    boolean updateBatchByIdRpc(Collection<DTO> dtoList);
+    @PostMapping("/updateBatchByIdRpc")
+    boolean updateBatchByIdRpc(@RequestBody Collection<DTO> dtoList);
 
     /**
      * 保存或更新
      */
-    boolean saveOrUpdateRpc(DTO dto);
-
+    @PostMapping("/saveOrUpdateRpc")
+    boolean saveOrUpdateRpc(@RequestBody DTO dto);
 
     /**
      * 根据 ID 删除
      */
-    boolean removeByIdRpc(Serializable id);
+    @PostMapping("/removeByIdRpc")
+    boolean removeByIdRpc(@RequestBody Serializable id);
 
     /**
      * 根据 entity 条件，删除记录
      */
-    boolean removeRpc(RpcQueryWrapper<DTO> queryWrapper);
+    @PostMapping("/removeRpc")
+    boolean removeRpc(@RequestBody RpcQueryWrapper<DTO> queryWrapper);
 
     /**
      * 删除（根据ID 批量删除）
      */
-    boolean removeByIdsRpc(Collection<? extends Serializable> idList);
-
-    /**
-     * 查询总数
-     */
-    long countRpc();
+    @PostMapping("/removeByIdsRpc")
+    boolean removeByIdsRpc(@RequestBody Collection<? extends Serializable> idList);
 
     /**
      * 根据条件查询总数
      */
-    long countRpc(RpcQueryWrapper<DTO> queryWrapper);
+    @PostMapping("/countRpc")
+    long countRpc(@RequestBody RpcQueryWrapper<DTO> queryWrapper);
 
     /**
      * 查询 Map
      */
-    Map<String, Object> getMapRpc(RpcQueryWrapper<DTO> queryWrapper);
+    @PostMapping("/getMapRpc")
+    Map<String, Object> getMapRpc(@RequestBody RpcQueryWrapper<DTO> queryWrapper);
 
 }

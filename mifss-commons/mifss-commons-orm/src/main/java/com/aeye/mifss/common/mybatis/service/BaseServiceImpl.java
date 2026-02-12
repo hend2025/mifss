@@ -1,5 +1,6 @@
 package com.aeye.mifss.common.mybatis.service;
 
+import cn.hsa.hsaf.core.framework.web.HsafRestPath;
 import cn.hsa.ims.common.utils.AeyePageInfo;
 import cn.hsa.ims.common.utils.AeyePageResult;
 import cn.hutool.core.bean.BeanUtil;
@@ -16,6 +17,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -174,22 +176,26 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
     // ================= RpcService Implementation =================
 
     @Override
-    public DTO getByIdRpc(Serializable id) {
+    @HsafRestPath(value = "/getByIdRpc", method = RequestMethod.POST)
+    public DTO getByIdRpc(@RequestBody Serializable id) {
         return toDto(bo.getById(id));
     }
 
     @Override
-    public DTO getOneRpc(RpcQueryWrapper<DTO> queryWrapper) {
+    @HsafRestPath(value = "/getOneRpc", method = RequestMethod.POST)
+    public DTO getOneRpc(@RequestBody RpcQueryWrapper<DTO> queryWrapper) {
         return toDto(bo.getOne(RpcWrapperConverter.toQueryWrapper(queryWrapper)));
     }
 
     @Override
-    public List<DTO> listRpc(RpcQueryWrapper<DTO> queryWrapper) {
+    @HsafRestPath(value = "/listRpc", method = RequestMethod.POST)
+    public List<DTO> listRpc(@RequestBody RpcQueryWrapper<DTO> queryWrapper) {
         return toDtoList(bo.list(RpcWrapperConverter.toQueryWrapper(queryWrapper)));
     }
 
     @Override
-    public AeyePageResult<DTO> pageRpc(RpcMergeDTO<DTO> mergeDTO) throws Exception {
+    @HsafRestPath(value = "/pageRpc", method = RequestMethod.POST)
+    public AeyePageResult<DTO> pageRpc(@RequestBody RpcMergeDTO<DTO> mergeDTO) throws Exception {
         //转本地条件构造器
         Wrapper<Entity> wrapper = RpcWrapperConverter.toQueryWrapper(mergeDTO.getQueryWrapper());
         AeyePageResult pageResult = this.page(mergeDTO.getPageParam(), wrapper);
@@ -199,62 +205,68 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
     }
 
     @Override
-    public boolean saveRpc(DTO dto) {
+    @HsafRestPath(value = "/saveRpc", method = RequestMethod.POST)
+    public boolean saveRpc(@RequestBody DTO dto) {
         return save(toEntity(dto));
     }
 
     @Override
-    public boolean saveBatchRpc(Collection<DTO> dtoList) {
+    @HsafRestPath(value = "/saveBatchRpc", method = RequestMethod.POST)
+    public boolean saveBatchRpc(@RequestBody Collection<DTO> dtoList) {
         return saveBatch(toEntityList(dtoList));
     }
 
     @Override
-    public boolean saveOrUpdateRpc(DTO dto) {
+    @HsafRestPath(value = "/saveOrUpdateRpc", method = RequestMethod.POST)
+    public boolean saveOrUpdateRpc(@RequestBody DTO dto) {
         return saveOrUpdate(toEntity(dto));
     }
 
     @Override
-    public boolean updateBatchByIdRpc(Collection<DTO> dtoList) {
+    @HsafRestPath(value = "/updateBatchByIdRpc", method = RequestMethod.POST)
+    public boolean updateBatchByIdRpc(@RequestBody Collection<DTO> dtoList) {
         return updateBatchById(toEntityList(dtoList));
     }
 
     @Override
-    public boolean updateByIdRpc(DTO dto) {
+    @HsafRestPath(value = "/updateByIdRpc", method = RequestMethod.POST)
+    public boolean updateByIdRpc(@RequestBody DTO dto) {
         return updateById(toEntity(dto));
     }
 
     @Override
-    public boolean updateRpc(DTO dto, RpcUpdateWrapper<DTO> updateWrapper) {
+    @HsafRestPath(value = "/updateRpc", method = RequestMethod.POST)
+    public boolean updateRpc(@RequestBody DTO dto, RpcUpdateWrapper<DTO> updateWrapper) {
         return update(toEntity(dto), RpcWrapperConverter.toUpdateWrapper(updateWrapper));
     }
 
     @Override
-    public boolean removeByIdRpc(Serializable id) {
+    @HsafRestPath(value = "/removeByIdRpc", method = RequestMethod.POST)
+    public boolean removeByIdRpc(@RequestBody Serializable id) {
         return removeById(id);
     }
 
     @Override
-    public boolean removeRpc(RpcQueryWrapper<DTO> queryWrapper) {
+    @HsafRestPath(value = "/removeRpc", method = RequestMethod.POST)
+    public boolean removeRpc(@RequestBody RpcQueryWrapper<DTO> queryWrapper) {
         return remove(RpcWrapperConverter.toQueryWrapper(queryWrapper));
     }
 
     @Override
-    public boolean removeByIdsRpc(Collection<? extends Serializable> idList) {
+    @HsafRestPath(value = "/removeByIdsRpc", method = RequestMethod.POST)
+    public boolean removeByIdsRpc(@RequestBody Collection<? extends Serializable> idList) {
         return removeByIds(idList);
     }
 
     @Override
-    public long countRpc() {
-        return count();
-    }
-
-    @Override
-    public long countRpc(RpcQueryWrapper<DTO> queryWrapper) {
+    @HsafRestPath(value = "/countRpc", method = RequestMethod.POST)
+    public long countRpc(@RequestBody RpcQueryWrapper<DTO> queryWrapper) {
         return count(RpcWrapperConverter.toQueryWrapper(queryWrapper));
     }
 
     @Override
-    public Map<String, Object> getMapRpc(RpcQueryWrapper<DTO> queryWrapper) {
+    @HsafRestPath(value = "/getMapRpc", method = RequestMethod.POST)
+    public Map<String, Object> getMapRpc(@RequestBody RpcQueryWrapper<DTO> queryWrapper) {
         return getMap(RpcWrapperConverter.toQueryWrapper(queryWrapper));
     }
 
@@ -262,6 +274,5 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         String result = JSONObject.toJSONString(dtos);
         return (List<DTO>) JSONObject.parseArray(result, getDtoClass());
     }
-
 
 }

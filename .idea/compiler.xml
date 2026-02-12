@@ -14,7 +14,6 @@
         <module name="mifss-bio" />
         <module name="mifss-hunan-intf" />
         <module name="mifss-biz-api" />
-        <module name="mifss-guangxi-ipt" />
         <module name="mifss-intf-pha" />
         <module name="mifss-intf-video" />
         <module name="mifss-adapter-generic" />
@@ -25,7 +24,6 @@
         <module name="mifss-intf-ipt" />
         <module name="mifss-hunan-bio" />
         <module name="mifss-adapter-ali" />
-        <module name="mifss-guangxi-bio" />
         <module name="mifss-commons-swagger" />
         <module name="mifss-biz-ipt" />
         <module name="mifss-intf-opt" />
@@ -36,7 +34,6 @@
         <module name="mifss-biz-trt" />
         <module name="mifss-adapter-huawei" />
         <module name="mifss-intf-job" />
-        <module name="mifss-guangxi-intf" />
         <module name="mifss-adapter-tencent" />
         <module name="mifss-intf-bio" />
         <module name="mifss-biz-hd" />
@@ -49,9 +46,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mifss-guangxi" target="1.8" />
+      <module name="mifss-guangxi-app" target="1.8" />
       <module name="mifss-guangxi-app (1)" target="1.8" />
+      <module name="mifss-guangxi-bio" target="1.8" />
       <module name="mifss-guangxi-bio (1)" target="1.8" />
+      <module name="mifss-guangxi-intf" target="1.8" />
       <module name="mifss-guangxi-intf (1)" target="1.8" />
+      <module name="mifss-guangxi-ipt" target="1.8" />
       <module name="mifss-guangxi-ipt (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
