@@ -1,5 +1,6 @@
 package com.aeye.mifss.common.mybatis.service;
 
+import cn.hsa.hsaf.core.cache.HsafCacheManager;
 import cn.hsa.hsaf.core.framework.web.HsafRestPath;
 import cn.hsa.ims.common.cache.AeyeCacheManager;
 import cn.hsa.ims.common.utils.AeyePageInfo;
@@ -14,6 +15,10 @@ import com.aeye.mifss.common.utils.Query;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.metadata.TableInfo;
+import com.baomidou.mybatisplus.core.metadata.TableInfoHelper;
+import com.baomidou.mybatisplus.core.toolkit.Assert;
+import com.baomidou.mybatisplus.core.toolkit.ReflectionKit;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +30,6 @@ import java.lang.reflect.ParameterizedType;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import com.aeye.mifss.common.annotation.CacheEntity;
@@ -36,6 +40,9 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
 
     @Autowired(required = false)
     protected BO bo;
+
+    @Autowired(required = false)
+    HsafCacheManager cacheManager;
 
     /**
      * 获取 DTO Class
@@ -91,37 +98,32 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         return entityList.stream().map(this::toDto).collect(Collectors.toList());
     }
 
-    // ================= LocalService Implementation =================
-
     @Override
     public Entity getById(Serializable id) {
         CacheEntity cacheEntity = getEntityClass().getAnnotation(CacheEntity.class);
         if (cacheEntity != null) {
-            String key = getCacheKey(cacheEntity, (Serializable) id);
-            Object obj = AeyeCacheManager.get(key,getEntityClass());
+            String key = id.toString();
+            String cachePre = getCachePrefix(cacheEntity);
+            Entity obj = AeyeCacheManager.get(cachePre,key,getEntityClass());
             if (obj != null) {
-                return (Entity) obj;
+                return obj;
             }
             Entity entity = bo.getById(id);
             if (entity != null) {
-                long expire = cacheEntity.expire();
-                if (expire > 0) {
-                    AeyeCacheManager.putTTL(key,entity,expire);
-                } else {
-                    AeyeCacheManager.put(key,entity);
-                }
+                long expire = cacheEntity.expire() > 0 ? cacheEntity.expire() : 1440*7;
+                AeyeCacheManager.put(cachePre,key,entity,expire);
             }
             return entity;
         }
         return bo.getById(id);
     }
 
-    private String getCacheKey(CacheEntity cacheEntity, Serializable id) {
+    private String getCachePrefix(CacheEntity cacheEntity) {
         String prefix = cacheEntity.keyPrefix();
-        if (StrUtil.isEmpty(prefix)) {
+        if (StrUtil.isEmpty(cacheEntity.keyPrefix())) {
             prefix = getEntityClass().getSimpleName();
         }
-        return prefix + ":" + id;
+        return prefix;
     }
 
     @Override
@@ -214,13 +216,10 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
             try {
                 Object id = getIdVal(entity);
                 if (id != null) {
-                    String key = getCacheKey(cacheEntity, (Serializable) id);
-                    long expire = cacheEntity.expire();
-                    if (expire > 0) {
-                        AeyeCacheManager.putTTL(key,entity,expire);
-                    } else {
-                        AeyeCacheManager.put(key,entity);
-                    }
+                    String key = id.toString();
+                    String cachePre = getCachePrefix(cacheEntity);
+                    long expire = cacheEntity.expire() > 0 ? cacheEntity.expire() : 1440*7;
+                    AeyeCacheManager.put(cachePre,key,entity,expire);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -231,27 +230,19 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
     private void removeCache(Serializable id) {
         CacheEntity cacheEntity = getEntityClass().getAnnotation(CacheEntity.class);
         if (cacheEntity != null) {
-            String key = getCacheKey(cacheEntity, id);
-            AeyeCacheManager.remove(key);
+            String key = id.toString();
+            String cachePre = getCachePrefix(cacheEntity);
+            AeyeCacheManager.remove(cachePre,key);
         }
     }
 
     private Object getIdVal(Entity entity) {
         try {
-            java.lang.reflect.Field[] fields = entity.getClass().getDeclaredFields();
-            for (java.lang.reflect.Field field : fields) {
-                if (field.isAnnotationPresent(com.baomidou.mybatisplus.annotation.TableId.class)) {
-                    field.setAccessible(true);
-                    return field.get(entity);
-                }
-            }
-            try {
-                java.lang.reflect.Field idField = entity.getClass().getDeclaredField("id");
-                idField.setAccessible(true);
-                return idField.get(entity);
-            } catch (NoSuchFieldException e) {
-                // ignore
-            }
+            TableInfo tableInfo = TableInfoHelper.getTableInfo(entity.getClass());
+            String keyProperty = tableInfo.getKeyProperty();
+            Assert.notEmpty(keyProperty, "错误: 不能够执行. 因为不能找到主键配置在实体类!", new Object[0]);
+            Object idVal = ReflectionKit.getFieldValue(entity, keyProperty);
+            return idVal;
         } catch (Exception e) {
             e.printStackTrace();
         }

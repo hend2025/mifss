@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Profile;
 @SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa.ims" })
 @Profile("huawei")
 @ImportResource({
-        "classpath:config/adapt/huawei/rpc.xml"
+        "classpath*:config/adapt/huawei/*.xml"
 })
 public class BasApplicationHuawei {
     public static void main(String[] args) {

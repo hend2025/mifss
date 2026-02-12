@@ -23,7 +23,7 @@ public class ParaController extends AeyeAbstractController {
     @Autowired
     private ParaService paraService;
 
-    @ApiOperation("查询列表")
+    @ApiOperation("列表")
     @PostMapping("/list")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "pageNum", value = "当前页码", dataType = "int", paramType = "header",  example = "1"),
@@ -39,10 +39,10 @@ public class ParaController extends AeyeAbstractController {
         return (WrapperResponse) WrapperResponse.success(pageData);
     }
 
-    @ApiOperation(value = "查询")
-    @GetMapping(value = "/info/{KeyId}")
-    public WrapperResponse<ParaDTO> info(@PathVariable("KeyId") String KeyId) throws Exception {
-        ParaDO bean = paraService.getById(KeyId);
+    @ApiOperation(value = "详细")
+    @GetMapping(value = "/info/{keyId}")
+    public WrapperResponse<ParaDTO> info(@PathVariable("keyId") String keyId) throws Exception {
+        ParaDO bean = paraService.getById(keyId);
         return WrapperResponse.success(AeyeBeanUtils.copyBean(bean, ParaDTO.class));
     }
 

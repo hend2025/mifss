@@ -55,7 +55,7 @@ cache:
     clusterNodes: 127.0.0.1:6379
     password: 123456
   cluster:
-    deployType: 2
+    deployType: 1
     cacheName: defaultCache
     clusterNodes: 127.0.0.1:6379
     password: 123456

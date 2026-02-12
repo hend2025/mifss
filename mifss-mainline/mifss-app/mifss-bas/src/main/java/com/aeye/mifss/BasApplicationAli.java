@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Profile;
 @SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa.ims" })
 @Profile("ali")
 @ImportResource({
-        "classpath:config/adapt/ali/rpc.xml"
+        "classpath*:config/adapt/generic/*.xml"
 })
 public class BasApplicationAli {
     public static void main(String[] args) {

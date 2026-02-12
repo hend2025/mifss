@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Profile;
 @SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa.ims" })
 @Profile("ali")
 @ImportResource({
-        "classpath:config/adapt/ali/rpc.xml"
+        "classpath*:config/adapt/ali/*.xml"
 })
 public class BioApplicationAli {
     public static void main(String[] args) {

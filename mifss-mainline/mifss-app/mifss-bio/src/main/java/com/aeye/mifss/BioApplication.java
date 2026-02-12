@@ -6,6 +6,7 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa.ims" })
+@Profile("generic")
 @ImportResource({
         "classpath*:config/adapt/generic/*.xml"
 })

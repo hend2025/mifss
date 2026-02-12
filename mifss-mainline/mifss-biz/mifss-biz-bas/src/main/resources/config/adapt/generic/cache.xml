@@ -26,7 +26,6 @@
     <bean id="cacheManager" class="cn.hsa.hsaf.cache.redis.HsafRedisCacheManager" >
         <property name="cacheAdapters">
             <set>
-                <!-- 第一个节点 -->
                 <bean class="cn.hsa.hsaf.cache.redis.HsafCacheAdapter">
                     <!-- deployType 参数值为1:单机模式,2:集群模式 -->
                     <property name="deployType" value="${cache.alone.deployType}"/>
@@ -40,7 +39,7 @@
     </bean>
 
     <!--单机版 for redisTemplate-->
-    <bean id="distributedJedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" init-method="afterPropertiesSet">
+    <bean id="distributedJedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
         <constructor-arg name="standaloneConfig">
             <bean class="cn.hsa.hsaf.cache.redis.DistributedRedisStandaloneConfiguration">
                 <constructor-arg name="clusterNodes" value="${cache.alone.clusterNodes}"/>
@@ -67,17 +66,13 @@
             <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
         </property>
         <property name="valueSerializer" >
-            <bean class="org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer">
-                <constructor-arg value="java.lang.Object"/>
-            </bean>
+            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
         </property>
         <property name="hashKeySerializer">
             <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
         </property>
         <property name="hashValueSerializer">
-            <bean class="org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer">
-                <constructor-arg value="java.lang.Object"/>
-            </bean>
+            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>
         </property>
     </bean>
 

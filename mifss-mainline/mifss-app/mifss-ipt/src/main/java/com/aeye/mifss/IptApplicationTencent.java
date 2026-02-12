@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Profile;
 @SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa.ims" })
 @Profile("tencent")
 @ImportResource({
-        "classpath:config/adapt/tencent/rpc.xml"
+        "classpath*:config/adapt/tencent/*.xml"
 })
 public class IptApplicationTencent {
     public static void main(String[] args) {
