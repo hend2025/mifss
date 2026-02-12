@@ -14,7 +14,7 @@ public class AeyeCacheManager {
 
     public static final String DEFAULT_CACHE_NAME = "defaultCache";
 
-    public static final long EXPIRE= 1440*7;
+    public static final long EXPIRE = 1440 * 7;
 
     private static String applicationName;
 
@@ -75,23 +75,23 @@ public class AeyeCacheManager {
         return putList(null, key, valueObj, EXPIRE);
     }
 
-    public static <T> T get(String cachePrex, String key, Class<T> classType) {
+    public static <T> T get(String cachePrex, String key, Class<T> clazz) {
         Assert.hasText(key, "缓存key不能为空!!!");
         Object obj = hsafRedisTemplate.opsForValue().get(buildKey(cachePrex, key));
         return (T) obj;
     }
 
-    public static <T> T get(String key, Class<T> classType) {
-        return get(null, key, classType);
+    public static <T> T get(String key, Class<T> clazz) {
+        return get(null, key, clazz);
     }
 
-    public static List<?> getList(String cachePrex, String key) {
-       List list = getRedisTemplate().opsForList().range(buildKey(cachePrex, key), 0L, -1L);
-       return list;
+    public static <T> List<T> getList(String cachePrex, String key, Class<T> clazz) {
+        List<T> list = (List<T>) getRedisTemplate().opsForList().range(buildKey(cachePrex, key), 0L, -1L);
+        return list;
     }
 
-    public static List<?> getList(String key) {
-        return getList(null,key);
+    public static <T> List<T> getList(String key, Class<T> clazz) {
+        return getList(null, key, clazz);
     }
 
     public static void remove(String cachePrex, String key) {
@@ -119,10 +119,10 @@ public class AeyeCacheManager {
     private static String buildKey(String cachePrex, String key) {
         StringBuilder vk = new StringBuilder();
         if (AeyeStringUtils.isNotBlank(applicationName)) {
-            vk.append(applicationName+":");
+            vk.append(applicationName + ":");
         }
         if (AeyeStringUtils.isNotBlank(cachePrex)) {
-            vk.append(cachePrex+":");
+            vk.append(cachePrex + ":");
         }
         vk.append(key);
         return vk.toString();

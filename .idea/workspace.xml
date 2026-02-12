@@ -5,40 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd390e63-630d-4c5e-a156-dbd2a5865735" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/utils/SerializeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/resources/config/adapt/huawei/cache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/resources/config/adapt/tencent/cache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/resources/config/adapt/ali/cache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/resources/config/adapt/generic/cache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/resources/config/adapt/huawei/cache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/resources/config/adapt/tencent/cache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/config/adapt/ali/cache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/config/adapt/generic/cache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/config/adapt/huawei/cache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/config/adapt/tencent/cache.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/cn/hsa/ims/common/cache/AeyeCacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/cache/AeyeCacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/BaseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/java/com/aeye/mifss/BasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/java/com/aeye/mifss/BasApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/java/com/aeye/mifss/BasApplicationAli.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/java/com/aeye/mifss/BasApplicationAli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/java/com/aeye/mifss/BasApplicationHuawei.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/java/com/aeye/mifss/BasApplicationHuawei.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/java/com/aeye/mifss/BasApplicationTencent.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/java/com/aeye/mifss/BasApplicationTencent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/resources/application-ali.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/resources/application-ali.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/resources/application-generic.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/resources/application-generic.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/resources/application-huawei.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bas/src/main/resources/application-huawei.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationAli.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationAli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationHuawei.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationHuawei.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationTencent.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-bio/src/main/java/com/aeye/mifss/BioApplicationTencent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationAli.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationAli.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationHuawei.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationHuawei.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationTencent.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-app/mifss-ipt/src/main/java/com/aeye/mifss/IptApplicationTencent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/cache/AeyeCacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/cache/AeyeCacheManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/controller/ParaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/controller/ParaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/resources/config/cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/resources/config/adapt/ali/cache.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/src/main/resources/config/cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/resources/config/adapt/generic/cache.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/config/cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/config/cache/cache.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,11 +232,22 @@
       <workItem from="1770818122076" duration="92000" />
       <workItem from="1770858556534" duration="15736000" />
       <workItem from="1770880403252" duration="10492000" />
-      <workItem from="1770898184221" duration="7463000" />
+      <workItem from="1770898184221" duration="8977000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/controller/ParaController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

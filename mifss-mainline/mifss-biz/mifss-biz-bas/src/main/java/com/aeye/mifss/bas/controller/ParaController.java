@@ -1,6 +1,7 @@
 package com.aeye.mifss.bas.controller;
 
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
+import cn.hsa.ims.common.cache.AeyeCacheManager;
 import cn.hsa.ims.common.contoller.AeyeAbstractController;
 import cn.hsa.ims.common.utils.AeyePageInfo;
 import cn.hsa.ims.common.utils.AeyePageResult;
@@ -26,7 +27,7 @@ public class ParaController extends AeyeAbstractController {
     @ApiOperation("列表")
     @PostMapping("/list")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum", value = "当前页码", dataType = "int", paramType = "header",  example = "1"),
+            @ApiImplicitParam(name = "pageNum", value = "当前页码", dataType = "int", paramType = "header", example = "1"),
             @ApiImplicitParam(name = "pageSize", value = "每页条目", dataType = "int", paramType = "header", example = "10"),
             @ApiImplicitParam(name = "orderField", value = "排序字段", dataType = "string", paramType = "header"),
             @ApiImplicitParam(name = "orderType", value = "排序类型", dataType = "string", paramType = "header", example = "asc或者desc")
@@ -36,6 +37,12 @@ public class ParaController extends AeyeAbstractController {
         AeyePageResult pageData = paraService.page(pageInfo, new LambdaQueryWrapper<ParaDO>()
                 .like(ParaDO::getParaName, "check")
                 .last("limit 10"));
+
+        List<ParaDO> list = AeyeCacheManager.getList("paraList", ParaDO.class);
+        if (list == null || list.size() == 0) {
+            AeyeCacheManager.putList("paraList", pageData.getData());
+        }
+
         return (WrapperResponse) WrapperResponse.success(pageData);
     }
 
