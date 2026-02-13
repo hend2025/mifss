@@ -1,0 +1,49 @@
+package com.aeye.mifss.bas.biz.controller;
+
+import cn.hsa.hsaf.core.framework.web.WrapperResponse;
+import cn.hsa.ims.common.cache.AeyeCacheManager;
+import cn.hsa.ims.common.contoller.AeyeAbstractController;
+import cn.hsa.ims.common.utils.AeyePageResult;
+import com.aeye.mifss.bas.dto.ParaDTO;
+import com.aeye.mifss.bas.biz.entity.ParaDO;
+import com.aeye.mifss.bas.biz.service.ParaService;
+import com.aeye.mifss.common.utils.AeyeBeanUtils;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import io.swagger.annotations.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@Api(tags = "场景监管参数管理")
+@RestController
+@RequestMapping("/bas/para")
+public class ParaController extends AeyeAbstractController {
+
+    @Autowired
+    private ParaService paraService;
+
+    @ApiOperation("列表")
+    @PostMapping("/list")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pageNum", value = "当前页码", dataType = "int", paramType = "header", example = "1"),
+            @ApiImplicitParam(name = "pageSize", value = "每页条目", dataType = "int", paramType = "header", example = "10"),
+            @ApiImplicitParam(name = "orderField", value = "排序字段", dataType = "string", paramType = "header"),
+            @ApiImplicitParam(name = "orderType", value = "排序类型", dataType = "string", paramType = "header", example = "asc或者desc")
+    })
+    public WrapperResponse<List<ParaDTO>> list() throws Exception {
+        AeyePageResult pageData = paraService.page(buildPageInfo(), new LambdaQueryWrapper<ParaDO>()
+                .like(ParaDO::getParaName, "check")
+                .last("limit 10"));
+
+        return (WrapperResponse) WrapperResponse.success(pageData);
+    }
+
+    @ApiOperation(value = "详细")
+    @GetMapping(value = "/info/{keyId}")
+    public WrapperResponse<ParaDTO> info(@PathVariable("keyId") String keyId) throws Exception {
+        ParaDO bean = paraService.getById(keyId);
+        return WrapperResponse.success(AeyeBeanUtils.copyBean(bean, ParaDTO.class));
+    }
+
+}

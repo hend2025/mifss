@@ -5,6 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
+    <dubbo:service interface="com.aeye.mifss.bas.service.RpcAdmdvsService" ref="admdvsServiceImpl"></dubbo:service>
     <dubbo:service interface="com.aeye.mifss.bas.service.RpcParaService" ref="paraServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.aeye.mifss.bas.service.RpcDicService" ref="dicServiceImpl"></dubbo:service>
 
 </beans>

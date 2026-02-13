@@ -1,13 +1,11 @@
-package com.aeye.mifss.bas.controller;
+package com.aeye.mifss.bas.biz.controller;
 
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
-import cn.hsa.ims.common.cache.AeyeCacheManager;
 import cn.hsa.ims.common.contoller.AeyeAbstractController;
-import cn.hsa.ims.common.utils.AeyePageInfo;
 import cn.hsa.ims.common.utils.AeyePageResult;
-import com.aeye.mifss.bas.dto.ParaDTO;
-import com.aeye.mifss.bas.entity.ParaDO;
-import com.aeye.mifss.bas.service.ParaService;
+import com.aeye.mifss.bas.dto.DicDTO;
+import com.aeye.mifss.bas.biz.entity.DicDO;
+import com.aeye.mifss.bas.biz.service.DicService;
 import com.aeye.mifss.common.utils.AeyeBeanUtils;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.swagger.annotations.*;
@@ -16,13 +14,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Api(tags = "场景监管参数管理")
+@Api(tags = "场景字典代码表管理")
 @RestController
-@RequestMapping("/bas/para")
-public class ParaController extends AeyeAbstractController {
+@RequestMapping("/bas/dic")
+public class DicController extends AeyeAbstractController {
 
     @Autowired
-    private ParaService paraService;
+    private DicService dicService;
 
     @ApiOperation("列表")
     @PostMapping("/list")
@@ -32,25 +30,16 @@ public class ParaController extends AeyeAbstractController {
             @ApiImplicitParam(name = "orderField", value = "排序字段", dataType = "string", paramType = "header"),
             @ApiImplicitParam(name = "orderType", value = "排序类型", dataType = "string", paramType = "header", example = "asc或者desc")
     })
-    public WrapperResponse<List<ParaDTO>> list() throws Exception {
-        AeyePageInfo pageInfo = buildPageInfo();
-        AeyePageResult pageData = paraService.page(pageInfo, new LambdaQueryWrapper<ParaDO>()
-                .like(ParaDO::getParaName, "check")
-                .last("limit 10"));
-
-        List<ParaDO> list = AeyeCacheManager.getList("paraList", ParaDO.class);
-        if (list == null || list.size() == 0) {
-            AeyeCacheManager.putList("paraList", pageData.getData());
-        }
-
+    public WrapperResponse<List<DicDTO>> list() throws Exception {
+        AeyePageResult pageData = dicService.page(buildPageInfo(), new LambdaQueryWrapper<DicDO>());
         return (WrapperResponse) WrapperResponse.success(pageData);
     }
 
     @ApiOperation(value = "详细")
     @GetMapping(value = "/info/{keyId}")
-    public WrapperResponse<ParaDTO> info(@PathVariable("keyId") String keyId) throws Exception {
-        ParaDO bean = paraService.getById(keyId);
-        return WrapperResponse.success(AeyeBeanUtils.copyBean(bean, ParaDTO.class));
+    public WrapperResponse<DicDTO> info(@PathVariable("keyId") String keyId) throws Exception {
+        DicDO bean = dicService.getById(keyId);
+        return WrapperResponse.success(AeyeBeanUtils.copyBean(bean, DicDTO.class));
     }
 
 }

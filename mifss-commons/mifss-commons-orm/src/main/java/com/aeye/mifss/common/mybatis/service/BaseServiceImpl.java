@@ -14,11 +14,13 @@ import com.aeye.mifss.common.utils.PageUtils;
 import com.aeye.mifss.common.utils.Query;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.metadata.TableInfo;
 import com.baomidou.mybatisplus.core.metadata.TableInfoHelper;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.baomidou.mybatisplus.core.toolkit.ReflectionKit;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -104,14 +107,14 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         if (cacheEntity != null) {
             String key = id.toString();
             String cachePre = getCachePrefix(cacheEntity);
-            Entity obj = AeyeCacheManager.get(cachePre,key,getEntityClass());
+            Entity obj = AeyeCacheManager.get(cachePre, key, getEntityClass());
             if (obj != null) {
                 return obj;
             }
             Entity entity = bo.getById(id);
             if (entity != null) {
-                long expire = cacheEntity.expire() > 0 ? cacheEntity.expire() : 1440*7;
-                AeyeCacheManager.put(cachePre,key,entity,expire);
+                long expire = cacheEntity.expire() > 0 ? cacheEntity.expire() : 1440 * 7;
+                AeyeCacheManager.put(cachePre, key, entity, expire);
             }
             return entity;
         }
@@ -218,8 +221,8 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
                 if (id != null) {
                     String key = id.toString();
                     String cachePre = getCachePrefix(cacheEntity);
-                    long expire = cacheEntity.expire() > 0 ? cacheEntity.expire() : 1440*7;
-                    AeyeCacheManager.put(cachePre,key,entity,expire);
+                    long expire = cacheEntity.expire() > 0 ? cacheEntity.expire() : 1440 * 7;
+                    AeyeCacheManager.put(cachePre, key, entity, expire);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -232,7 +235,7 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         if (cacheEntity != null) {
             String key = id.toString();
             String cachePre = getCachePrefix(cacheEntity);
-            AeyeCacheManager.remove(cachePre,key);
+            AeyeCacheManager.remove(cachePre, key);
         }
     }
 
@@ -364,6 +367,79 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
     protected List<DTO> getTargetDtoList(List<Entity> dtos) throws Exception {
         String result = JSONObject.toJSONString(dtos);
         return (List<DTO>) JSONObject.parseArray(result, getDtoClass());
+    }
+
+    @Override
+    public void reloadCache() {
+        CacheEntity cacheEntity = getEntityClass().getAnnotation(CacheEntity.class);
+        if (cacheEntity == null) {
+            return;
+        }
+
+        // 分页读取全部数据
+        int pageNum = 1;
+        int pageSize = 1000;
+        List<Entity> allList = new ArrayList<>();
+        while (true) {
+            Page<Entity> page = new Page<>(pageNum, pageSize);
+            IPage<Entity> resultPage = bo.page(page, new QueryWrapper<>());
+            List<Entity> records = resultPage.getRecords();
+            if (records == null || records.isEmpty()) {
+                break;
+            }
+            allList.addAll(records);
+            if (records.size() < pageSize) {
+                break;
+            }
+            pageNum++;
+        }
+
+        if (allList == null || allList.isEmpty()) {
+            return;
+        }
+
+        // 存入缓存
+        String cachePre = getCachePrefix(cacheEntity);
+        long expire = cacheEntity.expire() > 0 ? cacheEntity.expire() : 1440 * 7;
+        for (Entity entity : allList) {
+            Object id = getIdVal(entity);
+            if (id != null) {
+                AeyeCacheManager.put(cachePre, id.toString(), entity, expire);
+            }
+        }
+
+        // Put list
+        String simpleName = getEntityClass().getSimpleName();
+        String listKey = StrUtil.lowerFirst(simpleName) + "List";
+        if (simpleName.endsWith("DO")) {
+            listKey = StrUtil.lowerFirst(simpleName.substring(0, simpleName.length() - 2)) + "List";
+        }
+
+        if (cacheEntity.cacheList()) {
+            AeyeCacheManager.putList(listKey, allList);
+        }
+
+        // Group caching
+        String groupField = cacheEntity.groupField();
+        if (StrUtil.isNotEmpty(groupField)) {
+            Map<String, List<Entity>> groupMap = new java.util.HashMap<>();
+            for (Entity entity : allList) {
+                try {
+                    Object groupVal = ReflectionKit.getFieldValue(entity, groupField);
+                    if (groupVal != null) {
+                        String groupKey = groupVal.toString();
+                        groupMap.computeIfAbsent(groupKey, k -> new ArrayList<>()).add(entity);
+                    }
+                } catch (Exception e) {
+
+                }
+            }
+            for (Map.Entry<String, List<Entity>> entry : groupMap.entrySet()) {
+                String cacheKey = listKey + ":" +  entry.getKey();
+                AeyeCacheManager.putList(cacheKey, entry.getValue());
+            }
+        }
+
     }
 
 }

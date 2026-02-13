@@ -38,7 +38,6 @@
         <module name="mifss-intf-bio" />
         <module name="mifss-biz-hd" />
         <module name="mifss-hunan-ipt" />
-        <module name="mifss-biz-bc" />
         <module name="mifss-commons-security" />
         <module name="mifss-commons-core" />
         <module name="mifss-adapter-core" />
@@ -46,6 +45,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mifss-biz-bc" target="1.8" />
       <module name="mifss-guangxi" target="1.8" />
       <module name="mifss-guangxi-app" target="1.8" />
       <module name="mifss-guangxi-app (1)" target="1.8" />

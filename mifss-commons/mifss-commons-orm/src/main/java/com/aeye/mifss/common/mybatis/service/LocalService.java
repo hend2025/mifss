@@ -42,6 +42,7 @@ public interface LocalService<Entity> {
      * 插入（批量）
      */
     boolean saveBatch(Collection<Entity> entityList);
+
     /**
      * 保存或更新
      */
@@ -61,7 +62,6 @@ public interface LocalService<Entity> {
      * 批量更新
      */
     boolean updateBatchById(Collection<Entity> entityList);
-
 
     /**
      * 根据 ID 删除
@@ -92,5 +92,10 @@ public interface LocalService<Entity> {
      * 查询 Map
      */
     Map<String, Object> getMap(Wrapper<Entity> queryWrapper);
+
+    /**
+     * 刷新缓存
+     */
+    void reloadCache();
 
 }

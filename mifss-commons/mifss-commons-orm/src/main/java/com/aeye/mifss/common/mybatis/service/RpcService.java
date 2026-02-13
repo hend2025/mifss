@@ -6,7 +6,6 @@ import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
 import com.aeye.mifss.common.mybatis.wrapper.RpcUpdateWrapper;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.Serializable;
 import java.util.Collection;

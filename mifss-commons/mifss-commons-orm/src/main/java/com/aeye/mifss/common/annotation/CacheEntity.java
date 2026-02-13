@@ -25,4 +25,16 @@ public @interface CacheEntity {
      * 过期时间（秒），默认 -1 不过期
      */
     long expire() default -1;
+
+    /**
+     * 是否缓存全量列表，默认不缓存
+     * 对于数据量较大的表（如设备、机构），建议关闭列表缓存，只缓存单条记录
+     */
+    boolean cacheList() default false;
+
+    /**
+     * 分组字段，如果不为空，则按该字段值分组缓存列表
+     * 例如：字典表按字典类型（dicTypeCode）分组
+     */
+    String groupField() default "";
 }

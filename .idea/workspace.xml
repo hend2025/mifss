@@ -5,14 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd390e63-630d-4c5e-a156-dbd2a5865735" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/common/AdmdvsCacheUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/common/DicCacheUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/common/ParaCacheUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/cache/AeyeCacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/cache/AeyeCacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/controller/ParaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/controller/ParaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/annotation/CacheEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/annotation/CacheEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/BaseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/LocalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/LocalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/RpcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/mybatis/service/RpcService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/bo/ParaBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/bo/ParaBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/bo/impl/ParaBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/bo/impl/ParaBoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/controller/ParaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/controller/ParaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/entity/ParaDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/entity/ParaDO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/mapper/ParaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/mapper/ParaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/service/ParaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/service/ParaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/service/impl/ParaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/service/impl/ParaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/resources/config/adapt/ali/rpc-ipt-provider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/resources/config/adapt/ali/rpc-ipt-provider.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/resources/config/adapt/generic/rpc-bas-provider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/resources/config/adapt/generic/rpc-bas-provider.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bc/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bas/src/main/java/com/aeye/mifss/bas/service/RpcParaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-intf/mifss-intf-bas/src/main/java/com/aeye/mifss/bas/service/RpcParaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,43 +65,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.mifss [clean].executor": "Run",
-    "Maven.mifss [install].executor": "Run",
-    "Maven.mifss [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.BasApplication.executor": "Debug",
-    "Spring Boot.BioApplication.executor": "Debug",
-    "Spring Boot.GenericBioApplication.executor": "Debug",
-    "Spring Boot.GuangxiBioApplication.executor": "Debug",
-    "Spring Boot.GuangxiIptApplication.executor": "Debug",
-    "Spring Boot.HunanBioApplication.executor": "Debug",
-    "Spring Boot.HunanIptApplication.executor": "Debug",
-    "Spring Boot.IptApplication.executor": "Debug",
-    "git-widget-placeholder": "v2.0.0",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/mifss-parent/mifss/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/config/adapt/huawei",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.mifss [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mifss [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mifss [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BasApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.BioApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.GenericBioApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.GuangxiBioApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.GuangxiIptApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.HunanBioApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.HunanIptApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.IptApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v2.0.0&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/mifss-parent/mifss/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/resources/config/adapt/huawei&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -232,22 +257,12 @@
       <workItem from="1770818122076" duration="92000" />
       <workItem from="1770858556534" duration="15736000" />
       <workItem from="1770880403252" duration="10492000" />
-      <workItem from="1770898184221" duration="8977000" />
+      <workItem from="1770898184221" duration="9086000" />
+      <workItem from="1770943735800" duration="9938000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/controller/ParaController.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

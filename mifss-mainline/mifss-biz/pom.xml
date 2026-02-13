@@ -24,7 +24,6 @@
         <module>mifss-biz-video</module>
         <module>mifss-biz-job</module>
         <module>mifss-biz-api</module>
-        <module>mifss-biz-bc</module>
     </modules>
 
 </project>

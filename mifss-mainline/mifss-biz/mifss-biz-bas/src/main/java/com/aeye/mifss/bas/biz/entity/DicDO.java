@@ -1,4 +1,4 @@
-package com.aeye.mifss.bas.entity;
+package com.aeye.mifss.bas.biz.entity;
 
 import com.aeye.mifss.common.annotation.CacheEntity;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -8,49 +8,49 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 场景监管参数实体
+ * 场景字典代码表实体
  */
 @Data
-@TableName("scen_para_a")
-@CacheEntity(keyPrefix = "scen_para_a")
-public class ParaDO implements Serializable {
+@TableName("scen_dic_a")
+@CacheEntity(keyPrefix = "scen_dic_a", cacheList = true, groupField = "dicTypeCode")
+public class DicDO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 参数名称
+     * 数据字典ID
      */
     @TableId
-    private String paraName;
+    private String dicId;
 
     /**
-     * 参数值
+     * 字典值代码
      */
-    private String paraval;
+    private String dicCode;
 
     /**
-     * 参数说明
+     * 字典值名称
      */
-    private String paraDscr;
+    private String dicName;
 
     /**
-     * 归属系统
+     * 父级字典值代码
      */
-    private String blngSys;
+    private String prntDicCode;
 
     /**
-     * 参数中文名称
+     * 字典类型代码
      */
-    private String paraChnName;
+    private String dicTypeCode;
 
     /**
-     * 参数备注信息
+     * 字典类型名称
      */
-    private String paraRemarks;
+    private String dicTypeName;
 
     /**
-     * 参数校验
+     * 顺序号
      */
-    private String paraChk;
+    private Integer seq;
 
     /**
      * 有效标志
