@@ -39,7 +39,7 @@ public class ParaController extends AeyeAbstractController {
         AeyePageInfo pageInfo = buildPageInfo();
         RpcMergeDTO<ParaDTO> rpcMergeDTO = new RpcMergeDTO(pageInfo, new RpcQueryWrapper<ParaDTO>()
                 .like(ParaDTO::getParaName, "is_appl_no_check_model")
-                .last("limit 10"));
+        );
         AeyePageResult<ParaDTO> result = paraService.pageRpc(rpcMergeDTO);
         return (WrapperResponse) WrapperResponse.success(result);
     }
