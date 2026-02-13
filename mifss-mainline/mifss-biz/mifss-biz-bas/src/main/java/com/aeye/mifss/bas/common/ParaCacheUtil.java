@@ -28,7 +28,7 @@ public class ParaCacheUtil {
         return BeanUtil.toBean(bean,ParaDTO.class);
     }
 
-    public static List<ParaDTO> getDicByParaType(String paraType) {
+    public static List<ParaDTO> getDicByType(String paraType) {
         return AeyeCacheManager.getList("paraList:"+paraType, ParaDTO.class);
     }
 

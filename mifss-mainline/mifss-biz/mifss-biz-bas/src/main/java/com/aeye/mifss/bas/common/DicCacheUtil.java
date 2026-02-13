@@ -28,7 +28,7 @@ public class DicCacheUtil {
         return BeanUtil.toBean(bean,DicDTO.class);
     }
 
-    public static List<DicDTO> getDicByDicType(String dicType) {
+    public static List<DicDTO> getDicByType(String dicType) {
         return AeyeCacheManager.getList("dicList:"+dicType,DicDTO.class);
     }
 

@@ -41,16 +41,6 @@ public class AdmdvsController extends AeyeAbstractController {
     @ApiOperation(value = "详细")
     @GetMapping(value = "/info/{keyId}")
     public WrapperResponse<AdmdvsDTO> info(@PathVariable("keyId") String keyId) throws Exception {
-        System.out.println();
-        List<DicDTO>  list  = DicCacheUtil.getDicAll();
-        System.out.println(" list size = "+list.size());
-
-        list  = DicCacheUtil.getDicByDicType("AGNTER_RLTS");
-        System.out.println(" list size = "+list.size());
-
-        DicDTO dicDTO = DicCacheUtil.getDicById("AGNTER_RLTS_1");
-        System.out.println(dicDTO);
-
         AdmdvsDO bean = admdvsService.getById(keyId);
         return WrapperResponse.success(AeyeBeanUtils.copyBean(bean, AdmdvsDTO.class));
     }
