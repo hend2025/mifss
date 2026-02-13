@@ -106,7 +106,7 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         CacheEntity cacheEntity = getEntityClass().getAnnotation(CacheEntity.class);
         if (cacheEntity != null) {
             String key = id.toString();
-            String cachePre = getCachePrefix(cacheEntity);
+            String cachePre = getCachePrefix();
             Entity obj = AeyeCacheManager.get(cachePre, key, getEntityClass());
             if (obj != null) {
                 return obj;
@@ -121,10 +121,11 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         return bo.getById(id);
     }
 
-    private String getCachePrefix(CacheEntity cacheEntity) {
-        String prefix = cacheEntity.keyPrefix();
-        if (StrUtil.isEmpty(cacheEntity.keyPrefix())) {
-            prefix = getEntityClass().getSimpleName();
+    private String getCachePrefix() {
+        String simpleName = getEntityClass().getSimpleName();
+        String prefix = StrUtil.lowerFirst(simpleName);
+        if (simpleName.endsWith("DO")) {
+            prefix = StrUtil.lowerFirst(simpleName.substring(0, simpleName.length() - 2));
         }
         return prefix;
     }
@@ -220,7 +221,7 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
                 Object id = getIdVal(entity);
                 if (id != null) {
                     String key = id.toString();
-                    String cachePre = getCachePrefix(cacheEntity);
+                    String cachePre = getCachePrefix();
                     long expire = cacheEntity.expire() > 0 ? cacheEntity.expire() : 1440 * 7;
                     AeyeCacheManager.put(cachePre, key, entity, expire);
                 }
@@ -234,7 +235,7 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         CacheEntity cacheEntity = getEntityClass().getAnnotation(CacheEntity.class);
         if (cacheEntity != null) {
             String key = id.toString();
-            String cachePre = getCachePrefix(cacheEntity);
+            String cachePre = getCachePrefix();
             AeyeCacheManager.remove(cachePre, key);
         }
     }
@@ -399,7 +400,7 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
         }
 
         // 存入缓存
-        String cachePre = getCachePrefix(cacheEntity);
+        String cachePre = getCachePrefix();
         long expire = cacheEntity.expire() > 0 ? cacheEntity.expire() : 1440 * 7;
         for (Entity entity : allList) {
             Object id = getIdVal(entity);

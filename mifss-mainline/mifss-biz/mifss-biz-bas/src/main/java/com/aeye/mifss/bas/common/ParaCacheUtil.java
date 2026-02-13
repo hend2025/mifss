@@ -21,7 +21,7 @@ public class ParaCacheUtil {
     }
 
     public static ParaDTO getDicById(String id) {
-        ParaDO bean = AeyeCacheManager.get("scen_para_a",id,ParaDO.class);
+        ParaDO bean = AeyeCacheManager.get("para",id,ParaDO.class);
         if(bean == null){
             return null;
         }

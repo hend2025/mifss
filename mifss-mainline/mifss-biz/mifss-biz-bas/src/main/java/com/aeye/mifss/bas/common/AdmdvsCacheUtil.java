@@ -22,7 +22,7 @@ public class AdmdvsCacheUtil {
     }
 
     public static AdmdvsDTO getDicById(String id) {
-        AdmdvsDO bean = AeyeCacheManager.get("scen_admdvs_info_b", id, AdmdvsDO.class);
+        AdmdvsDO bean = AeyeCacheManager.get("admdvs", id, AdmdvsDO.class);
         if (bean == null) {
             return null;
         }

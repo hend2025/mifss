@@ -12,7 +12,7 @@ import java.util.Date;
  */
 @Data
 @TableName("scen_dic_a")
-@CacheEntity(keyPrefix = "scen_dic_a", cacheList = true, groupField = "dicTypeCode")
+@CacheEntity(cacheList = true, groupField = "dicTypeCode")
 public class DicDO implements Serializable {
     private static final long serialVersionUID = 1L;
 

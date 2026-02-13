@@ -12,7 +12,7 @@ import java.util.Date;
  */
 @Data
 @TableName("scen_para_a")
-@CacheEntity(keyPrefix = "scen_para_a", cacheList = true)
+@CacheEntity(cacheList = true)
 public class ParaDO implements Serializable {
     private static final long serialVersionUID = 1L;
 

@@ -17,11 +17,6 @@ import java.lang.annotation.Target;
 public @interface CacheEntity {
 
     /**
-     * 缓存key前缀，默认使用类名
-     */
-    String keyPrefix() default "";
-
-    /**
      * 过期时间（秒），默认 -1 不过期
      */
     long expire() default -1;
@@ -37,4 +32,5 @@ public @interface CacheEntity {
      * 例如：字典表按字典类型（dicTypeCode）分组
      */
     String groupField() default "";
+
 }

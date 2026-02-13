@@ -21,7 +21,7 @@ public class DicCacheUtil {
     }
 
     public static DicDTO getDicById(String id) {
-        DicDO bean = AeyeCacheManager.get("scen_dic_a",id,DicDO.class);
+        DicDO bean = AeyeCacheManager.get("dic",id,DicDO.class);
         if(bean == null){
             return null;
         }

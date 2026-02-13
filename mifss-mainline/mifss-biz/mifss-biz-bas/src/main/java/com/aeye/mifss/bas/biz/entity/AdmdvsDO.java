@@ -12,7 +12,7 @@ import java.util.Date;
  */
 @Data
 @TableName("scen_admdvs_info_b")
-@CacheEntity(keyPrefix = "scen_admdvs_info_b", groupField = "prntAdmdvs")
+@CacheEntity(cacheList=true, groupField = "prntAdmdvs")
 public class AdmdvsDO implements Serializable {
     private static final long serialVersionUID = 1L;
 
