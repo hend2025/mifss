@@ -55,4 +55,9 @@ public class AdmdvsDTO implements Serializable {
      * 数据更新时间
      */
     private Date updtTime;
+
+    /**
+     * 子节点列表
+     */
+    private java.util.List<AdmdvsDTO> children;
 }

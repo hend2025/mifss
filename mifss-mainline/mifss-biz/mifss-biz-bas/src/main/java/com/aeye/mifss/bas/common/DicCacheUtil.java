@@ -1,29 +1,35 @@
 package com.aeye.mifss.bas.common;
 
+import cn.hsa.ims.common.cache.AeyeCacheManager;
 import cn.hsa.ims.common.utils.AeyeSpringContextUtils;
+import cn.hutool.core.bean.BeanUtil;
+import com.aeye.mifss.bas.biz.entity.DicDO;
 import com.aeye.mifss.bas.biz.service.DicService;
 import com.aeye.mifss.bas.dto.DicDTO;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DicCacheUtil {
 
     public static void reloadCache() {
-        DicService dicService = AeyeSpringContextUtils.getBean("dicService");
+        DicService dicService = AeyeSpringContextUtils.getBean("dicServiceImpl");
         dicService.reloadCache();
     }
 
     public static List<DicDTO> getDicAll() {
-        return new ArrayList<>();
+        return AeyeCacheManager.getList("dicList",DicDTO.class);
     }
 
     public static DicDTO getDicById(String id) {
-        return new DicDTO();
+        DicDO bean = AeyeCacheManager.get("scen_dic_a",id,DicDO.class);
+        if(bean == null){
+            return null;
+        }
+        return BeanUtil.toBean(bean,DicDTO.class);
     }
 
     public static List<DicDTO> getDicByDicType(String dicType) {
-        return new ArrayList<>();
+        return AeyeCacheManager.getList("dicList:"+dicType,DicDTO.class);
     }
 
 }

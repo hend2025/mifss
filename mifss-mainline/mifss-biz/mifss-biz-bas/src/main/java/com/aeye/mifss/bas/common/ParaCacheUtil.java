@@ -7,34 +7,29 @@ import com.aeye.mifss.bas.biz.entity.ParaDO;
 import com.aeye.mifss.bas.biz.service.ParaService;
 import com.aeye.mifss.bas.dto.ParaDTO;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ParaCacheUtil {
 
     public static void reloadCache() {
-        ParaService paraService = AeyeSpringContextUtils.getBean("paraService");
+        ParaService paraService = AeyeSpringContextUtils.getBean("paraServiceImpl");
         paraService.reloadCache();
     }
 
     public static List<ParaDTO> getDicAll() {
-        List<ParaDO> list = AeyeCacheManager.getList("paraList", ParaDO.class);
-        if(list==null||list.size()==0){
-            return null;
-        }
-        return  BeanUtil.copyToList(list, ParaDTO.class);
+        return AeyeCacheManager.getList("paraList",ParaDTO.class);
     }
 
     public static ParaDTO getDicById(String id) {
-        ParaDO paraDO = AeyeCacheManager.get(id, ParaDO.class);
-        if(paraDO==null){
+        ParaDO bean = AeyeCacheManager.get("scen_para_a",id,ParaDO.class);
+        if(bean == null){
             return null;
         }
-        return BeanUtil.toBean(paraDO, ParaDTO.class);
+        return BeanUtil.toBean(bean,ParaDTO.class);
     }
 
     public static List<ParaDTO> getDicByParaType(String paraType) {
-        return new ArrayList<>();
+        return AeyeCacheManager.getList("paraList:"+paraType, ParaDTO.class);
     }
 
 }

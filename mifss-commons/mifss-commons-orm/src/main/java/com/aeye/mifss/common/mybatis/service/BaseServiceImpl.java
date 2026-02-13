@@ -388,7 +388,7 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
                 break;
             }
             allList.addAll(records);
-            if (records.size() < pageSize) {
+            if (records.size() != pageSize) {
                 break;
             }
             pageNum++;
@@ -435,7 +435,7 @@ public class BaseServiceImpl<DTO, Entity, BO extends IService<Entity>>
                 }
             }
             for (Map.Entry<String, List<Entity>> entry : groupMap.entrySet()) {
-                String cacheKey = listKey + ":" +  entry.getKey();
+                String cacheKey = listKey + ":" + entry.getKey();
                 AeyeCacheManager.putList(cacheKey, entry.getValue());
             }
         }

@@ -3,9 +3,11 @@ package com.aeye.mifss.bas.biz.controller;
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import cn.hsa.ims.common.contoller.AeyeAbstractController;
 import cn.hsa.ims.common.utils.AeyePageResult;
+import com.aeye.mifss.bas.common.DicCacheUtil;
 import com.aeye.mifss.bas.dto.AdmdvsDTO;
 import com.aeye.mifss.bas.biz.entity.AdmdvsDO;
 import com.aeye.mifss.bas.biz.service.AdmdvsService;
+import com.aeye.mifss.bas.dto.DicDTO;
 import com.aeye.mifss.common.utils.AeyeBeanUtils;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.swagger.annotations.*;
@@ -39,6 +41,16 @@ public class AdmdvsController extends AeyeAbstractController {
     @ApiOperation(value = "详细")
     @GetMapping(value = "/info/{keyId}")
     public WrapperResponse<AdmdvsDTO> info(@PathVariable("keyId") String keyId) throws Exception {
+        System.out.println();
+        List<DicDTO>  list  = DicCacheUtil.getDicAll();
+        System.out.println(" list size = "+list.size());
+
+        list  = DicCacheUtil.getDicByDicType("AGNTER_RLTS");
+        System.out.println(" list size = "+list.size());
+
+        DicDTO dicDTO = DicCacheUtil.getDicById("AGNTER_RLTS_1");
+        System.out.println(dicDTO);
+
         AdmdvsDO bean = admdvsService.getById(keyId);
         return WrapperResponse.success(AeyeBeanUtils.copyBean(bean, AdmdvsDTO.class));
     }
