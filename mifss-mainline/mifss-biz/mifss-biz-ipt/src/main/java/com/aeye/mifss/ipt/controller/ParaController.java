@@ -4,6 +4,7 @@ import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import cn.hsa.ims.common.contoller.AeyeAbstractController;
 import cn.hsa.ims.common.utils.AeyePageInfo;
 import cn.hsa.ims.common.utils.AeyePageResult;
+import cn.hutool.core.util.StrUtil;
 import com.aeye.mifss.bas.dto.ParaDTO;
 import com.aeye.mifss.bas.service.RpcParaService;
 import com.aeye.mifss.common.dto.RpcMergeDTO;
@@ -39,8 +40,8 @@ public class ParaController extends AeyeAbstractController {
     public WrapperResponse<List<ParaDTO>> list(@RequestBody ParaDTO paraDTO) throws Exception {
         AeyePageInfo pageInfo = buildPageInfo();
         RpcMergeDTO<ParaDTO> rpcMergeDTO = new RpcMergeDTO(pageInfo, new RpcQueryWrapper<ParaDTO>()
-                .like(ParaDTO::getParaName, paraDTO.getParaName())
-                .like(ParaDTO::getParaDscr, paraDTO.getParaDscr()));
+                .like(StrUtil.isNotBlank(paraDTO.getParaName()), ParaDTO::getParaName, paraDTO.getParaName())
+                .like(StrUtil.isNotBlank(paraDTO.getParaDscr()), ParaDTO::getParaDscr, paraDTO.getParaDscr()));
         AeyePageResult<ParaDTO> result = paraService.pageRpc(rpcMergeDTO);
         return (WrapperResponse) WrapperResponse.success(result);
     }

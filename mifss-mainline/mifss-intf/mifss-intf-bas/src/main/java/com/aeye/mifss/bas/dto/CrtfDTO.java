@@ -1,5 +1,6 @@
 package com.aeye.mifss.bas.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -61,4 +62,11 @@ public class CrtfDTO implements Serializable {
      * 人脸模板照URL
      */
     private String faceImgUrl;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date startTime;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date endTime;
+
 }

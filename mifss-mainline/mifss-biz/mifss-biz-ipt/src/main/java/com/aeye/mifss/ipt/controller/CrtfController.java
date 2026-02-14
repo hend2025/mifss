@@ -4,6 +4,7 @@ import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import cn.hsa.ims.common.contoller.AeyeAbstractController;
 import cn.hsa.ims.common.utils.AeyePageInfo;
 import cn.hsa.ims.common.utils.AeyePageResult;
+import cn.hutool.core.util.StrUtil;
 import com.aeye.mifss.bas.dto.CrtfDTO;
 import com.aeye.mifss.bas.service.RpcCrtfService;
 import com.aeye.mifss.common.dto.RpcMergeDTO;
@@ -37,8 +38,10 @@ public class CrtfController extends AeyeAbstractController {
     public WrapperResponse<List<CrtfDTO>> list(@RequestBody CrtfDTO crtfDTO) throws Exception {
         AeyePageInfo pageInfo = buildPageInfo();
         RpcMergeDTO<CrtfDTO> rpcMergeDTO = new RpcMergeDTO(pageInfo, new RpcQueryWrapper<CrtfDTO>()
-                .like(CrtfDTO::getPsnName, crtfDTO.getPsnName())
-                .like(CrtfDTO::getMedinsName, crtfDTO.getMedinsName())
+                .eq(StrUtil.isNotBlank(crtfDTO.getPsnName()), CrtfDTO::getPsnName, crtfDTO.getPsnName())
+                .ge(crtfDTO.getStartTime()!=null,CrtfDTO::getCrtfTime,crtfDTO.getStartTime())
+                .le(crtfDTO.getEndTime()!=null,CrtfDTO::getCrtfTime,crtfDTO.getEndTime())
+                .like(StrUtil.isNotBlank(crtfDTO.getMedinsName()), CrtfDTO::getMedinsName, crtfDTO.getMedinsName())
         );
         AeyePageResult<CrtfDTO> result = crtfService.pageRpc(rpcMergeDTO);
         return (WrapperResponse) WrapperResponse.success(result);
