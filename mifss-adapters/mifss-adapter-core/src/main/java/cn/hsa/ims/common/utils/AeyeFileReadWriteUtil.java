@@ -3,7 +3,7 @@ package cn.hsa.ims.common.utils;
 import cn.hsa.hsaf.core.framework.web.exception.BusinessException;
 import cn.hsa.hsaf.core.fsstore.FSEntity;
 import cn.hutool.core.util.StrUtil;
-import org.apache.tomcat.util.http.fileupload.IOUtils;
+import cn.hutool.core.io.IoUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpMethod;
@@ -15,7 +15,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-
 
 public class AeyeFileReadWriteUtil {
 
@@ -30,15 +29,16 @@ public class AeyeFileReadWriteUtil {
     public static final String SYS_TMP_DIR = System.getProperty("java.io.tmpdir");
 
     static {
-        try{
+        try {
             SslUtil.ignoreSsl();
-        }catch (Exception ex){
+        } catch (Exception ex) {
             log.warn("全局https忽略证书配置异常！msg={}", ex.getMessage());
         }
     }
 
     /**
      * 文件流直接向response输出增加传输速度
+     * 
      * @param resp
      * @param inputStream
      */
@@ -55,8 +55,8 @@ public class AeyeFileReadWriteUtil {
         } catch (IOException e) {
             log.error(e.getMessage(), e);
         } finally {
-            IOUtils.closeQuietly(out);
-            IOUtils.closeQuietly(inputStream);
+            IoUtil.close(out);
+            IoUtil.close(inputStream);
         }
     }
 
@@ -70,45 +70,45 @@ public class AeyeFileReadWriteUtil {
             log.error(e.getMessage(), e);
             return false;
         } finally {
-            IOUtils.closeQuietly(out);
+            IoUtil.close(out);
         }
     }
 
-    public static void toZip(String sourceDir, String targetFile){
+    public static void toZip(String sourceDir, String targetFile) {
         FileOutputStream zipStream = null;
         ZipOutputStream out = null;
-        try{
-            //处理压缩文件
+        try {
+            // 处理压缩文件
             zipStream = new FileOutputStream(targetFile);
             out = new ZipOutputStream(new BufferedOutputStream(zipStream));
             File[] sourceFiles = new File(sourceDir).listFiles();
-            for(int i=0;i<sourceFiles.length;i++){
-                BufferedInputStream in=new BufferedInputStream(new FileInputStream(sourceFiles[i]));
-                try{
-                    //设置 ZipEntry 对象
+            for (int i = 0; i < sourceFiles.length; i++) {
+                BufferedInputStream in = new BufferedInputStream(new FileInputStream(sourceFiles[i]));
+                try {
+                    // 设置 ZipEntry 对象
                     out.putNextEntry(new ZipEntry(sourceFiles[i].getPath()));
                     int b;
-                    while((b=in.read())!=-1){
-                        //从源文件读出，往压缩文件中写入
+                    while ((b = in.read()) != -1) {
+                        // 从源文件读出，往压缩文件中写入
                         out.write(b);
                     }
-                }catch (Exception e){
+                } catch (Exception e) {
                     log.error(e.getMessage(), e);
-                }finally {
-                    IOUtils.closeQuietly(in);
+                } finally {
+                    IoUtil.close(in);
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             log.error(e.getMessage(), e);
-        }finally {
-            if(out != null){
+        } finally {
+            if (out != null) {
                 try {
                     out.closeEntry();
                 } catch (IOException e) {
                     log.error(e.getMessage(), e);
                 }
             }
-            IOUtils.closeQuietly(zipStream);
+            IoUtil.close(zipStream);
         }
     }
 
@@ -116,73 +116,73 @@ public class AeyeFileReadWriteUtil {
      * @param url 读取网络文件的完整地址 例如: http://127.0.0.1:8080/avatar/100000/abc.jpg
      * @return
      */
-    public static byte[] readFile(URL url) throws Exception{
+    public static byte[] readFile(URL url) throws Exception {
 
-        //打开链接
-        HttpURLConnection conn = (HttpURLConnection)valiUrlSafe(url).openConnection();
-        //设置请求方式为"GET"
+        // 打开链接
+        HttpURLConnection conn = (HttpURLConnection) valiUrlSafe(url).openConnection();
+        // 设置请求方式为"GET"
         conn.setRequestMethod(HttpMethod.GET.name());
-        //超时响应时间为5秒
+        // 超时响应时间为5秒
         conn.setConnectTimeout(5 * 1000);
         InputStream inStream = null;
         ByteArrayOutputStream outStream = null;
         byte[] data = null;
-        try{
-            //通过输入流获取图片数据
+        try {
+            // 通过输入流获取图片数据
             inStream = conn.getInputStream();
             outStream = new ByteArrayOutputStream();
-            //创建一个Buffer字符串
+            // 创建一个Buffer字符串
             byte[] buffer = new byte[1024];
-            //每次读取的字符串长度，如果为-1，代表全部读取完毕
+            // 每次读取的字符串长度，如果为-1，代表全部读取完毕
             int len = 0;
-            //使用一个输入流从buffer里把数据读取出来
-            while( (len=inStream.read(buffer)) != -1 ){
-                //用输出流往buffer里写入数据，中间参数代表从哪个位置开始读，len代表读取的长度
+            // 使用一个输入流从buffer里把数据读取出来
+            while ((len = inStream.read(buffer)) != -1) {
+                // 用输出流往buffer里写入数据，中间参数代表从哪个位置开始读，len代表读取的长度
                 outStream.write(buffer, 0, len);
             }
             // 得到图片的二进制数据，以二进制封装得到数据，具有通用性
             data = outStream.toByteArray();
-        }catch (Exception ex){
+        } catch (Exception ex) {
             log.debug("文件下载异常！url={};errorMsg={}", url, ex.getMessage());
-        }finally {
-            IOUtils.closeQuietly(inStream);
-            IOUtils.closeQuietly(outStream);
+        } finally {
+            IoUtil.close(inStream);
+            IoUtil.close(outStream);
         }
         return data;
     }
 
-    public static InputStream readFileStream(URL url) throws Exception{
-        //打开链接
-        HttpURLConnection conn = (HttpURLConnection)valiUrlSafe(url).openConnection();
-        //设置请求方式为"GET"
+    public static InputStream readFileStream(URL url) throws Exception {
+        // 打开链接
+        HttpURLConnection conn = (HttpURLConnection) valiUrlSafe(url).openConnection();
+        // 设置请求方式为"GET"
         conn.setRequestMethod(HttpMethod.GET.name());
-        //超时响应时间为5秒
+        // 超时响应时间为5秒
         conn.setConnectTimeout(5 * 1000);
-        try{
-            //通过输入流获取图片数据
+        try {
+            // 通过输入流获取图片数据
             return conn.getInputStream();
-        }catch (Exception ex){
+        } catch (Exception ex) {
             log.debug("文件下载异常！url={};errorMsg={}", url, ex.getMessage());
-            IOUtils.closeQuietly(conn.getInputStream());
+            IoUtil.close(conn.getInputStream());
         }
         return null;
     }
 
-    public static byte[] readByFile(File file) throws Exception{
-        if(!file.exists()){
+    public static byte[] readByFile(File file) throws Exception {
+        if (!file.exists()) {
             return null;
         }
         BufferedInputStream bis = null;
         byte[] b = null;
-        try{
+        try {
             bis = new BufferedInputStream(new FileInputStream(file));
-            //读取文件内容
+            // 读取文件内容
             b = new byte[bis.available()];
             bis.read(b);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             log.error(ex.getMessage(), ex);
-        }finally {
-            IOUtils.closeQuietly(bis);
+        } finally {
+            IoUtil.close(bis);
         }
         return b;
     }
@@ -190,7 +190,7 @@ public class AeyeFileReadWriteUtil {
     public static byte[] readFile(FSEntity entity) {
         BufferedInputStream in = null;
         ByteArrayOutputStream bos = null;
-        try{
+        try {
             bos = new ByteArrayOutputStream((int) entity.getSize());
             in = new BufferedInputStream(entity.getInputstream());
 
@@ -201,18 +201,19 @@ public class AeyeFileReadWriteUtil {
                 bos.write(buffer, 0, len);
             }
             return bos.toByteArray();
-        }catch (Exception ex){
-            String baseKeyPrex = AeyeFSManager.defaultBucket+"/";
+        } catch (Exception ex) {
+            String baseKeyPrex = AeyeFSManager.defaultBucket + "/";
             String baseKey = null;
-            if(entity.getKeyId().startsWith(baseKeyPrex)){
+            if (entity.getKeyId().startsWith(baseKeyPrex)) {
                 baseKey = Base64Utils.urlEncode(entity.getKeyId().replace(baseKeyPrex, "").getBytes());
-            }else{
+            } else {
                 baseKey = Base64Utils.urlEncode(entity.getKeyId().getBytes());
             }
-            log.error("文件下载失败：errMsg=" + ex.getMessage()+"；baseKey="+baseKey+"；key="+entity.getKeyId()+"；name="+entity.getName(), ex);
-        }finally {
-            IOUtils.closeQuietly(bos);
-            IOUtils.closeQuietly(in);
+            log.error("文件下载失败：errMsg=" + ex.getMessage() + "；baseKey=" + baseKey + "；key=" + entity.getKeyId()
+                    + "；name=" + entity.getName(), ex);
+        } finally {
+            IoUtil.close(bos);
+            IoUtil.close(in);
         }
         return new byte[0];
     }
@@ -220,7 +221,7 @@ public class AeyeFileReadWriteUtil {
     public static byte[] readFile(InputStream inputStream) {
         BufferedInputStream in = null;
         ByteArrayOutputStream bos = null;
-        try{
+        try {
             bos = new ByteArrayOutputStream();
             in = new BufferedInputStream(inputStream);
 
@@ -231,86 +232,87 @@ public class AeyeFileReadWriteUtil {
                 bos.write(buffer, 0, len);
             }
             return bos.toByteArray();
-        }catch (Exception ex){
+        } catch (Exception ex) {
             log.error(ex.getMessage(), ex);
-        }finally {
-            IOUtils.closeQuietly(bos);
-            IOUtils.closeQuietly(in);
+        } finally {
+            IoUtil.close(bos);
+            IoUtil.close(in);
         }
         return new byte[0];
     }
 
     public static String renameToUUID(String fileName) {
-        if(StrUtil.isNotBlank(fileName)){
+        if (StrUtil.isNotBlank(fileName)) {
             int index = fileName.lastIndexOf(".");
-            if(index > -1){
+            if (index > -1) {
                 String name = fileName.substring(index + 1);
-                if(StrUtil.isNotBlank(name)){
+                if (StrUtil.isNotBlank(name)) {
                     return AeyeIdGeneratorUtil.uuid() + "." + name;
                 }
             }
         }
         return AeyeIdGeneratorUtil.uuid();
-	}
+    }
 
     public static String renameSplitUUID(String fileName) {
-        if(StrUtil.isNotBlank(fileName)){
+        if (StrUtil.isNotBlank(fileName)) {
             int index = fileName.lastIndexOf(FILE_SPLIT_MARK);
             String name = null;
             StringBuilder rename = new StringBuilder();
-            if(index > -1){
+            if (index > -1) {
                 String suffix = fileName.substring(index + 1);
                 name = fileName.substring(0, index);
-                if(StrUtil.isNotBlank(name)){
+                if (StrUtil.isNotBlank(name)) {
                     rename.append(name).append(RENAME_SPLIT_UUID_MARK);
                 }
                 rename.append(AeyeIdGeneratorUtil.uuid());
-                if(StrUtil.isNotBlank(suffix)){
+                if (StrUtil.isNotBlank(suffix)) {
                     rename.append(FILE_SPLIT_MARK).append(suffix);
                 }
-            }else{
+            } else {
                 rename.append(fileName).append(RENAME_SPLIT_UUID_MARK).append(AeyeIdGeneratorUtil.uuid());
             }
             return rename.toString();
         }
         return AeyeIdGeneratorUtil.uuid();
-	}
+    }
 
     /**
      * 计算字节单位
+     * 
      * @param size
      * @return
      */
     public static String showByteSizeUnit(long size) {
-        //如果字节数少于1024，则直接以B为单位，否则先除于1024，后3位因太少无意义
+        // 如果字节数少于1024，则直接以B为单位，否则先除于1024，后3位因太少无意义
         if (size < 1024) {
             return String.valueOf(size) + "B";
         } else {
             size = size / 1024;
         }
-        //如果原字节数除于1024之后，少于1024，则可以直接以KB作为单位
-        //因为还没有到达要使用另一个单位的时候
-        //接下去以此类推
+        // 如果原字节数除于1024之后，少于1024，则可以直接以KB作为单位
+        // 因为还没有到达要使用另一个单位的时候
+        // 接下去以此类推
         if (size < 1024) {
             return String.valueOf(size) + "KB";
         } else {
             size = size / 1024;
         }
         if (size < 1024) {
-            //因为如果以MB为单位的话，要保留最后1位小数，
-            //因此，把此数乘以100之后再取余
+            // 因为如果以MB为单位的话，要保留最后1位小数，
+            // 因此，把此数乘以100之后再取余
             size = size * 100;
             return String.valueOf((size / 100)) + "."
                     + String.valueOf((size % 100)) + "MB";
         } else {
-            //否则如果要以GB为单位的，先除于1024再作同样的处理
+            // 否则如果要以GB为单位的，先除于1024再作同样的处理
             size = size * 100 / 1024;
             return String.valueOf((size / 100)) + "."
                     + String.valueOf((size % 100)) + "GB";
         }
     }
 
-	public static void main(String args[]) throws  Exception{
+    public static void main(String args[]) throws Exception {
 
     }
 
@@ -331,13 +333,15 @@ public class AeyeFileReadWriteUtil {
                 } else if (!parent.exists()) {
                     throw new BusinessException("Invalid directory, specified parent does not exist: parent=" + parent);
                 } else if (!parent.isDirectory()) {
-                    throw new BusinessException("Invalid directory, specified parent is not a directory:  parent=" + parent);
+                    throw new BusinessException(
+                            "Invalid directory, specified parent is not a directory:  parent=" + parent);
                 } else if (!dir.getCanonicalPath().startsWith(parent.getCanonicalPath())) {
                     throw new BusinessException("Invalid directory, not inside specified parent: path=" + parent);
                 } else {
                     String canonicalPath = dir.getCanonicalPath();
                     if (!canonicalPath.equals(input)) {
-                        throw new BusinessException("Invalid directory name does not match the canonical path: path=" + input);
+                        throw new BusinessException(
+                                "Invalid directory name does not match the canonical path: path=" + input);
                     } else {
                         return canonicalPath;
                     }
@@ -349,7 +353,7 @@ public class AeyeFileReadWriteUtil {
     }
 
     public static String getValidFileExt(String input, List<String> allowedExtensions) throws Exception {
-        for(String ext : allowedExtensions) {
+        for (String ext : allowedExtensions) {
             if (input.toLowerCase().endsWith(ext.toLowerCase())) {
                 return input;
             }
@@ -363,7 +367,7 @@ public class AeyeFileReadWriteUtil {
      * @param filename 要检查的文件名
      * @return 如果文件名安全返回true，否则返回false
      */
-    public static String validFileSafe(String filename) throws BusinessException{
+    public static String validFileSafe(String filename) throws BusinessException {
         if (StrUtil.isBlank(filename)) {
             return filename;
         }
@@ -383,9 +387,9 @@ public class AeyeFileReadWriteUtil {
         }
 
         // 检查是否包含危险字符
-        String[] maliciousChars = {";", "&", "|", "`", "$", "<", ">",
+        String[] maliciousChars = { ";", "&", "|", "`", "$", "<", ">",
                 "\"", "'", "\\", "*", "?", "{", "}",
-                "[", "]", "(", ")", "~", "!", "#"};
+                "[", "]", "(", ")", "~", "!", "#" };
 
         for (String maliciousChar : maliciousChars) {
             if (filename.contains(maliciousChar)) {
@@ -409,7 +413,6 @@ public class AeyeFileReadWriteUtil {
         return filename;
     }
 
-
     /**
      *
      * @param input
@@ -419,7 +422,8 @@ public class AeyeFileReadWriteUtil {
      * @throws BusinessException
      */
 
-    public static String getValidFileName(String input, List<String> allowedExtensions, boolean allowNull) throws BusinessException {
+    public static String getValidFileName(String input, List<String> allowedExtensions, boolean allowNull)
+            throws BusinessException {
         if (allowedExtensions != null && !allowedExtensions.isEmpty()) {
             String canonical = "";
 
@@ -437,28 +441,32 @@ public class AeyeFileReadWriteUtil {
                 String c = f.getCanonicalPath();
                 String cpath = c.substring(c.lastIndexOf(File.separator) + 1);
                 if (!input.equals(cpath)) {
-                    throw new BusinessException("Invalid directory name does not match the canonical path: input=" + input);
+                    throw new BusinessException(
+                            "Invalid directory name does not match the canonical path: input=" + input);
                 }
             } catch (IOException e) {
                 throw new BusinessException("Invalid file name does not exist: input=" + input);
             }
 
-            for(String ext : allowedExtensions) {
+            for (String ext : allowedExtensions) {
                 if (input.toLowerCase().endsWith(ext.toLowerCase())) {
                     return canonical;
                 }
             }
 
-            throw new BusinessException("Invalid file name does not have valid extension ( " + allowedExtensions + "): input=" + input);
+            throw new BusinessException(
+                    "Invalid file name does not have valid extension ( " + allowedExtensions + "): input=" + input);
         } else {
-            throw new BusinessException("getValidFileName called with an empty or null list of allowed Extensions, therefore no files can be uploaded");
+            throw new BusinessException(
+                    "getValidFileName called with an empty or null list of allowed Extensions, therefore no files can be uploaded");
         }
     }
 
     /**
-     * Url 参数校验，禁用不需要的协议。仅仅允许http和https请求。可以防止类似于`file:///, gopher:// , ftp://` 等引起的问题。
+     * Url 参数校验，禁用不需要的协议。仅仅允许http和https请求。可以防止类似于`file:///, gopher:// , ftp://`
+     * 等引起的问题。
      */
-    public static URL valiUrlSafe(URL url) throws BusinessException{
+    public static URL valiUrlSafe(URL url) throws BusinessException {
         if (url == null) {
             throw new BusinessException("Invalid URL: url=" + url);
         } else {
