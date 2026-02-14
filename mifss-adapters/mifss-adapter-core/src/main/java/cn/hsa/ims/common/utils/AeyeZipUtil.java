@@ -14,10 +14,6 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.zip.ZipOutputStream;
 
-/**
- * @author shenxingping
- * @date 2021/05/21
- */
 public class AeyeZipUtil {
 
     private static Logger log = LoggerFactory.getLogger(AeyeZipUtil.class);
@@ -98,9 +94,6 @@ public class AeyeZipUtil {
     }
 
     public static void main(String[] args) {
-//        String sourcePath = "C:/model.zip";
-//        String destPath = "C:/test";
-//        unZip(sourcePath, destPath);
         zip(new File("D:\\4.jpg"), new File("D:\\gg.zip"));
     }
 

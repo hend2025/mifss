@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Primary;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.util.PathMatcher;
-import org.springframework.util.StringUtils;
+import cn.hutool.core.util.StrUtil;
 
 @Primary
 public class RefererFilter implements Filter {
@@ -29,14 +29,14 @@ public class RefererFilter implements Filter {
 
         try {
             String referer = httprequest.getHeader("Referer");
-            if (StringUtils.isEmpty(referer)) {
+            if (StrUtil.isEmpty(referer)) {
                 chain.doFilter(request, response);
             } else {
                 boolean permitsFlag = false;
                 String permits = "/api/**,/*/api/**," + AuthPropertiesUtil.referePermits;
                 String requestUrl = httprequest.getServletPath().toString();
                 PathMatcher matcher = new AntPathMatcher();
-                if (!StringUtils.isEmpty(permits)) {
+                if (!StrUtil.isEmpty(permits)) {
                     for(int i = 0; i < permits.split(",").length; ++i) {
                         String exclusions = permits.split(",")[i];
                         if (!"".equals(exclusions) && matcher.match(exclusions, requestUrl)) {
@@ -48,7 +48,7 @@ public class RefererFilter implements Filter {
 
                 String activeReferer = AuthPropertiesUtil.activeReferer;
                 String refereDomain = this.getDomain(referer);
-                if (!permitsFlag && !StringUtils.isEmpty(activeReferer) && refereDomain.indexOf(activeReferer) < 0) {
+                if (!permitsFlag && !StrUtil.isEmpty(activeReferer) && refereDomain.indexOf(activeReferer) < 0) {
                     httpresponse.sendError(403, "不被允许的Referer请求!");
                 } else {
                     chain.doFilter(request, response);

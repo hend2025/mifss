@@ -2,10 +2,6 @@ package cn.hsa.ims.common.dto;
 
 import lombok.Data;
 
-/**
- * @author shenxingping
- * @date 2021/09/02
- */
 @Data
 public class AeyeImageDto {
     /**

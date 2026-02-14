@@ -2,6 +2,7 @@ package cn.hsa.ims.common.utils;
 
 import cn.hsa.hsaf.core.framework.web.exception.BusinessException;
 import cn.hsa.hsaf.core.fsstore.FSEntity;
+import cn.hutool.core.util.StrUtil;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -240,11 +241,11 @@ public class AeyeFileReadWriteUtil {
     }
 
     public static String renameToUUID(String fileName) {
-        if(AeyeStringUtils.isNotBlank(fileName)){
+        if(StrUtil.isNotBlank(fileName)){
             int index = fileName.lastIndexOf(".");
             if(index > -1){
                 String name = fileName.substring(index + 1);
-                if(AeyeStringUtils.isNotBlank(name)){
+                if(StrUtil.isNotBlank(name)){
                     return AeyeIdGeneratorUtil.uuid() + "." + name;
                 }
             }
@@ -253,18 +254,18 @@ public class AeyeFileReadWriteUtil {
 	}
 
     public static String renameSplitUUID(String fileName) {
-        if(AeyeStringUtils.isNotBlank(fileName)){
+        if(StrUtil.isNotBlank(fileName)){
             int index = fileName.lastIndexOf(FILE_SPLIT_MARK);
             String name = null;
             StringBuilder rename = new StringBuilder();
             if(index > -1){
                 String suffix = fileName.substring(index + 1);
                 name = fileName.substring(0, index);
-                if(AeyeStringUtils.isNotBlank(name)){
+                if(StrUtil.isNotBlank(name)){
                     rename.append(name).append(RENAME_SPLIT_UUID_MARK);
                 }
                 rename.append(AeyeIdGeneratorUtil.uuid());
-                if(AeyeStringUtils.isNotBlank(suffix)){
+                if(StrUtil.isNotBlank(suffix)){
                     rename.append(FILE_SPLIT_MARK).append(suffix);
                 }
             }else{
@@ -363,7 +364,7 @@ public class AeyeFileReadWriteUtil {
      * @return 如果文件名安全返回true，否则返回false
      */
     public static String validFileSafe(String filename) throws BusinessException{
-        if (AeyeStringUtils.isBlank(filename)) {
+        if (StrUtil.isBlank(filename)) {
             return filename;
         }
 

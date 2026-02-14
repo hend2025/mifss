@@ -1,7 +1,7 @@
 package cn.hsa.ims.common.cache;
 
 import cn.hsa.ims.common.utils.AeyeSpringContextUtils;
-import cn.hsa.ims.common.utils.AeyeStringUtils;
+import cn.hutool.core.util.StrUtil;
 import org.springframework.cache.CacheManager;
 import org.springframework.core.env.Environment;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -118,10 +118,10 @@ public class AeyeCacheManager {
 
     private static String buildKey(String cachePrex, String key) {
         StringBuilder vk = new StringBuilder();
-        if (AeyeStringUtils.isNotBlank(applicationName)) {
+        if (StrUtil.isNotBlank(applicationName)) {
             vk.append(applicationName + ":");
         }
-        if (AeyeStringUtils.isNotBlank(cachePrex)) {
+        if (StrUtil.isNotBlank(cachePrex)) {
             vk.append(cachePrex + ":");
         }
         vk.append(key);

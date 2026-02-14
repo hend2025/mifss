@@ -5,7 +5,7 @@ import cn.hsa.hsaf.core.framework.context.HsafContextHolder;
 import cn.hsa.hsaf.core.framework.util.SerialUtil;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
-import org.apache.commons.lang3.StringUtils;
+import cn.hutool.core.util.StrUtil;
 import org.springframework.http.MediaType;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -39,7 +39,7 @@ public class AeyeFeignInterceptor implements RequestInterceptor {
 
             userInfo = request.getHeader("HsafContext");
             SerialUtil<HsafContext> serialUtil = new SerialUtil();
-            if (StringUtils.isBlank(userInfo)) {
+            if (StrUtil.isBlank(userInfo)) {
                 HsafContext hsafContext = HsafContextHolder.getContext();
                 String userInfoBase64 = serialUtil.serialToBase64(hsafContext);
                 template.header("HsafFeignSign", new String[]{"HsafFeignSign"});

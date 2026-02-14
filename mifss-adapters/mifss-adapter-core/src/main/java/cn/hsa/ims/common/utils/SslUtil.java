@@ -4,10 +4,6 @@ import javax.net.ssl.*;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
-/**
- * @author shenxingping
- * @date 2021/10/29
- */
 public class SslUtil {
     /**
      * 忽略HTTPS请求的SSL证书，必须在openConnection之前调用

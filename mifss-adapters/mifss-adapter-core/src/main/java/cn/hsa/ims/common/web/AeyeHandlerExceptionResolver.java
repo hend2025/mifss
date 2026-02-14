@@ -12,11 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * @author shenxingping
- * @TODO 描述
- * @date 2022/09/06
- */
 @Configuration
 @Slf4j
 public class AeyeHandlerExceptionResolver extends DefaultHandlerExceptionResolver implements HandlerExceptionResolver {
@@ -31,4 +26,5 @@ public class AeyeHandlerExceptionResolver extends DefaultHandlerExceptionResolve
         log.info("客户端IP={}；请求地址={}；参数缺失={}", AeyeHttpClientUtil.getIpAddr(request), request.getRequestURL()+"?"+request.getQueryString(), ex.getMessage());
         return super.handleMissingServletRequestParameter(ex, request, response, handler);
     }
+
 }

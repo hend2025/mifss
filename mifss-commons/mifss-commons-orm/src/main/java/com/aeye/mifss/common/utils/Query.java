@@ -1,7 +1,6 @@
 package com.aeye.mifss.common.utils;
 
 import cn.hsa.ims.common.utils.AeyePageInfo;
-import cn.hsa.ims.common.utils.AeyeStringUtils;
 import cn.hutool.core.util.StrUtil;
 import com.aeye.mifss.common.xss.SqlFilter;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -54,7 +53,7 @@ public class Query<T> {
         String order = pageInfo.getOrderType();
 
         //前端字段排序
-        if(AeyeStringUtils.isNotEmpty(orderField) && AeyeStringUtils.isNotEmpty(order)){
+        if(StrUtil.isNotEmpty(orderField) && StrUtil.isNotEmpty(order)){
             if(Constant.ASC.equalsIgnoreCase(order)) {
                 orders.add(new OrderItem(orderField, true));
                 return page;
@@ -80,7 +79,7 @@ public class Query<T> {
                 if(tableField != null){
                     //实体属性存在注解，可能存在映射差异化
                     String column = tableField.value();
-                    if(AeyeStringUtils.isNotBlank(column)){
+                    if(StrUtil.isNotBlank(column)){
                         //存在映射差异化
                         return column;
                     }

@@ -3,6 +3,7 @@ package cn.hsa.ims.common.utils;
 
 import cn.hsa.hsaf.core.framework.web.exception.BusinessException;
 import cn.hsa.ims.common.config.AeyeHttpPoolConfig;
+import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
@@ -45,11 +46,6 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.Map;
 
-/**
- * https://github.com/apache/httpcomponents-client/blob/4.5.x/httpclient/src/examples/org/apache/http/examples/client/ClientConfiguration.java
- * @Author shenxingping
- * @Date 2021/1/16
- */
 public class AeyeHttpClientUtil {
     public static final String HTTPS_PREX = "https://";
     private final static String UNKNOWN_KEY = "unknown";
@@ -121,7 +117,7 @@ public class AeyeHttpClientUtil {
     public static boolean jsAjax(HttpServletRequest req){
         //判断是否为ajax请求，默认不是
         boolean isAjaxRequest = false;
-        if(!AeyeStringUtils.isBlank(req.getHeader(X_REQUESTED_KEY)) && XML_HTTP_KEY.equals(req.getHeader(X_REQUESTED_KEY))){
+        if(!StrUtil.isBlank(req.getHeader(X_REQUESTED_KEY)) && XML_HTTP_KEY.equals(req.getHeader(X_REQUESTED_KEY))){
             isAjaxRequest = true;
         }
         return isAjaxRequest;
@@ -201,13 +197,6 @@ public class AeyeHttpClientUtil {
         }
     }
 
-    /**
-     * 读取HttpServletRequest 里面的json，返回字符串
-     * @Author 沈兴平
-     * @Date 2020/12/1
-     * @Param request
-     * @return java.lang.String
-     */
     public static String readHttpRequest(HttpServletRequest request) throws Exception{
         BufferedReader br;
         String jsonStr = null;
@@ -361,7 +350,7 @@ public class AeyeHttpClientUtil {
 
     public static String getRequestDomain(HttpServletRequest request){
         String domain = request.getHeader("Referer");
-        if(AeyeStringUtils.isBlank(domain)){
+        if(StrUtil.isBlank(domain)){
             domain = request.getServerName() + ":" + request.getServerPort();
         }
 

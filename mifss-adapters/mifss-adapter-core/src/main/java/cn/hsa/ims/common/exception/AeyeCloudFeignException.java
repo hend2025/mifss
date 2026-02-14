@@ -4,11 +4,6 @@ import lombok.Data;
 
 import java.io.IOException;
 
-/**
- * @author shenxingping
- * @TODO 描述
- * @date 2023/03/26
- */
 @Data
 public class AeyeCloudFeignException extends IOException {
 

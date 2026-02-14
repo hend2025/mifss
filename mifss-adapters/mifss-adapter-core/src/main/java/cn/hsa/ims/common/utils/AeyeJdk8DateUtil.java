@@ -5,10 +5,6 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
-/**
- * @author shenxingping
- * @date 2021/04/04
- */
 public class AeyeJdk8DateUtil {
     public static DateTimeFormatter MONTH = DateTimeFormatter.ofPattern("yyyyMM");
     public static DateTimeFormatter DATE = DateTimeFormatter.ofPattern("yyyyMMdd");

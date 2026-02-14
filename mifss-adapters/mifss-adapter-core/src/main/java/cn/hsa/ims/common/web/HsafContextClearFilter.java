@@ -8,11 +8,6 @@ import org.springframework.stereotype.Component;
 import javax.servlet.*;
 import java.io.IOException;
 
-/**
- * @author shenxingping
- * @TODO 描述
- * @date 2022/04/07
- */
 @Component
 @Order(-999)
 @Slf4j
@@ -38,4 +33,5 @@ public class HsafContextClearFilter implements Filter {
     public void destroy() {
 
     }
+
 }

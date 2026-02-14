@@ -1,8 +1,3 @@
-/**
- * Project Name:mbr-parent
- * Date:2017-08-25 16:48
- * Copyright (c) 2017, AEYE All Rights Reserved.
- */
 package cn.hsa.ims.common.utils;
 
 import java.io.ByteArrayOutputStream;
@@ -10,13 +5,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Base64;
 
-/**
- * Function: ADD FUNCTION. <br/>
- * Date: 2017-08-25 16:48 <br/>
- *
- * @author duanxuhua
- * @version 1.0
- */
 public class Base64Utils {
 
     private final static String JPG_BASE64_KEY = "/9j";
@@ -168,11 +156,6 @@ public class Base64Utils {
     }
 
     public static void main(String args[]) throws Exception{
-//        DateTimeFormatter formatter = AeyeJdk8DateUtil.DATETIME_MINUTE;
-//        Date nextTime = AeyeJdk8DateUtil.convertToDate(LocalDate.parse("201901010030", formatter).atStartOfDay());
-//        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm").format(nextTime));
-//        String bb = urlEncode("test/[day]/11111111ggddddddddddddddddddddddddddddddddddbbbbbb11111111ggddddddddddddddddddddddddddddddddddbbbbbb.jpg".getBytes());
-//        System.out.println(new String(bb));
         byte[] bb = urlDecode("TTAwLzAwLzAwL3dLZ1FsR0wxejUyQUI5UU9BQUJVLVo2X3VOQTU2MC50eHQ=");
         System.out.println(new String(bb));
     }

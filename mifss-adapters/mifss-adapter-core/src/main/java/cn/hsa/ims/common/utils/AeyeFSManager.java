@@ -61,14 +61,14 @@ public class AeyeFSManager {
         }
         defaultOssDir = env.getProperty("fsstore.defaultOssDir");
         allowFormat = env.getProperty("spring.application.multipart.allowFormat");
-        if(AeyeStringUtils.isNotBlank(defaultOssDir)){
+        if(StrUtil.isNotBlank(defaultOssDir)){
             // 检查必须'/'结束
             defaultOssDir = defaultOssDir.endsWith(AeyeFileReadWriteUtil.DIR_SPLIT_MARK) ? defaultOssDir : defaultOssDir + AeyeFileReadWriteUtil.DIR_SPLIT_MARK;
         }else{
             // 默认以ZHY为目录名按月存储,必须'/'结束
             defaultOssDir = "ZHY/[month]/";
         }
-        if(AeyeStringUtils.isBlank(allowFormat)){
+        if(StrUtil.isBlank(allowFormat)){
             allowFormat = "doc,docx,xls,xlsx,ppt,pptx,pdf,jpg,gif,jpeg,png,txt,log,wmv,mp4,zip,rar,apk";
         }
         allowFormats.addAll(Arrays.asList(allowFormat.split(",")));
@@ -82,7 +82,7 @@ public class AeyeFSManager {
         AeyeFSEntity aeyeFSEntity = null;
         InputStream inputStream = null;
         try {
-            if(AeyeStringUtils.isBlank(fileName)){
+            if(StrUtil.isBlank(fileName)){
                 fileName = uploadFile.getName();
             }
             inputStream = new FileInputStream(uploadFile);
@@ -166,7 +166,7 @@ public class AeyeFSManager {
                 fsEntity.setName(fsEntity.getName().replace(DATETIME_MONTH_KEY, AeyeJdk8DateUtil.MONTH.format(nowTime)));
             }
             fsEntity.setAcl(FSAccessControlList.Private);
-            fsManager.putObject(AeyeStringUtils.isNotBlank(bucket) ? bucket : defaultBucket, fsEntity);
+            fsManager.putObject(StrUtil.isNotBlank(bucket) ? bucket : defaultBucket, fsEntity);
             fsEntity.setKeyId(Base64Utils.urlEncode(fsEntity.getKeyId().getBytes()));
         }finally {
             //关闭流
@@ -215,11 +215,11 @@ public class AeyeFSManager {
      * @return
      */
     public static boolean deleteObject(String bucket, String keyId){
-        if(AeyeStringUtils.isBlank(keyId)){
+        if(StrUtil.isBlank(keyId)){
             return false;
         }
         FSManager fsManager = AeyeSpringContextUtils.getBean(FSManager.class);
-        return fsManager.deleteObject(AeyeStringUtils.isNotBlank(bucket) ? bucket : defaultBucket, new String(Base64Utils.urlDecode(keyId)));
+        return fsManager.deleteObject(StrUtil.isNotBlank(bucket) ? bucket : defaultBucket, new String(Base64Utils.urlDecode(keyId)));
     }
 
     /**
@@ -327,7 +327,7 @@ public class AeyeFSManager {
             }else{
                 FSManager fsManager = AeyeSpringContextUtils.getBean(FSManager.class);
 
-                fsEntity = fsManager.getObject(AeyeStringUtils.isNotBlank(bucket) ? bucket : defaultBucket, new String(Base64Utils.urlDecode(keyId)));
+                fsEntity = fsManager.getObject(StrUtil.isNotBlank(bucket) ? bucket : defaultBucket, new String(Base64Utils.urlDecode(keyId)));
             }
 
             if(fsEntity != null){

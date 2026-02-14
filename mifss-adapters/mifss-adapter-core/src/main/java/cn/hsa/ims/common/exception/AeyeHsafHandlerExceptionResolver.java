@@ -21,11 +21,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-/**
- * @author shenxingping
- * @TODO 描述
- * @date 2023/03/26
- */
+
 public class AeyeHsafHandlerExceptionResolver extends AbstractHandlerExceptionResolver {
     private Logger log = LoggerFactory.getLogger(AeyeHsafHandlerExceptionResolver.class);
     private String viewType = "json";

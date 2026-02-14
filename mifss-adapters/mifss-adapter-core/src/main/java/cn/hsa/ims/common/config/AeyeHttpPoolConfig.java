@@ -4,10 +4,6 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @author shenxingping
- * @date 2021/11/22
- */
 @Data
 @Configuration
 public class AeyeHttpPoolConfig {
