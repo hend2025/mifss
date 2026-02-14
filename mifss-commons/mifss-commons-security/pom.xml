@@ -15,19 +15,19 @@
     <dependencies>
 
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <scope>provided</scope>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-commons-core</artifactId>
         </dependency>
 
         <dependency>
             <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-commons-core</artifactId>
+            <artifactId>mifss-adapter-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -63,10 +63,6 @@
         </dependency>
 
         <dependency>
-            <groupId>cn.hsa.hsaf.core</groupId>
-            <artifactId>hsaf-core</artifactId>
-        </dependency>
-        <dependency>
             <groupId>cn.hsa.hsaf.auth.security</groupId>
             <artifactId>hsaf-auth-security</artifactId>
             <exclusions>
@@ -88,21 +84,6 @@
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-adapter-core</artifactId>
         </dependency>
 
     </dependencies>

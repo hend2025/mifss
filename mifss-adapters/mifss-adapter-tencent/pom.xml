@@ -12,36 +12,11 @@
     <artifactId>mifss-adapter-tencent</artifactId>
     <description>腾讯云适配</description>
 
-    <properties>
-        <cmq-client.version>1.1.0</cmq-client.version>
-        <cmq-client-standalone.version>1.0.0-SNAPSHOT</cmq-client-standalone.version>
-        <httpclient.version>4.5.9</httpclient.version>
-        <awsjavasdk.version>1.11.603</awsjavasdk.version>
-        <tsf.version>1.18.3-Finchley-RELEASE</tsf.version>
-    </properties>
-
     <dependencies>
 
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-adapter-core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>cn.hsa.hsaf.core</groupId>
-            <artifactId>hsaf-core</artifactId>
-            <scope>compile</scope>
         </dependency>
 
         <!--rpc微服务-->
@@ -50,47 +25,86 @@
             <artifactId>hsaf-tencent-rpc</artifactId>
             <version>1.1.3</version>
         </dependency>
+
         <!-- TSF Consul Config Consul分布式配置 -->
         <dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-consul-config</artifactId>
-            <version>${tsf.version}</version>
+            <version>1.18.3-Finchley-RELEASE</version>
         </dependency>
         <!-- TSF Consul Discovery Consul服务注册发现 -->
         <dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-consul-discovery</artifactId>
-            <version>${tsf.version}</version>
+            <version>1.18.3-Finchley-RELEASE</version>
         </dependency>
         <!-- TSF Sleuth 调用链 -->
         <dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-sleuth</artifactId>
-            <version>${tsf.version}</version>
+            <version>1.18.3-Finchley-RELEASE</version>
         </dependency>
         <!-- TSF Auth 权限管理 -->
         <dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-auth</artifactId>
-            <version>${tsf.version}</version>
+            <version>1.18.3-Finchley-RELEASE</version>
         </dependency>
         <!-- TSF Rate Limit 限流 -->
         <dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-ratelimit</artifactId>
-            <version>${tsf.version}</version>
+            <version>1.18.3-Finchley-RELEASE</version>
         </dependency>
         <!-- TSF Ribbon 客户端路由 -->
         <dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-route</artifactId>
-            <version>${tsf.version}</version>
+            <version>1.18.3-Finchley-RELEASE</version>
         </dependency>
         <!-- TSF Logger 日志 -->
         <dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-logger</artifactId>
-            <version>${tsf.version}</version>
+            <version>1.18.3-Finchley-RELEASE</version>
+        </dependency>
+
+        <!--TStack 文件存储-->
+        <dependency>
+            <groupId>cn.hsa.hsaf.adapt</groupId>
+            <artifactId>hsaf-tencent-fsstore</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <!-- ceph s3 need -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-s3</artifactId>
+            <version>1.11.603</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-core</artifactId>
+            <version>1.11.603</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-kms</artifactId>
+            <version>1.11.603</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>jmespath-java</artifactId>
+            <version>1.11.603</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>bouncycastle</groupId>
+            <artifactId>bcprov-jdk15</artifactId>
+            <version>133</version>
         </dependency>
 
         <!--cmq 消息队列-->
@@ -121,50 +135,12 @@
             </exclusions>
         </dependency>
 
-        <!--TStack 文件存储-->
-        <dependency>
-            <groupId>cn.hsa.hsaf.adapt</groupId>
-            <artifactId>hsaf-tencent-fsstore</artifactId>
-            <version>1.0.1</version>
-        </dependency>
-        <!-- ceph s3 need -->
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk-s3</artifactId>
-            <version>${awsjavasdk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk-core</artifactId>
-            <version>${awsjavasdk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk-kms</artifactId>
-            <version>${awsjavasdk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>jmespath-java</artifactId>
-            <version>${awsjavasdk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>2.8.1</version>
-        </dependency>
-        <dependency>
-            <groupId>bouncycastle</groupId>
-            <artifactId>bcprov-jdk15</artifactId>
-            <version>133</version>
-        </dependency>
         <!--里约网关-->
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-tencent-gateway</artifactId>
             <version>1.2.2</version>
         </dependency>
-
 
     </dependencies>
 
