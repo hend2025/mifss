@@ -13,4 +13,6 @@
 
     <dubbo:reference id="rpcFaceRecognitionService" interface="com.aeye.mifss.bio.service.RpcFaceRecognitionService" check="false" timeout="60000"></dubbo:reference>
 
+    <dubbo:reference id="rpcCrtfService" interface="com.aeye.mifss.bas.service.RpcCrtfService" check="false" timeout="60000"></dubbo:reference>
+
 </beans>
