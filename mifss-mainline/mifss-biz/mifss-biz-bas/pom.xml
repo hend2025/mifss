@@ -31,7 +31,6 @@
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-swagger</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-security</artifactId>
@@ -43,15 +42,15 @@
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-adapter-core</artifactId>
             <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

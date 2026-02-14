@@ -13,6 +13,7 @@
     <description>Swagger/Knife4j 配置</description>
 
     <dependencies>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-web</artifactId>
@@ -22,14 +23,17 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
         </dependency>
+
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-ui</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>

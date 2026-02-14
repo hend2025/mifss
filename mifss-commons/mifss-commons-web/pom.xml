@@ -13,14 +13,17 @@
     <description>通用Web层配置</description>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-core</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>
