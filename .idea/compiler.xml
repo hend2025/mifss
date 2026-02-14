@@ -46,6 +46,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mifss-biz-bc" target="1.8" />
+      <module name="mifss-commons-base" target="1.8" />
+      <module name="mifss-commons-json" target="1.8" />
+      <module name="mifss-commons-redis" target="1.8" />
       <module name="mifss-guangxi" target="1.8" />
       <module name="mifss-guangxi-app" target="1.8" />
       <module name="mifss-guangxi-app (1)" target="1.8" />

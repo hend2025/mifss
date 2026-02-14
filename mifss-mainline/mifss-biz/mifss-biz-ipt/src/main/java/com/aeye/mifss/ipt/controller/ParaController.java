@@ -14,6 +14,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,11 +36,11 @@ public class ParaController extends AeyeAbstractController {
             @ApiImplicitParam(name = "orderField", value = "排序字段", dataType = "string", paramType = "header"),
             @ApiImplicitParam(name = "orderType", value = "排序类型", dataType = "string", paramType = "header", example = "asc或者desc")
     })
-    public WrapperResponse<List<ParaDTO>> list() throws Exception {
+    public WrapperResponse<List<ParaDTO>> list(@RequestBody ParaDTO paraDTO) throws Exception {
         AeyePageInfo pageInfo = buildPageInfo();
         RpcMergeDTO<ParaDTO> rpcMergeDTO = new RpcMergeDTO(pageInfo, new RpcQueryWrapper<ParaDTO>()
-                .like(ParaDTO::getParaName, "is_appl_no_check_model")
-        );
+                .like(ParaDTO::getParaName, paraDTO.getParaName())
+                .like(ParaDTO::getParaDscr, paraDTO.getParaDscr()));
         AeyePageResult<ParaDTO> result = paraService.pageRpc(rpcMergeDTO);
         return (WrapperResponse) WrapperResponse.success(result);
     }

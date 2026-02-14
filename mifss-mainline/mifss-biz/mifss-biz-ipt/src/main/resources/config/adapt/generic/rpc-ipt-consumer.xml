@@ -5,7 +5,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
+    <dubbo:reference id="rpcAdmdvsService" interface="com.aeye.mifss.bas.service.RpcAdmdvsService" check="false" timeout="60000"></dubbo:reference>
+
     <dubbo:reference id="rpcParaService" interface="com.aeye.mifss.bas.service.RpcParaService" check="false" timeout="60000"></dubbo:reference>
+
+    <dubbo:reference id="rpcDicService" interface="com.aeye.mifss.bas.service.RpcDicService" check="false" timeout="60000"></dubbo:reference>
 
     <dubbo:reference id="rpcFaceRecognitionService" interface="com.aeye.mifss.bio.service.RpcFaceRecognitionService" check="false" timeout="60000"></dubbo:reference>
 
