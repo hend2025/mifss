@@ -62,4 +62,5 @@ public abstract class AeyeAbstractController extends HsafController {
 		pageInfo.setOrderType(orderType);
 		return pageInfo;
 	}
+
 }

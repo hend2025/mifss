@@ -6,9 +6,14 @@ import java.util.UUID;
 
 public class AeyeIdGeneratorUtil {
 
-    public static Long nextSF(){
+    public static Long nextLong(){
         IdGenerator idGenerator = AeyeSpringContextUtils.getBean(IdGenerator.class);
         return idGenerator.next("");
+    }
+
+    public static String next(){
+        IdGenerator idGenerator = AeyeSpringContextUtils.getBean(IdGenerator.class);
+        return String.valueOf(idGenerator.next(""));
     }
 
     public static Long nextRedis(String seqKey){

@@ -32,12 +32,17 @@ public class CrtfDO implements Serializable {
     private String psnName;
 
     /**
+     * 证件号码
+     */
+    private String certno;
+
+    /**
      * 认证时间
      */
     private Date crtfTime;
 
     /**
-     * 认证结果，详见字典【SCEN_CRTF_RSLT】
+     * 认证结果
      */
     private String crtfRslt;
 
@@ -65,4 +70,15 @@ public class CrtfDO implements Serializable {
      * 人脸模板照URL
      */
     private String faceImgUrl;
+
+    /**
+     * 数据创建时间
+     */
+    private Date crteTime;
+
+    /**
+     * 数据更新时间
+     */
+    private Date updtTime;
+
 }
