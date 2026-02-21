@@ -51,7 +51,9 @@ public class CrtfController extends AeyeAbstractController {
                 .eq(StrUtil.isNotBlank(crtfDTO.getPsnName()), CrtfDTO::getPsnName, crtfDTO.getPsnName())
                 .ge(crtfDTO.getStartTime() != null, CrtfDTO::getCrtfTime, crtfDTO.getStartTime())
                 .le(crtfDTO.getEndTime() != null, CrtfDTO::getCrtfTime, crtfDTO.getEndTime())
-                .like(StrUtil.isNotBlank(crtfDTO.getMedinsName()), CrtfDTO::getMedinsName, crtfDTO.getMedinsName()));
+                .like(StrUtil.isNotBlank(crtfDTO.getMedinsName()), CrtfDTO::getMedinsName, crtfDTO.getMedinsName())
+                .orderByDesc(CrtfDTO::getCrtfTime)
+        );
         AeyePageResult<CrtfDTO> result = crtfService.pageRpc(rpcMergeDTO);
         return (WrapperResponse) WrapperResponse.success(result);
     }
@@ -83,6 +85,8 @@ public class CrtfController extends AeyeAbstractController {
             // 认证结果：1-成功，0-失败
             Boolean authenticated = authResult.getData();
             crtfDTO.setCrtfRslt(Boolean.TRUE.equals(authenticated) ? "1" : "0");
+            crtfDTO.setCrtfRate(new BigDecimal(0.95f));
+            crtfDTO.setCrtfTime(new Date());
             crtfService.saveRpc(crtfDTO);
         } catch (Exception e) {
             // 记录保存失败不影响认证结果返回
