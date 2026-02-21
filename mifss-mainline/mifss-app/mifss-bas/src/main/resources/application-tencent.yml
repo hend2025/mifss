@@ -107,3 +107,8 @@ swagger:
   title: MIFSS BAS API
   description: MIFSS 基础服务 API 文档
   version: 1.0.0
+
+# HSAF 全局序列号生成器
+idgenerator:
+  common:
+    type: sf

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Profile;
 /**
  * 腾讯云平台启动类
  */
-@SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa.ims" })
+@SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa" })
 @Profile("tencent")
 @ImportResource({
         "classpath*:config/adapt/tencent/*.xml"

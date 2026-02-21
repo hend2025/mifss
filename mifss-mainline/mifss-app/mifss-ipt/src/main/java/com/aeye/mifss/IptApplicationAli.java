@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Profile;
 
-@SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa.ims" })
+@SpringBootApplication(scanBasePackages = { "com.aeye.mifss", "cn.hsa" })
 @Profile("ali")
 @ImportResource({
         "classpath*:config/adapt/ali/*.xml"

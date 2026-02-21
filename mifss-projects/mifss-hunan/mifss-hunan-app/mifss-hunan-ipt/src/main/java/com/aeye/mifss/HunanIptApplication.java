@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Profile;
 @ImportResource({
         "classpath*:config/adapt/generic/*.xml"
 })
-@ComponentScan(basePackages = {"com.aeye.mifss", "cn.hsa.ims" }, excludeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, classes = WildcardControllerFilter.class ))
+@ComponentScan(basePackages = {"com.aeye.mifss", "cn.hsa" }, excludeFilters = @ComponentScan.Filter(type = FilterType.CUSTOM, classes = WildcardControllerFilter.class ))
 public class HunanIptApplication {
     public static void main(String[] args) {
         SpringApplication.run(HunanIptApplication.class, args);

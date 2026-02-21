@@ -62,5 +62,17 @@
         </property>
     </bean>
 
+    <!--HSAF ID生成器 Redis客户端-->
+    <bean id="cn.hsa.hsaf.idgenerator.redis.HsafRedisClient"
+          class="cn.hsa.hsaf.idgenerator.redis.impl.RedisClientTemplateImpl">
+        <property name="redisTemplate" ref="hsafRedisTemplate"/>
+    </bean>
+
+    <!--HSAF ID生成器 Redis备份客户端-->
+    <bean id="cn.hsa.hsaf.idgenerator.redis.HsafBackClient"
+          class="cn.hsa.hsaf.idgenerator.redis.impl.RedisBackTemplateImpl">
+        <property name="redisTemplate" ref="hsafRedisTemplate"/>
+    </bean>
+
 </beans>
 
