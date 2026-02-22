@@ -93,3 +93,24 @@ swagger:
 idgenerator:
   common:
     type: sf
+
+#XXL JOB 定时任务###########################################################################
+xxl:
+  job:
+    admin:
+      addresses: http://127.0.0.1:3838/xxl-job-admin
+    ### xxl-job, access token
+    accessToken:
+    ### xxl-job executor appname 作为分组依据
+    executor:
+      appname: ${spring.application.name}
+      ### xxl-job executor registry-address: default use address to registry , otherwise use ip:port if address is null
+      address:
+      ### xxl-job executor server-info
+      ip: 127.0.0.1
+      port: 3802
+      ### xxl-job executor log-path
+      logpath: ./logs/xxl-job/jobhandler
+      ### xxl-job executor log-retention-days
+      logretentiondays: 7
+#XXL JOB 定时任务###########################################################################
