@@ -75,6 +75,9 @@ mifss/
 
 请对mifss应用的所有 pom.xml 文件进行全面诊断，严格按照“最少必须（Minimum Viable Dependencies）”原则，解决重复与多次引用、无效引用、循环引用、不合理、Scope（作用域）配置不当、传递性依赖过深、版本号硬编码、大杂烩等问题；并对pom.xml文件中的依赖按照提供商、功能、版本号等进行分类排列在一起。
 
+springboot中a模块引用了xx.jar  b模块引用了a, 是不是b模块再引用xx.jar 就是多余的？
+基于上述传递性依赖原则，再次检查mifss下的所有pom文件，清除不必要的传递性依赖问题。
+
 -Dspring.main.allow-circular-references=true
 
 ```
