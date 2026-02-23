@@ -126,6 +126,6 @@ xxl:
       ### xxl-job executor server-info
       ip: 127.0.0.1
       port: 3802
-      logpath: ./logs/xxl-job/jobhandler
+      logpath: /home/logs/xxl-job/jobhandler
       logretentiondays: 7
 #XXL JOB 定时任务###########################################################################

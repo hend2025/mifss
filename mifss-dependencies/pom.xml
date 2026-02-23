@@ -63,6 +63,71 @@
         <knife4j.version>2.0.9</knife4j.version>
         <okhttp.version>3.8.1</okhttp.version>
         <fastjson.version>1.2.83</fastjson.version>
+            <!-- Extracted Properties -->
+        <hsaf-ali-rpc.version>1.1.1</hsaf-ali-rpc.version>
+        <spring-cloud-starter-hsf.version>1.3</spring-cloud-starter-hsf.version>
+        <spring-cloud-starter-pandora.version>1.3</spring-cloud-starter-pandora.version>
+        <spring-cloud-starter-alicloud-acm.version>0.2.2.RELEASE</spring-cloud-starter-alicloud-acm.version>
+        <hsf-sdk.version>2.2.8.2--2019-06-stable</hsf-sdk.version>
+        <hsaf-ali-fsstore.version>1.0.1</hsaf-ali-fsstore.version>
+        <aliyun-sdk-oss.version>2.8.3</aliyun-sdk-oss.version>
+        <hsaf-ali-mq.version>1.0.1</hsaf-ali-mq.version>
+        <hsaf-ali-gateway.version>1.2.0</hsaf-ali-gateway.version>
+        <http-client.version>1.1.5.2</http-client.version>
+        <ons-client.version>1.8.0.Final</ons-client.version>
+        <hsaf-core.version>1.2.5</hsaf-core.version>
+        <hsaf-idgenerator.version>1.0.3</hsaf-idgenerator.version>
+        <hsaf-cache-redis.version>1.0.0</hsaf-cache-redis.version>
+        <lombok.version>1.18.4</lombok.version>
+        <swagger-annotations.version>1.6.10</swagger-annotations.version>
+        <xxl-job-core.version>2.0.1</xxl-job-core.version>
+        <hsaf-generic-rpc.version>1.1.0</hsaf-generic-rpc.version>
+        <dubbo-spring-boot-starter.version>2.7.3</dubbo-spring-boot-starter.version>
+        <dubbo-dependencies-zookeeper.version>2.7.3</dubbo-dependencies-zookeeper.version>
+        <sentinel-apache-dubbo-adapter.version>1.8.0</sentinel-apache-dubbo-adapter.version>
+        <apm-toolkit-logback-1.x.version>8.7.0</apm-toolkit-logback-1.x.version>
+        <hsaf-generic-fsstore.version>1.0.1</hsaf-generic-fsstore.version>
+        <fastdfs-client.version>1.27.2</fastdfs-client.version>
+        <minio.version>7.0.2</minio.version>
+        <hsaf-generic-mq.version>1.0.0</hsaf-generic-mq.version>
+        <spring-kafka.version>2.1.13.RELEASE</spring-kafka.version>
+        <kafka-clients.version>1.0.2</kafka-clients.version>
+        <hsaf-generic-gateway.version>1.2.0</hsaf-generic-gateway.version>
+        <httpclient.version>4.5.8</httpclient.version>
+        <spring-cloud-starter-huawei-servicecomb-discovery.version>1.5.1-Finchley</spring-cloud-starter-huawei-servicecomb-discovery.version>
+        <spring-cloud-starter-huawei-config.version>1.5.1-Finchley</spring-cloud-starter-huawei-config.version>
+        <spring-cloud-starter-huawei-governance.version>1.5.1-Finchley</spring-cloud-starter-huawei-governance.version>
+        <hsaf-huawei-springcloud-rpc.version>1.0.0</hsaf-huawei-springcloud-rpc.version>
+        <spring-cloud-starter-openfeign.version>2.0.4.RELEASE</spring-cloud-starter-openfeign.version>
+        <hsaf-huawei-cache.version>1.0.0</hsaf-huawei-cache.version>
+        <hsaf-huawei-fsstore.version>1.0.0</hsaf-huawei-fsstore.version>
+        <esdk-obs-java.version>3.20.6</esdk-obs-java.version>
+        <okhttp.version>3.8.1</okhttp.version>
+        <hsaf-huawei-mq.version>1.0.0</hsaf-huawei-mq.version>
+        <hsaf-huawei-gateway.version>1.0.0</hsaf-huawei-gateway.version>
+        <hsaf-tencent-rpc.version>1.1.3</hsaf-tencent-rpc.version>
+        <spring-cloud-tsf-consul-config.version>1.18.3-Finchley-RELEASE</spring-cloud-tsf-consul-config.version>
+        <spring-cloud-tsf-consul-discovery.version>1.18.3-Finchley-RELEASE</spring-cloud-tsf-consul-discovery.version>
+        <spring-cloud-tsf-sleuth.version>1.18.3-Finchley-RELEASE</spring-cloud-tsf-sleuth.version>
+        <spring-cloud-tsf-auth.version>1.18.3-Finchley-RELEASE</spring-cloud-tsf-auth.version>
+        <spring-cloud-tsf-ratelimit.version>1.18.3-Finchley-RELEASE</spring-cloud-tsf-ratelimit.version>
+        <spring-cloud-tsf-route.version>1.18.3-Finchley-RELEASE</spring-cloud-tsf-route.version>
+        <spring-cloud-tsf-logger.version>1.18.3-Finchley-RELEASE</spring-cloud-tsf-logger.version>
+        <hsaf-tencent-fsstore.version>1.0.1</hsaf-tencent-fsstore.version>
+        <aws-java-sdk-s3.version>1.11.603</aws-java-sdk-s3.version>
+        <aws-java-sdk-core.version>1.11.603</aws-java-sdk-core.version>
+        <aws-java-sdk-kms.version>1.11.603</aws-java-sdk-kms.version>
+        <jmespath-java.version>1.11.603</jmespath-java.version>
+        <joda-time.version>2.8.1</joda-time.version>
+        <bcprov-jdk15.version>133</bcprov-jdk15.version>
+        <hsaf-tencent-mq.version>1.0.0</hsaf-tencent-mq.version>
+        <cmq-standalone-client.version>1.0.0-SNAPSHOT</cmq-standalone-client.version>
+        <hsaf-tencent-gateway.version>1.2.2</hsaf-tencent-gateway.version>
+        <commons-fileupload.version>1.6.0</commons-fileupload.version>
+        <hutool-all.version>5.8.25</hutool-all.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <spring-session-data-redis.version>2.0.10.RELEASE</spring-session-data-redis.version>
+        <aspectjweaver.version>1.9.7</aspectjweaver.version>
     </properties>
 
     <dependencyManagement>
@@ -426,12 +491,12 @@
             <dependency>
                 <groupId>cn.hsa.hsaf.adapt</groupId>
                 <artifactId>hsaf-generic-rpc</artifactId>
-                <version>1.1.0</version>
+                <version>${hsaf-generic-rpc.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>2.7.3</version>
+                <version>${dubbo-spring-boot-starter.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>log4j</groupId>
@@ -446,7 +511,7 @@
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-dependencies-zookeeper</artifactId>
-                <version>2.7.3</version>
+                <version>${dubbo-dependencies-zookeeper.version}</version>
                 <type>pom</type>
                 <exclusions>
                     <exclusion>
@@ -462,7 +527,196 @@
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>
-                <version>1.9.7</version>
+                <version>${aspectjweaver.version}</version>
+            </dependency>
+
+                    <!-- Extracted Dependencies -->
+
+        
+            <dependency>
+                <groupId>com.huaweicloud</groupId>
+                <artifactId>spring-cloud-starter-huawei-servicecomb-discovery</artifactId>
+                <version>${spring-cloud-starter-huawei-servicecomb-discovery.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.huaweicloud</groupId>
+                <artifactId>spring-cloud-starter-huawei-config</artifactId>
+                <version>${spring-cloud-starter-huawei-config.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.huaweicloud</groupId>
+                <artifactId>spring-cloud-starter-huawei-governance</artifactId>
+                <version>${spring-cloud-starter-huawei-governance.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-huawei-springcloud-rpc</artifactId>
+                <version>${hsaf-huawei-springcloud-rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring-cloud-starter-openfeign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-huawei-cache</artifactId>
+                <version>${hsaf-huawei-cache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-huawei-mq</artifactId>
+                <version>${hsaf-huawei-mq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-huawei-gateway</artifactId>
+                <version>${hsaf-huawei-gateway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-rpc</artifactId>
+                <version>${hsaf-tencent-rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tencent.tsf</groupId>
+                <artifactId>spring-cloud-tsf-consul-config</artifactId>
+                <version>${spring-cloud-tsf-consul-config.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tencent.tsf</groupId>
+                <artifactId>spring-cloud-tsf-consul-discovery</artifactId>
+                <version>${spring-cloud-tsf-consul-discovery.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tencent.tsf</groupId>
+                <artifactId>spring-cloud-tsf-sleuth</artifactId>
+                <version>${spring-cloud-tsf-sleuth.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tencent.tsf</groupId>
+                <artifactId>spring-cloud-tsf-auth</artifactId>
+                <version>${spring-cloud-tsf-auth.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tencent.tsf</groupId>
+                <artifactId>spring-cloud-tsf-ratelimit</artifactId>
+                <version>${spring-cloud-tsf-ratelimit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tencent.tsf</groupId>
+                <artifactId>spring-cloud-tsf-route</artifactId>
+                <version>${spring-cloud-tsf-route.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tencent.tsf</groupId>
+                <artifactId>spring-cloud-tsf-logger</artifactId>
+                <version>${spring-cloud-tsf-logger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>bouncycastle</groupId>
+                <artifactId>bcprov-jdk15</artifactId>
+                <version>${bcprov-jdk15.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-mq</artifactId>
+                <version>${hsaf-tencent-mq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qcloud</groupId>
+                <artifactId>cmq-standalone-client</artifactId>
+                <version>${cmq-standalone-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-gateway</artifactId>
+                <version>${hsaf-tencent-gateway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.core</groupId>
+                <artifactId>hsaf-idgenerator</artifactId>
+                <version>${hsaf-idgenerator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-logback-1.x</artifactId>
+                <version>${apm-toolkit-logback-1.x.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-generic-mq</artifactId>
+                <version>${hsaf-generic-mq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-ali-mq</artifactId>
+                <version>${hsaf-ali-mq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun.openservices</groupId>
+                <artifactId>ons-client</artifactId>
+                <version>${ons-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-generic-gateway</artifactId>
+                <version>${hsaf-generic-gateway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-ali-rpc</artifactId>
+                <version>${hsaf-ali-rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-hsf</artifactId>
+                <version>${spring-cloud-starter-hsf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-pandora</artifactId>
+                <version>${spring-cloud-starter-pandora.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-alicloud-acm</artifactId>
+                <version>${spring-cloud-starter-alicloud-acm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.middleware</groupId>
+                <artifactId>hsf-sdk</artifactId>
+                <version>${hsf-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-ali-gateway</artifactId>
+                <version>${hsaf-ali-gateway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.csb.sdk</groupId>
+                <artifactId>http-client</artifactId>
+                <version>${http-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.session</groupId>
+                <artifactId>spring-session-data-redis</artifactId>
+                <version>${spring-session-data-redis.version}</version>
             </dependency>
 
         </dependencies>

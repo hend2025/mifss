@@ -28,70 +28,58 @@
         <dependency>
             <groupId>com.huaweicloud</groupId>
             <artifactId>spring-cloud-starter-huawei-servicecomb-discovery</artifactId>
-            <version>1.5.1-Finchley</version>
         </dependency>
         <dependency>
             <groupId>com.huaweicloud</groupId>
             <artifactId>spring-cloud-starter-huawei-config</artifactId>
-            <version>1.5.1-Finchley</version>
         </dependency>
         <dependency>
             <groupId>com.huaweicloud</groupId>
             <artifactId>spring-cloud-starter-huawei-governance</artifactId>
-            <version>1.5.1-Finchley</version>
         </dependency>
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-huawei-springcloud-rpc</artifactId>
-            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <version>2.0.4.RELEASE</version>
         </dependency>
 
         <!--redis缓存-->
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-huawei-cache</artifactId>
-            <version>1.0.0</version>
         </dependency>
 
         <!--文件存储-->
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-huawei-fsstore</artifactId>
-            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.huawei.storage</groupId>
             <artifactId>esdk-obs-java</artifactId>
-            <version>3.20.6</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <version>3.8.1</version>
         </dependency>
 
         <!--消息队列-->
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-huawei-mq</artifactId>
-            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
-            <version>2.1.13.RELEASE</version>
         </dependency>
 
         <!--网关-->
         <dependency>
             <groupId>cn.hsa.hsaf.adapt</groupId>
             <artifactId>hsaf-huawei-gateway</artifactId>
-            <version>1.0.0</version>
         </dependency>
 
     </dependencies>
