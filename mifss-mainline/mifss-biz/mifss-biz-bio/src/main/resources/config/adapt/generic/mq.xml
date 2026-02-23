@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <!--定义认证核销消息生产者-->
+    <bean id="mqProducer" class="cn.hsa.hsaf.mq.MQProducerByOns" init-method="start"
+          destroy-method="shutdown">
+        <property name="properties">
+            <props>
+                <prop key="GROUP_ID">${mq.topic_crtf.group_crtf.id}</prop>
+                <prop key="AccessKey">${mq.ali.AccessKey}</prop>
+                <prop key="SecretKey">${mq.ali.SecretKey}</prop>
+                <prop key="NAMESRV_ADDR">${mq.ali.NAMESRV_ADDR}</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

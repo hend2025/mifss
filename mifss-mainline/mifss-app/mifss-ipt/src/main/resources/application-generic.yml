@@ -94,14 +94,31 @@ idgenerator:
   common:
     type: sf
 
+# MQ 消息队列测试主题#########################################################################
+mq:
+  #rocketMQ/kafka,默认rocketMQ，只针对开源版本有效
+  type: rocketMQ
+  topic_crtf:
+    name: MQ_IMS_CRTF_TEST
+    group_crtf:
+      id: GID_IMS_CRTF_GROUP
+      tag: crtf
+      queue: TENCENT_QUEUE_CRTF_TEST
+  ali:
+    # 您的阿里云账号的 AccessKeyId
+    AccessKey: 1
+    # 您的阿里云账号的 AccessKeySecret
+    SecretKey: 1
+    # 您的消息队列 RocketMQ 实例的 TCP 接入点，可在控制台的实例管理的获取接入点信息区域获取 TCP 协议接入点
+    NAMESRV_ADDR: 192.168.16.148:9876
+# MQ 消息队列测试主题#########################################################################
+
 #XXL JOB 定时任务###########################################################################
 xxl:
   job:
     admin:
       addresses: http://127.0.0.1:3838/xxl-job-admin
-    ### xxl-job, access token
     accessToken:
-    ### xxl-job executor appname 作为分组依据
     executor:
       appname: ${spring.application.name}
       ### xxl-job executor registry-address: default use address to registry , otherwise use ip:port if address is null
@@ -109,8 +126,6 @@ xxl:
       ### xxl-job executor server-info
       ip: 127.0.0.1
       port: 3802
-      ### xxl-job executor log-path
       logpath: ./logs/xxl-job/jobhandler
-      ### xxl-job executor log-retention-days
       logretentiondays: 7
 #XXL JOB 定时任务###########################################################################

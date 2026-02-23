@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <bean id="testMqConsumerService" class="com.aeye.mifss.ipt.mq.TestMqConsumerService"></bean>
+    <bean class="cn.hsa.hsaf.mq.MQConsumerByOns" init-method="start" destroy-method="shutdown">
+        <!--消费者配置信息-->
+        <property name="properties">
+            <props>
+                <prop key="GROUP_ID">${mq.topic_crtf.group_crtf.id}</prop>
+                <prop key="AccessKey">${mq.ali.AccessKey}</prop>
+                <prop key="SecretKey">${mq.ali.SecretKey}</prop>
+                <prop key="NAMESRV_ADDR">${mq.ali.NAMESRV_ADDR}</prop>
+                <!--最大并发数-->
+                <prop key="ConsumeThreadNums">${mq.topic_crtf.concurrency:20}</prop>
+            </props>
+        </property>
+        <!--消费者容器主题对应业务处理对象配置信息-->
+        <property name="listTopic2Handler">
+            <list>
+                <bean class="cn.hsa.hsaf.mq.MQConsumerInfo">
+                    <property name="topic" value="${mq.topic_crtf.name}"></property>
+                    <property name="tag" value="${mq.topic_crtf.group_crtf.tag}"></property>
+                    <property name="concurrency" value="${mq.topic_crtf.concurrency:20}"></property>
+                    <property name="businessService" ref="testMqConsumerService"></property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>
