@@ -574,6 +574,12 @@
                 <artifactId>spring-kafka</artifactId>
                 <version>${spring-kafka.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring.security.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.security.oauth</groupId>
                 <artifactId>spring-security-oauth2</artifactId>

@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fd390e63-630d-4c5e-a156-dbd2a5865735" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-security/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mifss-dependencies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-dependencies/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,10 +124,10 @@
           <value>
             <map>
               <entry key="BasApplication" value="STOPPED" />
-              <entry key="BioApplication" value="STOPPED" />
+              <entry key="BioApplication" value="FAILED" />
               <entry key="HunanBioApplication" value="STOPPED" />
               <entry key="HunanIptApplication" value="STOPPED" />
-              <entry key="IptApplication" value="STOPPED" />
+              <entry key="IptApplication" value="FAILED" />
             </map>
           </value>
         </entry>
