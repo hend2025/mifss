@@ -8,18 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mifss-intf-api" />
         <module name="mifss-biz-bas" />
-        <module name="mifss-intf-hd" />
         <module name="mifss-intf-bas" />
         <module name="mifss-commons-web" />
         <module name="mifss-bio" />
         <module name="mifss-hunan-intf" />
         <module name="mifss-biz-api" />
         <module name="mifss-intf-pha" />
-        <module name="mifss-intf-video" />
         <module name="mifss-adapter-generic" />
         <module name="mifss-biz-job" />
         <module name="mifss-bas" />
-        <module name="mifss-biz-video" />
+        <module name="mifss-intf-nvr" />
         <module name="mifss-biz-bio" />
         <module name="mifss-intf-ipt" />
         <module name="mifss-hunan-bio" />
@@ -29,23 +27,29 @@
         <module name="mifss-intf-opt" />
         <module name="mifss-biz-opt" />
         <module name="mifss-intf-trt" />
+        <module name="mifss-intf-rpt" />
         <module name="mifss-ipt" />
         <module name="mifss-commons-orm" />
         <module name="mifss-biz-trt" />
+        <module name="mifss-biz-rpt" />
         <module name="mifss-adapter-huawei" />
+        <module name="mifss-biz-ckd" />
+        <module name="mifss-intf-ckd" />
         <module name="mifss-intf-job" />
         <module name="mifss-adapter-tencent" />
         <module name="mifss-intf-bio" />
-        <module name="mifss-biz-hd" />
         <module name="mifss-hunan-ipt" />
         <module name="mifss-commons-security" />
         <module name="mifss-commons-core" />
         <module name="mifss-adapter-core" />
+        <module name="mifss-biz-nvr" />
         <module name="mifss-biz-pha" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mifss-biz-bc" target="1.8" />
+      <module name="mifss-biz-hd" target="1.8" />
+      <module name="mifss-biz-video" target="1.8" />
       <module name="mifss-commons-base" target="1.8" />
       <module name="mifss-commons-json" target="1.8" />
       <module name="mifss-commons-redis" target="1.8" />
@@ -58,6 +62,8 @@
       <module name="mifss-guangxi-intf (1)" target="1.8" />
       <module name="mifss-guangxi-ipt" target="1.8" />
       <module name="mifss-guangxi-ipt (1)" target="1.8" />
+      <module name="mifss-intf-hd" target="1.8" />
+      <module name="mifss-intf-video" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

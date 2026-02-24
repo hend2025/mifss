@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/mifss-commons/mifss-commons-base/mifss-commons-base.iml" filepath="$PROJECT_DIR$/mifss-commons/mifss-commons-base/mifss-commons-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mifss-commons/mifss-commons-json/mifss-commons-json.iml" filepath="$PROJECT_DIR$/mifss-commons/mifss-commons-json/mifss-commons-json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mifss-commons/mifss-commons-redis/mifss-commons-redis.iml" filepath="$PROJECT_DIR$/mifss-commons/mifss-commons-redis/mifss-commons-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-dependencies/mifss-guangxi-dependencies.iml" filepath="$PROJECT_DIR$/mifss-projects/mifss-guangxi/mifss-guangxi-dependencies/mifss-guangxi-dependencies.iml" />
     </modules>
   </component>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -126,15 +126,8 @@
     <dependencyManagement>
         <dependencies>
             <!-- ====================================================================== -->
-            <!-- BOM Imports -->
+            <!-- BOM Imports & Spring Ecosystem -->
             <!-- ====================================================================== -->
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring-cloud-alibaba.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -144,106 +137,70 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring-cloud-starter-openfeign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-openfeign-core</artifactId>
+                <version>${spring-cloud-starter-openfeign.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- ====================================================================== -->
-            <!-- AWS Ecosystem -->
-            <!-- ====================================================================== -->
             <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-core</artifactId>
-                <version>${awsjavasdk.version}</version>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring-security.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-kms</artifactId>
-                <version>${awsjavasdk.version}</version>
+                <groupId>org.springframework.security.oauth.boot</groupId>
+                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+                <version>${spring-security-oauth-auto.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-s3</artifactId>
-                <version>${awsjavasdk.version}</version>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>${spring-security-oauth.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>jmespath-java</artifactId>
-                <version>${awsjavasdk.version}</version>
-            </dependency>
-            <!-- ====================================================================== -->
-            <!-- Alibaba Ecosystem -->
-            <!-- ====================================================================== -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
+                <groupId>org.springframework.session</groupId>
+                <artifactId>spring-session-data-redis</artifactId>
+                <version>${spring-session-data-redis.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-                <version>${spring-cloud-alibaba.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.csb.sdk</groupId>
-                <artifactId>http-client</artifactId>
-                <version>${http-client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-apache-dubbo-adapter</artifactId>
-                <version>${sentinel-apache-dubbo-adapter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.middleware</groupId>
-                <artifactId>hsf-sdk</artifactId>
-                <version>${hsf-sdk.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aliyun.openservices</groupId>
-                <artifactId>ons-client</artifactId>
-                <version>${ons-client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aliyun.oss</groupId>
-                <artifactId>aliyun-sdk-oss</artifactId>
-                <version>${aliyun-oss.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-dependencies-zookeeper</artifactId>
-                <version>${dubbo-dependencies-zookeeper.version}</version>
-                <type>pom</type>
-                <exclusions>
-                    <exclusion>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-log4j12</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>${dubbo-spring-boot-starter.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-log4j12</artifactId>
-                    </exclusion>
-                </exclusions>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+                <version>${spring-kafka.version}</version>
             </dependency>
             <!-- ====================================================================== -->
             <!-- HSAF Framework -->
             <!-- ====================================================================== -->
+            <dependency>
+                <groupId>cn.hsa.hsaf.core</groupId>
+                <artifactId>hsaf-core</artifactId>
+                <version>${hsaf-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-cache-redis</artifactId>
+                <version>${hsaf-cache-redis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.auth.security</groupId>
+                <artifactId>hsaf-auth-security</artifactId>
+                <version>${hsaf-auth-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.core</groupId>
+                <artifactId>hsaf-idgenerator</artifactId>
+                <version>${hsaf-idgenerator.version}</version>
+            </dependency>
             <dependency>
                 <groupId>cn.hsa.hsaf.adapt</groupId>
                 <artifactId>hsaf-ali-fsstore</artifactId>
@@ -266,11 +223,6 @@
             </dependency>
             <dependency>
                 <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-cache-redis</artifactId>
-                <version>${hsaf-cache-redis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
                 <artifactId>hsaf-generic-fsstore</artifactId>
                 <version>${hsaf-generic-fsstore.version}</version>
             </dependency>
@@ -288,6 +240,26 @@
                 <groupId>cn.hsa.hsaf.adapt</groupId>
                 <artifactId>hsaf-generic-rpc</artifactId>
                 <version>${hsaf-generic-rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-fsstore</artifactId>
+                <version>${hsaf-tencent-fsstore.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-gateway</artifactId>
+                <version>${hsaf-tencent-gateway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-mq</artifactId>
+                <version>${hsaf-tencent-mq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-rpc</artifactId>
+                <version>${hsaf-tencent-rpc.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.hsa.hsaf.adapt</groupId>
@@ -314,40 +286,77 @@
                 <artifactId>hsaf-huawei-springcloud-rpc</artifactId>
                 <version>${hsaf-huawei-springcloud-rpc.version}</version>
             </dependency>
+            <!-- ====================================================================== -->
+            <!-- Alibaba Ecosystem -->
+            <!-- ====================================================================== -->
             <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-tencent-fsstore</artifactId>
-                <version>${hsaf-tencent-fsstore.version}</version>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-spring-boot-starter.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-tencent-gateway</artifactId>
-                <version>${hsaf-tencent-gateway.version}</version>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-dependencies-zookeeper</artifactId>
+                <version>${dubbo-dependencies-zookeeper.version}</version>
+                <type>pom</type>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-tencent-mq</artifactId>
-                <version>${hsaf-tencent-mq.version}</version>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-apache-dubbo-adapter</artifactId>
+                <version>${sentinel-apache-dubbo-adapter.version}</version>
             </dependency>
             <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-tencent-rpc</artifactId>
-                <version>${hsaf-tencent-rpc.version}</version>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
             </dependency>
             <dependency>
-                <groupId>cn.hsa.hsaf.auth.security</groupId>
-                <artifactId>hsaf-auth-security</artifactId>
-                <version>${hsaf-auth-security.version}</version>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-alicloud-acm</artifactId>
+                <version>${spring-cloud-starter-alicloud-acm.version}</version>
             </dependency>
             <dependency>
-                <groupId>cn.hsa.hsaf.core</groupId>
-                <artifactId>hsaf-core</artifactId>
-                <version>${hsaf-core.version}</version>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-pandora</artifactId>
+                <version>${spring-cloud-starter-pandora.version}</version>
             </dependency>
             <dependency>
-                <groupId>cn.hsa.hsaf.core</groupId>
-                <artifactId>hsaf-idgenerator</artifactId>
-                <version>${hsaf-idgenerator.version}</version>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun-oss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun.openservices</groupId>
+                <artifactId>ons-client</artifactId>
+                <version>${ons-client.version}</version>
             </dependency>
             <!-- ====================================================================== -->
             <!-- Huawei Ecosystem -->
@@ -371,251 +380,6 @@
                 <groupId>com.huaweicloud</groupId>
                 <artifactId>spring-cloud-starter-huawei-servicecomb-discovery</artifactId>
                 <version>${huawei-servicecomb-discovery.version}</version>
-            </dependency>
-            <!-- ====================================================================== -->
-            <!-- MIFSS Internal Modules -->
-            <!-- ====================================================================== -->
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-adapter-ali</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-adapter-core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-adapter-generic</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-adapter-huawei</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-adapter-tencent</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-api</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-bas</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-bc</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-bio</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-hd</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-ipt</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-job</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-opt</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-pha</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-trt</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-biz-video</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-commons-core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-commons-orm</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-commons-security</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-commons-swagger</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-commons-web</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-intf-api</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-intf-bas</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-intf-bio</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-intf-hd</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-intf-ipt</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-intf-job</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-intf-opt</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-intf-pha</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-intf-trt</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-intf-video</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <!-- ====================================================================== -->
-            <!-- Middleware Data & Storage -->
-            <!-- ====================================================================== -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-extension</artifactId>
-                <version>${mybatis-plus.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.tobato</groupId>
-                <artifactId>fastdfs-client</artifactId>
-                <version>${fastdfs-client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.minio</groupId>
-                <artifactId>minio</artifactId>
-                <version>${minio.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.kafka</groupId>
-                <artifactId>kafka-clients</artifactId>
-                <version>${kafka-clients.version}</version>
-            </dependency>
-            <!-- ====================================================================== -->
-            <!-- Spring Ecosystem -->
-            <!-- ====================================================================== -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-openfeign-core</artifactId>
-                <version>${spring-cloud-starter-openfeign.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-alicloud-acm</artifactId>
-                <version>${spring-cloud-starter-alicloud-acm.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-hsf</artifactId>
-                <version>${spring-cloud-starter-hsf.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-openfeign</artifactId>
-                <version>${spring-cloud-starter-openfeign.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-pandora</artifactId>
-                <version>${spring-cloud-starter-pandora.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.kafka</groupId>
-                <artifactId>spring-kafka</artifactId>
-                <version>${spring-kafka.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-core</artifactId>
-                <version>${spring-security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security.oauth</groupId>
-                <artifactId>spring-security-oauth2</artifactId>
-                <version>${spring-security-oauth.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security.oauth.boot</groupId>
-                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
-                <version>${spring-security-oauth-auto.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.session</groupId>
-                <artifactId>spring-session-data-redis</artifactId>
-                <version>${spring-session-data-redis.version}</version>
             </dependency>
             <!-- ====================================================================== -->
             <!-- Tencent Ecosystem -->
@@ -661,12 +425,70 @@
                 <version>${spring-cloud-tsf-sleuth.version}</version>
             </dependency>
             <!-- ====================================================================== -->
+            <!-- Middleware Data & Storage -->
+            <!-- ====================================================================== -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${minio.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.tobato</groupId>
+                <artifactId>fastdfs-client</artifactId>
+                <version>${fastdfs-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka-clients</artifactId>
+                <version>${kafka-clients.version}</version>
+            </dependency>
+            <!-- ====================================================================== -->
+            <!-- AWS Ecosystem -->
+            <!-- ====================================================================== -->
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>jmespath-java</artifactId>
+                <version>${awsjavasdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-kms</artifactId>
+                <version>${awsjavasdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-s3</artifactId>
+                <version>${awsjavasdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-core</artifactId>
+                <version>${awsjavasdk.version}</version>
+            </dependency>
+
+            <!-- ====================================================================== -->
             <!-- Utils & Tools -->
             <!-- ====================================================================== -->
             <dependency>
-                <groupId>bouncycastle</groupId>
-                <artifactId>bcprov-jdk15</artifactId>
-                <version>${bcprov-jdk15.version}</version>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.hutool</groupId>
@@ -674,19 +496,9 @@
                 <version>${hutool-all.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-spring-ui</artifactId>
-                <version>${knife4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.squareup.okhttp3</groupId>
-                <artifactId>okhttp</artifactId>
-                <version>${okhttp.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.xuxueli</groupId>
-                <artifactId>xxl-job-core</artifactId>
-                <version>${xxl-job-core.version}</version>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
             <dependency>
                 <groupId>commons-fileupload</groupId>
@@ -694,24 +506,9 @@
                 <version>${commons-fileupload.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-annotations</artifactId>
-                <version>${swagger-annotations.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>joda-time</groupId>
-                <artifactId>joda-time</artifactId>
-                <version>${joda-time.version}</version>
+                <groupId>com.alibaba.csb.sdk</groupId>
+                <artifactId>http-client</artifactId>
+                <version>${http-client.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
@@ -719,9 +516,9 @@
                 <version>${httpclient.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.skywalking</groupId>
-                <artifactId>apm-toolkit-logback-1.x</artifactId>
-                <version>${apm-toolkit-logback-1-x.version}</version>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.aspectj</groupId>
@@ -729,9 +526,295 @@
                 <version>${aspectjweaver.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
+                <groupId>bouncycastle</groupId>
+                <artifactId>bcprov-jdk15</artifactId>
+                <version>${bcprov-jdk15.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-ui</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.middleware</groupId>
+                <artifactId>hsf-sdk</artifactId>
+                <version>${hsf-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-hsf</artifactId>
+                <version>${spring-cloud-starter-hsf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-logback-1.x</artifactId>
+                <version>${apm-toolkit-logback-1-x.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job-core.version}</version>
+            </dependency>
+
+        
+            <!-- ====================================================================== -->
+            <!-- MIFSS Internal Modules -->
+            <!-- ====================================================================== -->
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-adapter-ali</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-adapter-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-adapter-generic</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-adapter-huawei</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-adapter-tencent</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-adapters</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-app</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-bas</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-bio</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-bas</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-bio</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-ckd</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-ipt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-job</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-nvr</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-opt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-pha</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-rpt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-biz-trt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-commons</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-commons-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-commons-orm</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-commons-security</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-commons-swagger</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-commons-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-hunan</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-hunan-app</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-hunan-bio</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-hunan-intf</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-hunan-ipt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-bas</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-bio</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-ckd</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-ipt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-job</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-nvr</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-opt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-pha</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-rpt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-intf-trt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-ipt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-mainline</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aeye.mifss</groupId>
+                <artifactId>mifss-projects</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

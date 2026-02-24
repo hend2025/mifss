@@ -17,13 +17,14 @@
         <module>mifss-intf-bio</module>
         <module>mifss-intf-ipt</module>
         <module>mifss-intf-opt</module>
-        <module>mifss-intf-hd</module>
+        <module>mifss-intf-ckd</module>
         <module>mifss-intf-bas</module>
         <module>mifss-intf-pha</module>
         <module>mifss-intf-trt</module>
-        <module>mifss-intf-video</module>
+        <module>mifss-intf-nvr</module>
         <module>mifss-intf-job</module>
         <module>mifss-intf-api</module>
+        <module>mifss-intf-rpt</module>
     </modules>
 
 </project>
