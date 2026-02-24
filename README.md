@@ -18,8 +18,8 @@ mifss/
 │
 ├── mifss-adapters/                                # 适配器模块
 │   ├── pom.xml
-│   ├── mifss-adapter-api/                         # 适配器API接口
-│   ├── mifss-adapter-generic/                     # 通用适配器（开源/本地）
+│   ├── mifss-adapter-core/                        # 适配器通用接口
+│   ├── mifss-adapter-generic/                     # 开源适配器
 │   ├── mifss-adapter-ali/                         # 阿里云适配器
 │   ├── mifss-adapter-huawei/                      # 华为云适配器
 │   └── mifss-adapter-tencent/                     # 腾讯云适配器
@@ -27,18 +27,24 @@ mifss/
 ├── mifss-mainline/                                # 主干版本
 │   ├── pom.xml
 │   ├── mifss-app/                                 # 主干-发布包构建
+│   │   ├── pom.xml
+│   │   ├── mifss-bas/                             # 监控基础发布包
+│   │   ├── mifss-bio/                             # 生物识别发布包
+│   │   └── mifss-ipt/                             # 住院服务发布包
+│   │
 │   ├── mifss-intf/                                # 主干接口定义
 │   │   ├── pom.xml
 │   │   ├── mifss-intf-bas/                        # 监控基础模块接口
 │   │   ├── mifss-intf-bio/                        # 生物识别服务接口
 │   │   ├── mifss-intf-ipt/                        # 住院场景服务接口
 │   │   ├── mifss-intf-opt/                        # 门诊场景服务接口
-│   │   ├── mifss-intf-hd/                         # 血透场景服务接口
+│   │   ├── mifss-intf-ckd/                        # 血透场景服务接口
 │   │   ├── mifss-intf-pha/                        # 购药场景监控接口
 │   │   ├── mifss-intf-trt/                        # 理疗场景监控接口
-│   │   ├── mifss-intf-video/                      # 视频监控接口
+│   │   ├── mifss-intf-nvr/                        # 视频监控/NVR接口
 │   │   ├── mifss-intf-job/                        # 调度任务接口
-│   │   └── mifss-intf-api/                        # 网关鉴权/IoT接入接口
+│   │   ├── mifss-intf-api/                        # 网关鉴权/IoT接入接口
+│   │   └── mifss-intf-rpt/                        # 报表服务接口
 │   │
 │   └── mifss-biz/                                 # 主干业务实现模块
 │       ├── pom.xml
@@ -46,32 +52,27 @@ mifss/
 │       ├── mifss-biz-bio/                         # 生物识别服务
 │       ├── mifss-biz-ipt/                         # 住院场景服务
 │       ├── mifss-biz-opt/                         # 门诊场景服务
-│       ├── mifss-biz-hd/                          # 血透场景服务
+│       ├── mifss-biz-ckd/                         # 血透场景服务
 │       ├── mifss-biz-pha/                         # 购药场景服务
 │       ├── mifss-biz-trt/                         # 理疗场景服务
-│       ├── mifss-biz-video/                       # 视频监控服务
+│       ├── mifss-biz-nvr/                         # 视频监控/NVR服务
 │       ├── mifss-biz-job/                         # 调度任务定义
 │       ├── mifss-biz-api/                         # 网关鉴权/IoT接入
-│       ├── mifss-biz-bc/                          # 业务中心聚合模块
+│       ├── mifss-biz-rpt/                         # 报表服务模块
 │       └── ...
 │
 └── mifss-projects/                                # 现场版本
     ├── pom.xml
-    └── mifss-guangxi/                             # 广西项目
+    └── mifss-hunan/                               # 湖南项目
         ├── pom.xml
-        ├── mifss-guangxi-app/                     # 广西-发布包构建        
-        ├── mifss-guangxi-dependencies/            # 广西依赖管理
-        ├── mifss-guangxi-intf/                    # 广西扩展API
-        └── mifss-guangxi-biz/                     # 广西定制服务
+        ├── mifss-hunan-intf/                      # 湖南扩展API
+        └── mifss-hunan-app/                       # 湖南-发布包构建及定制服务
             ├── pom.xml
-            ├── mifss-guangxi-app-bio/             # 定制生物识别服务
-            ├── mifss-guangxi-app-ipt/             # 定制住院场景服务
-            └── mifss-guangxi-app-hd/              # 定制血透场景服务
+            ├── mifss-hunan-bio/                   # 定制生物识别服务发布包
+            └── mifss-hunan-ipt/                   # 定制住院场景服务发布包
 
-请使用jdk1.8、springboot2.0.9、mysql5.7、mybatis plus、Dubbo3.0、spring-security-core5.7.12、redis、hutool-all、fastjson等创建这个系统的手脚架。
-要求1: 模块命名严格按照上面的定义。
-要求2: 现场版本继承主干，同时可以新增功能、也可以重写主干原有功能，如：重写主干中的类、或只重写类中的一个方法。
-要求3: 以mifss-guangxi-app-bio为示例，采用继承/重写的方式，实现现场需求的定制开发。
+说明1: 现场版本继承主干，可以新增功能、重写主干原有功能，如：重写主干中的类、或只重写类中的一个方法。
+说明2: 以mifss-hunan-app-bio为示例，采用继承/重写的方式，实现现场需求的定制开发。
 
 请对mifss应用的所有 pom.xml 文件进行全面诊断，严格按照“最少必须（Minimum Viable Dependencies）”原则，
 解决重复与多次引用、无效引用、循环引用、不合理、Scope（作用域）配置不当、传递性依赖过深、版本号硬编码、大杂烩等问题；
@@ -79,7 +80,5 @@ mifss/
 
 springboot中a模块引用了xx.jar  b模块引用了a, 是不是b模块再引用xx.jar 就是多余的？
 基于上述传递性依赖原则，再次检查mifss下的所有pom文件，清除不必要的传递性依赖问题。
-
--Dspring.main.allow-circular-references=true
 
 ```
