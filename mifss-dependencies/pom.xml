@@ -33,15 +33,15 @@
         <hsaf-auth-security.version>1.1.7</hsaf-auth-security.version>
         <hsaf-idgenerator.version>1.0.3</hsaf-idgenerator.version>
 
-        <hsaf-ali-fsstore.version>1.0.1</hsaf-ali-fsstore.version>
-        <hsaf-ali-gateway.version>1.2.0</hsaf-ali-gateway.version>
-        <hsaf-ali-mq.version>1.0.1</hsaf-ali-mq.version>
-        <hsaf-ali-rpc.version>1.1.1</hsaf-ali-rpc.version>
-
         <hsaf-generic-fsstore.version>1.0.1</hsaf-generic-fsstore.version>
         <hsaf-generic-gateway.version>1.2.0</hsaf-generic-gateway.version>
         <hsaf-generic-mq.version>1.0.0</hsaf-generic-mq.version>
         <hsaf-generic-rpc.version>1.1.0</hsaf-generic-rpc.version>
+
+        <hsaf-ali-fsstore.version>1.0.1</hsaf-ali-fsstore.version>
+        <hsaf-ali-gateway.version>1.2.0</hsaf-ali-gateway.version>
+        <hsaf-ali-mq.version>1.0.1</hsaf-ali-mq.version>
+        <hsaf-ali-rpc.version>1.1.1</hsaf-ali-rpc.version>
 
         <hsaf-tencent-fsstore.version>1.0.1</hsaf-tencent-fsstore.version>
         <hsaf-tencent-gateway.version>1.2.2</hsaf-tencent-gateway.version>
@@ -63,7 +63,9 @@
         <spring-cloud-alibaba.version>2.0.0.RELEASE</spring-cloud-alibaba.version>
         <spring-cloud-starter-alicloud-acm.version>0.2.2.RELEASE</spring-cloud-starter-alicloud-acm.version>
         <spring-cloud-starter-pandora.version>1.3</spring-cloud-starter-pandora.version>
+        <spring-cloud-starter-hsf.version>1.3</spring-cloud-starter-hsf.version>
         <aliyun-oss.version>2.8.3</aliyun-oss.version>
+        <hsf-sdk.version>2.2.8.2--2019-06-stable</hsf-sdk.version>
         <ons-client.version>1.8.0.Final</ons-client.version>
 
         <!-- ====================================================================== -->
@@ -116,8 +118,6 @@
         <knife4j.version>2.0.9</knife4j.version>
         <swagger.version>2.9.2</swagger.version>
         <swagger-annotations.version>1.6.10</swagger-annotations.version>
-        <hsf-sdk.version>2.2.8.2--2019-06-stable</hsf-sdk.version>
-        <spring-cloud-starter-hsf.version>1.3</spring-cloud-starter-hsf.version>
         <apm-toolkit-logback-1-x.version>8.7.0</apm-toolkit-logback-1-x.version>
         <xxl-job-core.version>2.0.1</xxl-job-core.version>
 
@@ -153,6 +153,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-core</artifactId>
@@ -178,6 +179,7 @@
                 <artifactId>spring-kafka</artifactId>
                 <version>${spring-kafka.version}</version>
             </dependency>
+
             <!-- ====================================================================== -->
             <!-- HSAF Framework -->
             <!-- ====================================================================== -->
@@ -203,26 +205,6 @@
             </dependency>
             <dependency>
                 <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-ali-fsstore</artifactId>
-                <version>${hsaf-ali-fsstore.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-ali-gateway</artifactId>
-                <version>${hsaf-ali-gateway.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-ali-mq</artifactId>
-                <version>${hsaf-ali-mq.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-ali-rpc</artifactId>
-                <version>${hsaf-ali-rpc.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hsa.hsaf.adapt</groupId>
                 <artifactId>hsaf-generic-fsstore</artifactId>
                 <version>${hsaf-generic-fsstore.version}</version>
             </dependency>
@@ -243,23 +225,23 @@
             </dependency>
             <dependency>
                 <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-tencent-fsstore</artifactId>
-                <version>${hsaf-tencent-fsstore.version}</version>
+                <artifactId>hsaf-ali-fsstore</artifactId>
+                <version>${hsaf-ali-fsstore.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-tencent-gateway</artifactId>
-                <version>${hsaf-tencent-gateway.version}</version>
+                <artifactId>hsaf-ali-gateway</artifactId>
+                <version>${hsaf-ali-gateway.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-tencent-mq</artifactId>
-                <version>${hsaf-tencent-mq.version}</version>
+                <artifactId>hsaf-ali-mq</artifactId>
+                <version>${hsaf-ali-mq.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.hsa.hsaf.adapt</groupId>
-                <artifactId>hsaf-tencent-rpc</artifactId>
-                <version>${hsaf-tencent-rpc.version}</version>
+                <artifactId>hsaf-ali-rpc</artifactId>
+                <version>${hsaf-ali-rpc.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.hsa.hsaf.adapt</groupId>
@@ -286,6 +268,27 @@
                 <artifactId>hsaf-huawei-springcloud-rpc</artifactId>
                 <version>${hsaf-huawei-springcloud-rpc.version}</version>
             </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-fsstore</artifactId>
+                <version>${hsaf-tencent-fsstore.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-gateway</artifactId>
+                <version>${hsaf-tencent-gateway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-mq</artifactId>
+                <version>${hsaf-tencent-mq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hsa.hsaf.adapt</groupId>
+                <artifactId>hsaf-tencent-rpc</artifactId>
+                <version>${hsaf-tencent-rpc.version}</version>
+            </dependency>
+
             <!-- ====================================================================== -->
             <!-- Alibaba Ecosystem -->
             <!-- ====================================================================== -->
@@ -358,6 +361,17 @@
                 <artifactId>ons-client</artifactId>
                 <version>${ons-client.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba.middleware</groupId>
+                <artifactId>hsf-sdk</artifactId>
+                <version>${hsf-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-hsf</artifactId>
+                <version>${spring-cloud-starter-hsf.version}</version>
+            </dependency>
+
             <!-- ====================================================================== -->
             <!-- Huawei Ecosystem -->
             <!-- ====================================================================== -->
@@ -381,6 +395,7 @@
                 <artifactId>spring-cloud-starter-huawei-servicecomb-discovery</artifactId>
                 <version>${huawei-servicecomb-discovery.version}</version>
             </dependency>
+
             <!-- ====================================================================== -->
             <!-- Tencent Ecosystem -->
             <!-- ====================================================================== -->
@@ -424,6 +439,7 @@
                 <artifactId>spring-cloud-tsf-sleuth</artifactId>
                 <version>${spring-cloud-tsf-sleuth.version}</version>
             </dependency>
+
             <!-- ====================================================================== -->
             <!-- Middleware Data & Storage -->
             <!-- ====================================================================== -->
@@ -458,6 +474,7 @@
                 <artifactId>kafka-clients</artifactId>
                 <version>${kafka-clients.version}</version>
             </dependency>
+
             <!-- ====================================================================== -->
             <!-- AWS Ecosystem -->
             <!-- ====================================================================== -->
@@ -535,6 +552,7 @@
                 <artifactId>joda-time</artifactId>
                 <version>${joda-time.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-ui</artifactId>
@@ -550,27 +568,18 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>io.swagger</groupId>
                 <artifactId>swagger-annotations</artifactId>
                 <version>${swagger-annotations.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.alibaba.middleware</groupId>
-                <artifactId>hsf-sdk</artifactId>
-                <version>${hsf-sdk.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-hsf</artifactId>
-                <version>${spring-cloud-starter-hsf.version}</version>
-            </dependency>
+
             <dependency>
                 <groupId>org.apache.skywalking</groupId>
                 <artifactId>apm-toolkit-logback-1.x</artifactId>
                 <version>${apm-toolkit-logback-1-x.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>com.xuxueli</groupId>
                 <artifactId>xxl-job-core</artifactId>
@@ -816,6 +825,7 @@
                 <artifactId>mifss-projects</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
