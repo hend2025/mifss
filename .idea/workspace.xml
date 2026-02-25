@@ -5,16 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd390e63-630d-4c5e-a156-dbd2a5865735" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/hsaf/generic/gateway/VenusApiCaller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/hsaf/generic/minio/MINIOAndFdfsStoreGenericManagerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/ims/generic/config/AeyeTrackerClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/ims/generic/config/AeyeTrackerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/ims/generic/config/MINIOAndFdfsStoreConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/src/main/java/com/aeye/mifss/common/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/config/AeyeApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/config/AeyeApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/contoller/OssFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/contoller/OssFileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/constants/OssRouteConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/constants/OssRouteConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/ims/generic/config/MINIOStoreConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/ims/generic/config/MINIOStoreConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/config/WildcardControllerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/src/main/java/com/aeye/mifss/common/config/WildcardControllerFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/config/XxlJobConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/src/main/java/com/aeye/mifss/common/config/XxlJobConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/contoller/AeyeAbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/src/main/java/com/aeye/mifss/common/contoller/AeyeAbstractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/contoller/AeyeErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/src/main/java/com/aeye/mifss/common/contoller/AeyeErrorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/contoller/OssFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/src/main/java/com/aeye/mifss/common/contoller/OssFileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/web/AeyeHandlerExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/src/main/java/com/aeye/mifss/common/web/AeyeHandlerExceptionResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/web/AeyeRequestMappingHandlerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/src/main/java/com/aeye/mifss/common/web/AeyeRequestMappingHandlerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-adapters/mifss-adapter-core/src/main/java/cn/hsa/ims/common/web/HsafContextClearFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/src/main/java/com/aeye/mifss/common/web/HsafContextClearFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/loader/CacheRefreshUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/loader/CacheRefreshUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-orm/src/main/java/com/aeye/mifss/common/utils/AeyeBeanUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-core/src/main/java/cn/hsa/ims/common/utils/AeyeBeanUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-swagger/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-swagger/src/main/java/com/aeye/mifss/common/swagger/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/mifss-commons-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-commons/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-dependencies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-dependencies/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/controller/AdmdvsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/controller/AdmdvsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/controller/CrtfController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/controller/CrtfController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/controller/DicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/controller/DicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/controller/ParaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bas/src/main/java/com/aeye/mifss/bas/biz/controller/ParaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-bio/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/CrtfController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/CrtfController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/FaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/FaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/ParaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-mainline/mifss-biz/mifss-biz-ipt/src/main/java/com/aeye/mifss/ipt/controller/ParaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-app/mifss-hunan-bio/src/main/java/com/aeye/mifss/HunanBioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-app/mifss-hunan-bio/src/main/java/com/aeye/mifss/HunanBioApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-app/mifss-hunan-ipt/src/main/java/com/aeye/mifss/HunanIptApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mifss-projects/mifss-hunan/mifss-hunan-app/mifss-hunan-ipt/src/main/java/com/aeye/mifss/HunanIptApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +102,7 @@
     "Spring Boot.IptApplication.executor": "Debug",
     "git-widget-placeholder": "v2.0.0",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/mifss-parent/mifss/mifss-adapters/mifss-adapter-generic/src/main/java/cn/hsa/ims/generic/config",
+    "last_opened_file_path": "D:/mifss-parent/mifss/mifss-commons/mifss-commons-web/src/main/java/com/aeye/mifss/common",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,22 +121,22 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mifss-parent\mifss\mifss-commons\mifss-commons-web\src\main\java\com\aeye\mifss\common" />
+      <recent name="D:\mifss-parent\mifss\mifss-commons\mifss-commons-web\src\main\java\com\aeye\mifss\common\contoller" />
+      <recent name="D:\mifss-parent\mifss\mifss-commons\mifss-commons-web" />
       <recent name="D:\mifss-parent\mifss\mifss-adapters\mifss-adapter-generic\src\main\java\cn\hsa\ims\generic\config" />
       <recent name="D:\mifss-parent\mifss\mifss-adapters\mifss-adapter-core\src\main\java\cn\hsa\ims\common\utils" />
-      <recent name="D:\mifss-parent\mifss\mifss-adapters\mifss-adapter-core\src\main\java\cn\hsa\ims\common" />
-      <recent name="D:\mifss-parent\mifss\mifss-adapters\mifss-adapter-core\src\main\java\cn\hsa\ims\common\config" />
-      <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-biz\mifss-biz-bio\src\main\resources\config\adapt\generic" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-ipt\src\main\resources" />
       <recent name="D:\mifss-parent\mifss\mifss-mainline\mifss-app\mifss-bio\src\main\resources\config\adapt" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.aeye.mifss.common.config" />
       <recent name="cn.hsa.hsaf.generic.minio" />
       <recent name="cn.hsa.hsaf.generic.gateway" />
       <recent name="cn.hsa.ims.common.utils" />
       <recent name="cn.hsa.ims.common.web" />
-      <recent name="cn.hsa.ims.common.contoller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -257,7 +280,7 @@
       <workItem from="1771721351345" duration="5010000" />
       <workItem from="1771808173175" duration="7625000" />
       <workItem from="1771941169405" duration="1249000" />
-      <workItem from="1771984686619" duration="5359000" />
+      <workItem from="1771984686619" duration="15306000" />
     </task>
     <servers />
   </component>

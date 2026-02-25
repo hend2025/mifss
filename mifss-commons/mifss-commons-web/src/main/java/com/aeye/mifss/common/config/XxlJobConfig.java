@@ -1,4 +1,4 @@
-package cn.hsa.ims.common.config;
+package com.aeye.mifss.common.config;
 
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
 import org.slf4j.Logger;

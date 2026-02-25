@@ -1,7 +1,6 @@
 package com.aeye.mifss.ipt.controller;
 
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
-import cn.hsa.ims.common.contoller.AeyeAbstractController;
 import cn.hsa.ims.common.utils.AeyeFSManager;
 import cn.hsa.ims.common.utils.AeyeIdGeneratorUtil;
 import cn.hsa.ims.common.utils.AeyePageInfo;
@@ -12,6 +11,7 @@ import com.aeye.mifss.bas.dto.CrtfDTO;
 import com.aeye.mifss.bas.service.RpcCrtfService;
 import com.aeye.mifss.bio.dto.FaceImageReq;
 import com.aeye.mifss.bio.service.RpcFaceRecognitionService;
+import com.aeye.mifss.common.contoller.AeyeAbstractController;
 import com.aeye.mifss.common.dto.RpcMergeDTO;
 import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
 import io.swagger.annotations.Api;

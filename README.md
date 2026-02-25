@@ -13,8 +13,7 @@ mifss/
 │   ├── mifss-commons-core/                        # 核心工具类
 │   ├── mifss-commons-security/                    # 安全组件
 │   ├── mifss-commons-orm/                         # 数据库组件
-│   ├── mifss-commons-web/                         # Web组件
-│   └── mifss-commons-swagger/                     # API组件
+│   └── mifss-commons-web/                         # Web组件
 │
 ├── mifss-adapters/                                # 适配器模块
 │   ├── pom.xml

@@ -1,4 +1,4 @@
-package cn.hsa.ims.common.contoller;
+package com.aeye.mifss.common.contoller;
 
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import org.springframework.boot.web.servlet.error.ErrorController;

@@ -1,4 +1,4 @@
-package cn.hsa.ims.common.web;
+package com.aeye.mifss.common.web;
 
 import cn.hsa.ims.common.utils.AeyeHttpClientUtil;
 import lombok.extern.slf4j.Slf4j;

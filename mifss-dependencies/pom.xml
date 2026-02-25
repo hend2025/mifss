@@ -717,11 +717,6 @@
             </dependency>
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-commons-swagger</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
                 <artifactId>mifss-commons-web</artifactId>
                 <version>${project.version}</version>
             </dependency>

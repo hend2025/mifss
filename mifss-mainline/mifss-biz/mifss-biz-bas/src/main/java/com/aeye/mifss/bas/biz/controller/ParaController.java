@@ -1,13 +1,12 @@
 package com.aeye.mifss.bas.biz.controller;
 
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
-import cn.hsa.ims.common.cache.AeyeCacheManager;
-import cn.hsa.ims.common.contoller.AeyeAbstractController;
+import com.aeye.mifss.common.contoller.AeyeAbstractController;
 import cn.hsa.ims.common.utils.AeyePageResult;
 import com.aeye.mifss.bas.dto.ParaDTO;
 import com.aeye.mifss.bas.biz.entity.ParaDO;
 import com.aeye.mifss.bas.biz.service.ParaService;
-import com.aeye.mifss.common.utils.AeyeBeanUtils;
+import cn.hsa.ims.common.utils.AeyeBeanUtils;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -30,7 +30,6 @@
         <module>mifss-commons-security</module>
         <module>mifss-commons-orm</module>
         <module>mifss-commons-web</module>
-        <module>mifss-commons-swagger</module>
     </modules>
 
 </project>

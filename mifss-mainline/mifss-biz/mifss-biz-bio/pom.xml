@@ -22,10 +22,6 @@
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-orm</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-commons-swagger</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.aeye.mifss</groupId>

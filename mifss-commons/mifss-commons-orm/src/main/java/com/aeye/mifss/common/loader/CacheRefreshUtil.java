@@ -3,7 +3,10 @@ package com.aeye.mifss.common.loader;
 import com.aeye.mifss.common.mybatis.service.LocalService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
+import org.springframework.data.redis.connection.RedisStringCommands;
+import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.types.Expiration;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -50,13 +53,13 @@ public class CacheRefreshUtil {
         try {
             // 尝试获取分布式锁，过期时间5分钟，使用RedisCallback以兼容旧版Spring Data Redis
             Boolean success = redisTemplate
-                    .execute((org.springframework.data.redis.core.RedisCallback<Boolean>) connection -> {
+                    .execute((RedisCallback<Boolean>) connection -> {
                         byte[] keyBytes = redisTemplate.getStringSerializer().serialize(lockKey);
                         byte[] valueBytes = redisTemplate.getStringSerializer().serialize("LOCKED");
                         // 原子操作: SET key value EX 300 NX
                         return connection.set(keyBytes, valueBytes,
-                                org.springframework.data.redis.core.types.Expiration.from(5, TimeUnit.MINUTES),
-                                org.springframework.data.redis.connection.RedisStringCommands.SetOption.ifAbsent());
+                               Expiration.from(5, TimeUnit.MINUTES),
+                                RedisStringCommands.SetOption.ifAbsent());
                     });
 
             if (Boolean.TRUE.equals(success)) {
@@ -84,4 +87,5 @@ public class CacheRefreshUtil {
             log.error(">>>>>>>>> [CacheRefreshUtil] 获取锁或加载缓存异常", e);
         }
     }
+
 }

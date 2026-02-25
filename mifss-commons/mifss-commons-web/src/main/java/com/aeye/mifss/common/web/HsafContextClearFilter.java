@@ -1,4 +1,4 @@
-package cn.hsa.ims.common.web;
+package com.aeye.mifss.common.web;
 
 import cn.hsa.hsaf.core.framework.context.HsafContextHolder;
 import lombok.extern.slf4j.Slf4j;

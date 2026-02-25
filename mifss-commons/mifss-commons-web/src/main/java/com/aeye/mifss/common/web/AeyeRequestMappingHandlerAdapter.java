@@ -1,4 +1,4 @@
-package cn.hsa.ims.common.web;
+package com.aeye.mifss.common.web;
 
 import cn.hsa.hsaf.core.framework.context.HsafContext;
 import cn.hsa.hsaf.core.framework.context.HsafContextHolder;
