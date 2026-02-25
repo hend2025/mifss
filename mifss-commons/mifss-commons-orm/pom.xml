@@ -16,12 +16,7 @@
 
         <dependency>
             <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-commons-core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-adapter-core</artifactId>
+            <artifactId>mifss-commons-util</artifactId>
         </dependency>
 
         <dependency>
@@ -43,6 +38,10 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-commons-web</artifactId>
         </dependency>
 
     </dependencies>

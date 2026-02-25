@@ -34,12 +34,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-adapter-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>

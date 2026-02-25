@@ -10,14 +10,13 @@ mifss/
 │
 ├── mifss-commons/                                 # 公共模块
 │   ├── pom.xml
-│   ├── mifss-commons-core/                        # 核心工具类
+│   ├── mifss-commons-util/                        # 核心工具类
 │   ├── mifss-commons-security/                    # 安全组件
 │   ├── mifss-commons-orm/                         # 数据库组件
 │   └── mifss-commons-web/                         # Web组件
 │
 ├── mifss-adapters/                                # 适配器模块
 │   ├── pom.xml
-│   ├── mifss-adapter-core/                        # 适配器通用接口
 │   ├── mifss-adapter-generic/                     # 开源适配器
 │   ├── mifss-adapter-ali/                         # 阿里云适配器
 │   ├── mifss-adapter-huawei/                      # 华为云适配器

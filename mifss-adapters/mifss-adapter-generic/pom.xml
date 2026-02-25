@@ -15,13 +15,28 @@
     <dependencies>
 
         <dependency>
-            <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-adapter-core</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>cn.hsa.hsaf.core</groupId>
+            <artifactId>hsaf-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hsa.hsaf.core</groupId>
+            <artifactId>hsaf-idgenerator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hsa.hsaf.adapt</groupId>
+            <artifactId>hsaf-cache-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hsa.hsaf.auth.security</groupId>
+            <artifactId>hsaf-auth-security</artifactId>
         </dependency>
 
         <!-- RPC 适配包 -->
@@ -145,6 +160,10 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
         </dependency>
         <!--Kong 网关-->
 

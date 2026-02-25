@@ -35,17 +35,17 @@
         <module name="mifss-biz-ckd" />
         <module name="mifss-intf-ckd" />
         <module name="mifss-intf-job" />
+        <module name="mifss-commons-util" />
         <module name="mifss-adapter-tencent" />
         <module name="mifss-intf-bio" />
         <module name="mifss-hunan-ipt" />
         <module name="mifss-commons-security" />
-        <module name="mifss-commons-core" />
-        <module name="mifss-adapter-core" />
         <module name="mifss-biz-nvr" />
         <module name="mifss-biz-pha" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mifss-adapter-core" target="1.8" />
       <module name="mifss-biz-bc" target="1.8" />
       <module name="mifss-biz-hd" target="1.8" />
       <module name="mifss-biz-video" target="1.8" />

@@ -597,11 +597,6 @@
             </dependency>
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-adapter-core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aeye.mifss</groupId>
                 <artifactId>mifss-adapter-generic</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -702,7 +697,7 @@
             </dependency>
             <dependency>
                 <groupId>com.aeye.mifss</groupId>
-                <artifactId>mifss-commons-core</artifactId>
+                <artifactId>mifss-commons-util</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

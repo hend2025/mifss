@@ -1,6 +1,5 @@
 package com.aeye.mifss.common.utils;
 
-import cn.hsa.ims.common.utils.AeyePageResult;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 

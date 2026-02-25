@@ -1,7 +1,7 @@
 package com.aeye.mifss.common.dto;
 
-import cn.hsa.ims.common.utils.AeyePageInfo;
 import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
+import com.aeye.mifss.common.utils.AeyePageInfo;
 import lombok.Data;
 
 import java.io.Serializable;

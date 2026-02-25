@@ -15,7 +15,7 @@
     <dependencies>
          <dependency>
             <groupId>com.aeye.mifss</groupId>
-            <artifactId>mifss-commons-core</artifactId>
+            <artifactId>mifss-commons-util</artifactId>
         </dependency>
         <dependency>
             <groupId>com.aeye.mifss</groupId>

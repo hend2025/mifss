@@ -1,6 +1,5 @@
 package com.aeye.mifss.common.utils;
 
-import cn.hsa.ims.common.utils.AeyePageInfo;
 import cn.hutool.core.util.StrUtil;
 import com.aeye.mifss.common.xss.SqlFilter;
 import com.baomidou.mybatisplus.annotation.TableField;
