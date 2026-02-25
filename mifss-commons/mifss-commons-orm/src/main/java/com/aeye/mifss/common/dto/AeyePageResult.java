@@ -1,4 +1,4 @@
-package com.aeye.mifss.common.utils;
+package com.aeye.mifss.common.dto;
 
 import cn.hsa.hsaf.core.framework.util.PageResult;
 

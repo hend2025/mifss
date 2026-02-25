@@ -1,6 +1,6 @@
 package com.aeye.mifss.common.utils.gm;
 
-import cn.hsa.ims.common.utils.AeyeSpringContextUtils;
+import com.aeye.mifss.common.utils.AeyeSpringContextUtils;
 import cn.hutool.core.codec.Base64;
 import com.aeye.mifss.common.config.AeyeGmConfig;
 import com.alibaba.fastjson.JSONObject;

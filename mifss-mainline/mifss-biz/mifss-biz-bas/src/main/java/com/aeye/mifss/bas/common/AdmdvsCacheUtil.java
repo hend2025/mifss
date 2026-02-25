@@ -1,6 +1,6 @@
 package com.aeye.mifss.bas.common;
 
-import cn.hsa.ims.common.utils.AeyeSpringContextUtils;
+import com.aeye.mifss.common.utils.AeyeSpringContextUtils;
 import cn.hutool.core.bean.BeanUtil;
 import com.aeye.mifss.bas.biz.entity.AdmdvsDO;
 import com.aeye.mifss.bas.biz.service.AdmdvsService;

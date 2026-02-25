@@ -1,7 +1,7 @@
 package com.aeye.mifss.common.mybatis.service;
 
-import com.aeye.mifss.common.utils.AeyePageInfo;
-import com.aeye.mifss.common.utils.AeyePageResult;
+import com.aeye.mifss.common.dto.AeyePageInfo;
+import com.aeye.mifss.common.dto.AeyePageResult;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 
 import java.io.Serializable;

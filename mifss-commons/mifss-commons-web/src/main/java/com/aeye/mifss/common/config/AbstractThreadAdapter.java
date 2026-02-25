@@ -1,7 +1,7 @@
 package com.aeye.mifss.common.config;
 
 import cn.hsa.hsaf.core.framework.web.exception.BusinessException;
-import cn.hsa.ims.common.utils.AeyeSpringContextUtils;
+import com.aeye.mifss.common.utils.AeyeSpringContextUtils;
 import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

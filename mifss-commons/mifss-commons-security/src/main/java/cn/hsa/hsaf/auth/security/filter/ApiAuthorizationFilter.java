@@ -2,7 +2,7 @@ package cn.hsa.hsaf.auth.security.filter;
 
 import cn.hsa.hsaf.auth.security.utils.ApiVerifyUtil;
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
-import cn.hsa.ims.common.utils.AeyeSpringContextUtils;
+import com.aeye.mifss.common.utils.AeyeSpringContextUtils;
 import cn.hutool.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

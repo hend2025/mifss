@@ -1,6 +1,6 @@
 package com.aeye.mifss.common.config;
 
-import cn.hsa.ims.common.utils.AeyeSpringContextUtils;
+import com.aeye.mifss.common.utils.AeyeSpringContextUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.annotation.Autowired;

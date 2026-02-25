@@ -1,4 +1,4 @@
-package cn.hsa.ims.common.utils;
+package com.aeye.mifss.common.utils;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

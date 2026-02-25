@@ -5,7 +5,6 @@ import cn.hsa.hsaf.core.framework.web.exception.BusinessException;
 import cn.hsa.hsaf.core.fsstore.FSAccessControlList;
 import cn.hsa.hsaf.core.fsstore.FSEntity;
 import cn.hsa.hsaf.core.fsstore.FSManager;
-import cn.hsa.ims.common.utils.AeyeSpringContextUtils;
 import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.util.StrUtil;
 import com.aeye.mifss.common.dto.AeyeFSEntity;

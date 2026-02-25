@@ -1,4 +1,4 @@
-package cn.hsa.ims.common.utils;
+package com.aeye.mifss.common.utils;
 
 import cn.hutool.core.bean.BeanUtil;
 

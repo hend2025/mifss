@@ -3,7 +3,7 @@ package com.aeye.mifss.common.mybatis.service;
 import com.aeye.mifss.common.dto.RpcMergeDTO;
 import com.aeye.mifss.common.mybatis.wrapper.RpcQueryWrapper;
 import com.aeye.mifss.common.mybatis.wrapper.RpcUpdateWrapper;
-import com.aeye.mifss.common.utils.AeyePageResult;
+import com.aeye.mifss.common.dto.AeyePageResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 

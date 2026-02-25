@@ -3,6 +3,8 @@ package cn.hsa.ims.common.utils;
 import cn.hsa.hsaf.core.framework.context.HsafContextHolder;
 import cn.hsa.hsaf.core.framework.util.CurrentUser;
 import cn.hutool.core.util.StrUtil;
+import com.aeye.mifss.common.utils.AeyeCurrentUser;
+
 import java.util.List;
 
 public class AeyeLoginUtil {
@@ -16,10 +18,10 @@ public class AeyeLoginUtil {
      * @return
      */
     @Deprecated
-    public static AeyeCurrentUser getCurrentUser(){
+    public static com.aeye.mifss.common.utils.AeyeCurrentUser getCurrentUser(){
 
         CurrentUser currentUser = getHsafCurrentUser();
-        AeyeCurrentUser aeyeCurrentUser = new AeyeCurrentUser();
+        com.aeye.mifss.common.utils.AeyeCurrentUser aeyeCurrentUser = new AeyeCurrentUser();
         aeyeCurrentUser.setAdmDvs(currentUser.getAdmDvs());
         aeyeCurrentUser.setName(currentUser.getName());
         aeyeCurrentUser.setDeptName(currentUser.getDeptName());

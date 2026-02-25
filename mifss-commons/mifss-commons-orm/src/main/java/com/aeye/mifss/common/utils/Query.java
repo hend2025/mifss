@@ -1,6 +1,7 @@
 package com.aeye.mifss.common.utils;
 
 import cn.hutool.core.util.StrUtil;
+import com.aeye.mifss.common.dto.AeyePageInfo;
 import com.aeye.mifss.common.xss.SqlFilter;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -24,11 +25,11 @@ public class Query<T> {
 
     public static final String COL_SPLIT_KEY = "_";
 
-    public IPage<T> getPage(AeyePageInfo pageInfo)throws Exception{
+    public IPage<T> getPage(com.aeye.mifss.common.dto.AeyePageInfo pageInfo)throws Exception{
         return getPage(pageInfo, null);
     }
 
-    public IPage<T> getPage(AeyePageInfo pageInfo, String countId)throws Exception{
+    public IPage<T> getPage(com.aeye.mifss.common.dto.AeyePageInfo pageInfo, String countId)throws Exception{
         //分页参数
         long curPage = 1;
         long limit = 10;
@@ -94,7 +95,7 @@ public class Query<T> {
      * @param pageInfo
      * @return
      */
-    public static AeyePageInfo convertSortFieldToCol(Class classType,AeyePageInfo pageInfo){
+    public static com.aeye.mifss.common.dto.AeyePageInfo convertSortFieldToCol(Class classType, AeyePageInfo pageInfo){
         if(StrUtil.isNotBlank(pageInfo.getOrderField()) && !pageInfo.getOrderField().contains(COL_SPLIT_KEY)){
             pageInfo.setOrderField(fieldToColumn(classType, pageInfo.getOrderField()));
         }

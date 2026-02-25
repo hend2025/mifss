@@ -2,7 +2,7 @@ package com.aeye.mifss.common.contoller;
 
 import cn.hsa.hsaf.core.framework.web.WrapperResponse;
 import cn.hsa.hsaf.core.framework.web.exception.BusinessException;
-import cn.hsa.ims.common.utils.*;
+import com.aeye.mifss.common.utils.AeyeContentTypeUtil;
 import cn.hutool.core.img.ImgUtil;
 import cn.hutool.core.util.NumberUtil;
 import cn.hutool.core.util.StrUtil;

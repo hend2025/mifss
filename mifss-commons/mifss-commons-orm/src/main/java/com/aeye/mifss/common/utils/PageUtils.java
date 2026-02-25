@@ -1,5 +1,6 @@
 package com.aeye.mifss.common.utils;
 
+import com.aeye.mifss.common.dto.AeyePageResult;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
@@ -9,8 +10,8 @@ public class PageUtils{
 	/**
 	 * 适配mybatis-plus的分页对象转换为hsaf分页对象；AeyePageInfo为hsaf适配分页对象
 	 */
-	public static <T> AeyePageResult pageConvert(IPage<T> page) {
-		AeyePageResult aeyePageResult = new AeyePageResult();
+	public static <T> com.aeye.mifss.common.dto.AeyePageResult pageConvert(IPage<T> page) {
+		com.aeye.mifss.common.dto.AeyePageResult aeyePageResult = new com.aeye.mifss.common.dto.AeyePageResult();
 		//List数据
 		aeyePageResult.setData(page.getRecords());
 		//记录条数
@@ -28,8 +29,8 @@ public class PageUtils{
 	/**
 	 *AeyePageResult<T> 转 AeyePageResult<R>
 	 */
-	public static  <T, R> AeyePageResult<R> convertPageResult(AeyePageResult<T> oldPageResult, List<R> collect) {
-		AeyePageResult<R> newPageResult = new AeyePageResult<>();
+	public static  <T, R> com.aeye.mifss.common.dto.AeyePageResult<R> convertPageResult(com.aeye.mifss.common.dto.AeyePageResult<T> oldPageResult, List<R> collect) {
+		com.aeye.mifss.common.dto.AeyePageResult<R> newPageResult = new AeyePageResult<>();
 		newPageResult.setData(collect);
 		newPageResult.setPageNum(oldPageResult.getPageNum());
 		newPageResult.setPageSize(oldPageResult.getPageSize());
