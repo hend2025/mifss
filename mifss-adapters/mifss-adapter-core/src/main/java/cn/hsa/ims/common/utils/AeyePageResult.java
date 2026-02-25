@@ -4,9 +4,6 @@ import cn.hsa.hsaf.core.framework.util.PageResult;
 
 import java.util.Map;
 
-/**
- * 分页工具类
- */
 public class AeyePageResult<T> extends PageResult<T> {
 
     private Map<Object,Object> extraDataMap;
