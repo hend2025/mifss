@@ -1,4 +1,4 @@
-package cn.hsa.ims.constants;
+package cn.hsa.ims.common.constants;
 
 /**
  * 文件存储路径前缀-强制性全局前缀ZHY/[month]/

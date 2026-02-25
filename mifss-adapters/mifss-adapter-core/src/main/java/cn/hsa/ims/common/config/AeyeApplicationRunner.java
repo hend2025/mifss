@@ -27,4 +27,5 @@ public class AeyeApplicationRunner implements ApplicationRunner {
             log.warn("当前SpringBoot【{}】服务已启动完成!!!http端口【{}】，访问路径【{}】",appName, port, contextPath);
         }
     }
+
 }

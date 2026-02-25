@@ -5,7 +5,7 @@ import cn.hsa.hsaf.core.framework.web.exception.BusinessException;
 import cn.hsa.ims.common.dto.AeyeFSEntity;
 import cn.hsa.ims.common.dto.RequestBodyDto;
 import cn.hsa.ims.common.utils.*;
-import cn.hsa.ims.constants.OssRouteConstants;
+import cn.hsa.ims.common.constants.OssRouteConstants;
 import cn.hutool.core.img.ImgUtil;
 import cn.hutool.core.util.NumberUtil;
 import cn.hutool.core.util.StrUtil;
