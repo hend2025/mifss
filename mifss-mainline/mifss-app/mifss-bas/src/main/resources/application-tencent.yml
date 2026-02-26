@@ -61,7 +61,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 security:
-  type: hsa-mock
+  type: hsa-sso
   isPrivilege: true
   oauth2:
     client:
