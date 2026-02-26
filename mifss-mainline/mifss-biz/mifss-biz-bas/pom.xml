@@ -18,6 +18,7 @@
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-orm</artifactId>

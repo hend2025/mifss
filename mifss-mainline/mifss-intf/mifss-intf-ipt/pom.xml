@@ -13,9 +13,22 @@
     <description>住院接口</description>
 
     <dependencies>
-         <dependency>
+        <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-commons-orm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

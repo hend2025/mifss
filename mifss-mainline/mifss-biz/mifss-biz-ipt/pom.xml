@@ -13,11 +13,12 @@
     <description>住院业务模块</description>
 
     <dependencies>
-        
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-orm</artifactId>
@@ -32,32 +33,15 @@
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-intf-ipt</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-intf-bio</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-intf-bas</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session-data-redis</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.xuxueli</groupId>
-            <artifactId>xxl-job-core</artifactId>
         </dependency>
 
         <dependency>

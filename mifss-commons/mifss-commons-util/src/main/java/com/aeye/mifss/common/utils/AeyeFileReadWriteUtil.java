@@ -6,12 +6,14 @@ import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.util.StrUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpMethod;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -26,10 +28,15 @@ public class AeyeFileReadWriteUtil {
 
     public static final String FILE_SPLIT_MARK = ".";
 
+    public static String defaultBucket;
+
     public static final String SYS_TMP_DIR = System.getProperty("java.io.tmpdir");
+
 
     static {
         try {
+            Environment env = AeyeSpringContextUtils.getBean(Environment.class);
+            defaultBucket = env.getProperty("fsstore.bucket");
             SslUtil.ignoreSsl();
         } catch (Exception ex) {
             log.warn("全局https忽略证书配置异常！msg={}", ex.getMessage());
@@ -202,7 +209,7 @@ public class AeyeFileReadWriteUtil {
             }
             return bos.toByteArray();
         } catch (Exception ex) {
-            String baseKeyPrex = AeyeFSManager.defaultBucket + "/";
+            String baseKeyPrex = defaultBucket + "/";
             String baseKey = null;
             if (entity.getKeyId().startsWith(baseKeyPrex)) {
                 baseKey = Base64Utils.urlEncode(entity.getKeyId().replace(baseKeyPrex, "").getBytes());

@@ -18,6 +18,7 @@
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-commons-orm</artifactId>
@@ -32,6 +33,7 @@
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-intf-bio</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.aeye.mifss</groupId>
             <artifactId>mifss-biz-bas</artifactId>

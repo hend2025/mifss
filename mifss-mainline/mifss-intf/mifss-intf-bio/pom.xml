@@ -18,16 +18,17 @@
             <artifactId>mifss-commons-util</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
+            <groupId>com.aeye.mifss</groupId>
+            <artifactId>mifss-commons-orm</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-openfeign-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>cn.hsa.hsaf.core</groupId>
-            <artifactId>hsaf-core</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
